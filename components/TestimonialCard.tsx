@@ -10,7 +10,7 @@ export default function TestimonialCard({
   rating,
 }: TestimonialCardProps) {
   return (
-    <div className="border-2 border-gray-200 border-t-[3px] border-t-brand-red bg-white p-6">
+    <div className="testimonial-border-slide border-2 border-gray-200 border-t-[3px] border-t-brand-red bg-white p-6 transition-shadow duration-300 ease-out hover:shadow-md">
       <div className="mb-3 flex gap-0.5 text-brand-red">
         {Array.from({ length: rating }, (_, i) => (
           <span key={i} className="text-lg">

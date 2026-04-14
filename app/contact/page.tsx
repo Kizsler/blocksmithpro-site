@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { CONTACT } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export default function ContactPage() {
   return (
     <main>
       {/* ===== HERO ===== */}
-      <section className="bg-brand-dark">
+      <section className="bg-brand-dark hero-gradient">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <SectionHeading
             label="Get In Touch"
@@ -28,15 +29,15 @@ export default function ContactPage() {
       <section className="bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 py-16 sm:px-6 lg:flex-row lg:gap-16 lg:px-8 lg:py-24">
           {/* Left — Form */}
-          <div className="flex-1">
+          <AnimateOnScroll className="flex-1">
             <h2 className="mb-8 text-2xl font-black uppercase tracking-tight text-gray-900">
               Send Us a Message
             </h2>
             <ContactForm />
-          </div>
+          </AnimateOnScroll>
 
           {/* Right — Sidebar */}
-          <div className="lg:w-80">
+          <AnimateOnScroll className="lg:w-80" delay={200}>
             {/* Phone */}
             <div className="mb-8">
               <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.15em] text-brand-red">
@@ -90,13 +91,20 @@ export default function ContactPage() {
               </p>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="flex h-48 items-center justify-center border-2 border-dashed border-gray-300 bg-gray-50">
-              <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-400">
-                Map — Phase 2
-              </p>
+            {/* Map */}
+            <div className="h-48 w-full overflow-hidden">
+              <iframe
+                title="B&B Locksmith location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100631.70633896498!2d-122.11042028547088!3d37.90009028498399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808561d2d7e10f8d%3A0x8ce0f85892d68bb2!2sWalnut%20Creek%2C%20CA!5e0!3m2!1sen!2sus!4v1713100000000"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
-          </div>
+          </AnimateOnScroll>
         </div>
       </section>
     </main>

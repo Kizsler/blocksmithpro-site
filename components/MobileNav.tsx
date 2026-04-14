@@ -52,7 +52,7 @@ export default function MobileNav() {
             onClick={() => setOpen(false)}
             className="mt-12 bg-brand-red px-8 py-3 text-sm font-extrabold uppercase tracking-[0.15em] text-white hover:bg-red-700 transition-colors"
           >
-            Schedule Visit
+            Free Assessment
           </Link>
         </div>
       )}

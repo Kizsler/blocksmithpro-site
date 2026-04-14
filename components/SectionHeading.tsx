@@ -24,7 +24,7 @@ export default function SectionHeading({
         {heading}
       </h2>
       <div
-        className={`mt-4 h-1 w-14 bg-brand-red ${center ? "mx-auto" : ""}`}
+        className={`mt-4 h-1 w-14 bg-brand-red accent-bar-animated ${center ? "mx-auto accent-bar-center" : ""}`}
       />
     </div>
   );

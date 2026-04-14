@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { SERVICES } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export default function ServicesPage() {
   return (
     <main>
       {/* ===== HERO ===== */}
-      <section className="bg-brand-dark">
+      <section className="bg-brand-dark hero-gradient">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <SectionHeading
             label="What We Do"
@@ -33,13 +34,16 @@ export default function ServicesPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((service) => (
-              <ServiceCard
-                key={service.title}
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-              />
+            {SERVICES.map((service, i) => (
+              <AnimateOnScroll key={service.title} delay={i * 75}>
+                <ServiceCard
+                  title={service.title}
+                  description={service.description}
+                  icon={service.icon}
+                  slug={service.slug}
+                  image={service.image}
+                />
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

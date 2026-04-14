@@ -14,4 +14,218 @@
 body {
   font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
+  animation: pageLoad 0.3s ease-out;
+}
+
+@keyframes pageLoad {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== Scroll-reveal animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Subtle red radial glow for dark hero sections */
+.hero-gradient {
+  background-image: radial-gradient(
+    ellipse at 30% 50%,
+    rgba(229, 57, 53, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+/* ===== Hero entrance animations ===== */
+@keyframes heroFadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroSlideInRight {
+  from { opacity: 0; transform: translateX(40px) scale(0.97); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes heroAccentGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.hero-stagger-1 { opacity: 0; animation: heroFadeInUp 0.5s ease-out 0.1s forwards; }
+.hero-stagger-2 { opacity: 0; animation: heroFadeInUp 0.6s ease-out 0.25s forwards; }
+.hero-stagger-3 { opacity: 0; transform-origin: left; animation: heroAccentGrow 0.4s ease-out 0.5s forwards; }
+.hero-stagger-4 { opacity: 0; animation: heroFadeInUp 0.5s ease-out 0.65s forwards; }
+.hero-stagger-5 { opacity: 0; animation: heroFadeInUp 0.5s ease-out 0.85s forwards; }
+.hero-image-enter { opacity: 0; animation: heroSlideInRight 0.7s ease-out 0.4s forwards; }
+
+/* ===== Logo marquee ===== */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ===== Nav link hover underline ===== */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-brand-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* ===== Section heading accent bar grow ===== */
+@keyframes accentGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.accent-bar-animated {
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.accent-bar-center {
+  transform-origin: center;
+}
+.animate-fade-in-up .accent-bar-animated,
+.animate-fade-in .accent-bar-animated {
+  animation: accentGrow 0.5s ease-out 0.3s forwards;
+}
+
+/* ===== Testimonial card sliding left border ===== */
+.testimonial-border-slide {
+  position: relative;
+}
+.testimonial-border-slide::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--color-brand-red);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+.testimonial-border-slide:hover::before {
+  transform: scaleY(1);
+}
+
+/* ===== Sticky header scroll behavior ===== */
+.header-top-bar {
+  transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 80px;
+  overflow: hidden;
+}
+.header-nav {
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+[data-scrolled] .header-top-bar {
+  transform: translateY(-100%);
+  opacity: 0;
+  max-height: 0;
+}
+[data-scrolled] .header-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+[data-scrolled] .header-nav > div {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: padding 0.3s ease;
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+  .animate-hidden {
+    opacity: 1;
+    transform: none;
+  }
+  .animate-fade-in-up,
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .hero-stagger-1,
+  .hero-stagger-2,
+  .hero-stagger-3,
+  .hero-stagger-4,
+  .hero-stagger-5,
+  .hero-image-enter {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+  .accent-bar-animated {
+    transform: none;
+  }
+  .animate-fade-in-up .accent-bar-animated,
+  .animate-fade-in .accent-bar-animated {
+    animation: none;
+    transform: none;
+  }
+  .nav-link-underline::after {
+    transition: none;
+  }
+  .testimonial-border-slide::before {
+    transition: none;
+  }
+  .marquee-track {
+    animation-duration: 0s;
+  }
 }

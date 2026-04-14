@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPost } from "@/lib/blog";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 export function generateStaticParams() {
   const posts = getAllPosts();
@@ -66,7 +67,7 @@ export default async function BlogPostPage({
   return (
     <main>
       {/* ===== HERO ===== */}
-      <section className="bg-brand-dark">
+      <section className="bg-brand-dark hero-gradient">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red">
             {new Date(post.date).toLocaleDateString("en-US", {
@@ -85,16 +86,18 @@ export default async function BlogPostPage({
       {/* ===== ARTICLE ===== */}
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <article dangerouslySetInnerHTML={{ __html: htmlContent }} />
+          <AnimateOnScroll animation="fade-in">
+            <article dangerouslySetInnerHTML={{ __html: htmlContent }} />
 
-          <div className="mt-12 border-t-2 border-gray-200 pt-8">
-            <Link
-              href="/blog"
-              className="text-sm font-bold text-brand-red hover:text-red-700 transition-colors"
-            >
-              &larr; Back to Blog
-            </Link>
-          </div>
+            <div className="mt-12 border-t-2 border-gray-200 pt-8">
+              <Link
+                href="/blog"
+                className="text-sm font-bold text-brand-red hover:text-red-700 transition-colors"
+              >
+                &larr; Back to Blog
+              </Link>
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
     </main>
