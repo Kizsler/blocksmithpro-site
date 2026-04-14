@@ -1,6 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import SectionHeading from "@/components/SectionHeading";
 import StatsBar from "@/components/StatsBar";
+import ServiceCard from "@/components/ServiceCard";
+import { SERVICES } from "@/lib/site-data";
+
+const WHY_CHOOSE_US = [
+  "Licensed C-28 Contractor",
+  "Over 15 Years Experience",
+  "24/7 Emergency Service",
+  "Free Security Assessments",
+  "Bonded & Insured",
+  "Locally Owned & Operated",
+  "Top-Rated on Yelp",
+  "Commercial & Residential",
+];
 
 export default function Home() {
   return (
@@ -58,6 +72,70 @@ export default function Home() {
 
       {/* ===== STATS BAR ===== */}
       <StatsBar />
+
+      {/* ===== SERVICES GRID ===== */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+          <div className="mb-12">
+            <SectionHeading
+              label="What We Do"
+              heading="Our Services"
+              center
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {SERVICES.map((service) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== WHY CHOOSE US ===== */}
+      <section className="bg-brand-dark">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 py-16 sm:px-6 lg:flex-row lg:gap-16 lg:px-8 lg:py-24">
+          {/* Left image */}
+          <div className="flex-1">
+            <div className="border-[3px] border-brand-red">
+              <Image
+                src="/images/why-choose-van.png"
+                alt="B&B Locksmith service van"
+                width={640}
+                height={420}
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+
+          {/* Right content */}
+          <div className="flex-1">
+            <SectionHeading
+              label="Why Us"
+              heading="Why Choose Us"
+              light
+            />
+            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {WHY_CHOOSE_US.map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <span className="mt-1 block h-[6px] w-[6px] shrink-0 bg-brand-red" />
+                  <span className="text-sm text-gray-300">{item}</span>
+                </div>
+              ))}
+            </div>
+            <Link
+              href="/about"
+              className="mt-8 inline-block bg-brand-red px-8 py-3 text-sm font-extrabold uppercase tracking-[0.15em] text-white hover:bg-red-700 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
