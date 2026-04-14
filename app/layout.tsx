@@ -27,6 +27,37 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="bg-white text-gray-700">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "B&B Locksmith & Security Inc.",
+              telephone: "+1-925-266-3393",
+              email: "office@blocksmithpro.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "1449 SOS Drive",
+                addressLocality: "Walnut Creek",
+                addressRegion: "CA",
+                postalCode: "94597",
+                addressCountry: "US",
+              },
+              areaServed: {
+                "@type": "Place",
+                name: "San Francisco Bay Area",
+              },
+              priceRange: "$$",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                reviewCount: "200",
+              },
+              url: "https://blocksmithpro.com",
+            }),
+          }}
+        />
         <Header />
         {children}
         <Footer />
