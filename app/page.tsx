@@ -3,7 +3,12 @@ import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import StatsBar from "@/components/StatsBar";
 import ServiceCard from "@/components/ServiceCard";
-import { SERVICES } from "@/lib/site-data";
+import TestimonialCard from "@/components/TestimonialCard";
+import {
+  SERVICES,
+  TESTIMONIALS,
+  CLIENT_LOGOS,
+} from "@/lib/site-data";
 
 const WHY_CHOOSE_US = [
   "Licensed C-28 Contractor",
@@ -134,6 +139,65 @@ export default function Home() {
               Learn More
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ===== TESTIMONIALS ===== */}
+      <section className="bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+          <div className="mb-12">
+            <SectionHeading
+              label="Reviews"
+              heading="What Our Clients Say"
+              center
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {TESTIMONIALS.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.author}
+                quote={testimonial.quote}
+                author={testimonial.author}
+                rating={testimonial.rating}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CLIENT LOGOS ===== */}
+      <section className="border-t-[3px] border-brand-red bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <p className="mb-8 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red">
+            Trusted By
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            {CLIENT_LOGOS.map((logo) => (
+              <Image
+                key={logo.name}
+                src={logo.src}
+                alt={logo.name}
+                width={120}
+                height={48}
+                className="h-10 w-auto grayscale transition-all hover:grayscale-0"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CTA ===== */}
+      <section className="bg-brand-dark">
+        <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-24">
+          <h2 className="mb-8 text-3xl font-black uppercase tracking-tight text-white sm:text-4xl lg:text-5xl">
+            Bay Area&apos;s #1 Locksmith for Over 15 Years!
+          </h2>
+          <Link
+            href="/contact"
+            className="inline-block bg-brand-red px-10 py-4 text-sm font-extrabold uppercase tracking-[0.15em] text-white hover:bg-red-700 transition-colors"
+          >
+            Schedule a Visit
+          </Link>
         </div>
       </section>
     </main>
