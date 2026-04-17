@@ -3,6 +3,7 @@ import Image from "next/image";
 import { CONTACT, SOCIAL, NAV_LINKS } from "@/lib/site-data";
 import MobileNav from "./MobileNav";
 import StickyHeader from "./StickyHeader";
+import BusinessStatus from "./BusinessStatus";
 
 export default function Header() {
   return (
@@ -10,26 +11,38 @@ export default function Header() {
     <header className="border-b-[3px] border-brand-red">
       {/* Top bar */}
       <div className="header-top-bar bg-brand-red">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          {/* Contact info */}
-          <div className="flex items-center gap-4 text-sm font-semibold text-white">
-            <a href={`tel:${CONTACT.phone1}`} className="hover:underline">
-              {CONTACT.phone1}
-            </a>
-            <span className="hidden sm:inline text-white/50">|</span>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-y-2 px-4 py-3 sm:px-6 lg:px-8">
+          {/* Contact info + live status */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-semibold text-white sm:text-sm">
             <a
-              href={`tel:${CONTACT.phone2}`}
-              className="hidden hover:underline sm:inline"
+              href={`tel:${CONTACT.phoneCall}`}
+              className="flex min-h-[44px] items-center gap-1.5 hover:underline sm:min-h-[32px]"
             >
-              {CONTACT.phone2}
+              <svg className="h-3.5 w-3.5 fill-white" viewBox="0 0 24 24">
+                <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 00-1.02.24l-2.2 2.2a15.07 15.07 0 01-6.59-6.59l2.2-2.21a1 1 0 00.25-1A11.36 11.36 0 018.5 4a1 1 0 00-1-1H4a1 1 0 00-1 1 17 17 0 0017 17 1 1 0 001-1v-3.5a1 1 0 00-1-1z" />
+              </svg>
+              <span>
+                <span className="opacity-75">Call:</span> {CONTACT.phoneCall}
+              </span>
             </a>
-            <span className="hidden md:inline text-white/50">|</span>
+            <span className="hidden h-3 w-px bg-white/40 sm:inline-block" />
             <a
-              href={`mailto:${CONTACT.email}`}
-              className="hidden hover:underline md:inline"
+              href={`sms:${CONTACT.phoneText}`}
+              className="flex min-h-[44px] items-center gap-1.5 hover:underline sm:min-h-[32px]"
             >
-              {CONTACT.email}
+              <svg className="h-3.5 w-3.5 fill-white" viewBox="0 0 24 24">
+                <path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2zM7 9h10v2H7zm0 4h7v2H7z" />
+              </svg>
+              <span>
+                <span className="opacity-75">Text:</span> {CONTACT.phoneText}
+              </span>
             </a>
+            <span className="hidden h-3 w-px bg-white/40 md:inline-block" />
+            <BusinessStatus />
+            <span className="hidden h-3 w-px bg-white/40 lg:inline-block" />
+            <span className="hidden text-xs font-semibold text-white/90 lg:inline">
+              {CONTACT.hoursSummary}
+            </span>
           </div>
 
           {/* Social icons + CTA */}
@@ -40,7 +53,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all"
+                className="flex h-11 w-11 items-center justify-center border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all sm:h-9 sm:w-9"
               >
                 <svg className="h-4 w-4 fill-white" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
@@ -51,7 +64,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-9 w-9 items-center justify-center border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all"
+                className="flex h-11 w-11 items-center justify-center border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all sm:h-9 sm:w-9"
               >
                 <svg className="h-4 w-4 fill-white" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -62,7 +75,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="flex h-9 w-9 items-center justify-center border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all"
+                className="flex h-11 w-11 items-center justify-center border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all sm:h-9 sm:w-9"
               >
                 <svg className="h-4 w-4 fill-white" viewBox="0 0 24 24">
                   <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -73,7 +86,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all"
+                className="flex h-11 w-11 items-center justify-center border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all sm:h-9 sm:w-9"
               >
                 <svg className="h-4 w-4 fill-white" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -93,9 +106,9 @@ export default function Header() {
       <nav className="header-nav bg-brand-dark">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" className="flex min-h-[44px] items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-white.png"
               alt="B&B Locksmith"
               width={160}
               height={41}
@@ -109,7 +122,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="nav-link-underline text-xs font-bold uppercase tracking-[0.15em] text-white hover:text-brand-red transition-colors"
+                className="nav-link-underline inline-flex min-h-[32px] items-center text-xs font-bold uppercase tracking-[0.15em] text-white hover:text-brand-red transition-colors"
               >
                 {link.label}
               </Link>

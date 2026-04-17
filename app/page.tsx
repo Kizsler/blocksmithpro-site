@@ -111,8 +111,8 @@ export default function Home() {
           <AnimateOnScroll className="flex-1">
             <div className="border-[3px] border-brand-red">
               <Image
-                src="/images/van-fleet.jpg"
-                alt="B&B Locksmith service van"
+                src="/images/why-us-sparks.jpg"
+                alt="B&B Locksmith technician at work"
                 width={640}
                 height={420}
                 className="h-auto w-full"

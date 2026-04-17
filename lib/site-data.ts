@@ -1,11 +1,24 @@
 // lib/site-data.ts
 
 export const CONTACT = {
-  phone1: "415-423-0182",
-  phone2: "925-266-3393",
+  phoneCall: "415-423-0182",
+  phoneText: "925-266-3393",
   email: "office@blocksmithpro.com",
   address: "1449 SOS Drive, Walnut Creek CA 94597",
+  hoursSummary: "Mon–Fri 8am–5pm",
 } as const;
+
+// Business hours in Pacific Time (America/Los_Angeles).
+// day: 0=Sun ... 6=Sat. openHour/closeHour in 24h. null = closed.
+export const HOURS_SCHEDULE = [
+  { day: 0, openHour: null, closeHour: null, emergency: false, label: "Sun" },
+  { day: 1, openHour: 8, closeHour: 17, emergency: false, label: "Mon" },
+  { day: 2, openHour: 8, closeHour: 17, emergency: false, label: "Tue" },
+  { day: 3, openHour: 8, closeHour: 17, emergency: false, label: "Wed" },
+  { day: 4, openHour: 8, closeHour: 17, emergency: false, label: "Thu" },
+  { day: 5, openHour: 8, closeHour: 17, emergency: false, label: "Fri" },
+  { day: 6, openHour: 8, closeHour: 17, emergency: true, label: "Sat" },
+] as const;
 
 export const SOCIAL = {
   instagram: "https://www.instagram.com/bblocksmith/",

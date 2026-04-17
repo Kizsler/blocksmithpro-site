@@ -22,6 +22,11 @@ export default function AnimateOnScroll({
     const el = ref.current;
     if (!el) return;
 
+    if (typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -33,7 +38,15 @@ export default function AnimateOnScroll({
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+
+    // Safety net: reveal after 1.2s in case the observer never fires
+    // (slow devices, layout shifts, or content already above the fold on load).
+    const timeout = window.setTimeout(() => setIsVisible(true), 1200);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(timeout);
+    };
   }, []);
 
   const animClass = isVisible

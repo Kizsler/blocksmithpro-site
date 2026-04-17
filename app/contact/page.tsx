@@ -41,19 +41,22 @@ export default function ContactPage() {
             {/* Phone */}
             <div className="mb-8">
               <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.15em] text-brand-red">
-                Phone
+                Call
               </p>
               <a
-                href={`tel:${CONTACT.phone1}`}
+                href={`tel:${CONTACT.phoneCall}`}
                 className="block text-sm text-gray-700 hover:text-brand-red transition-colors"
               >
-                {CONTACT.phone1}
+                {CONTACT.phoneCall}
               </a>
+              <p className="mt-4 mb-2 text-[10px] font-bold uppercase tracking-[0.15em] text-brand-red">
+                Text
+              </p>
               <a
-                href={`tel:${CONTACT.phone2}`}
+                href={`sms:${CONTACT.phoneText}`}
                 className="block text-sm text-gray-700 hover:text-brand-red transition-colors"
               >
-                {CONTACT.phone2}
+                {CONTACT.phoneText}
               </a>
             </div>
 

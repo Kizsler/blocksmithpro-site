@@ -12,7 +12,7 @@ export default function MobileNav() {
       {/* Hamburger button */}
       <button
         onClick={() => setOpen(!open)}
-        className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5"
+        className="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5"
         aria-label={open ? "Close menu" : "Open menu"}
       >
         <span

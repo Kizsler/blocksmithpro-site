@@ -163,7 +163,7 @@ body {
 /* ===== Sticky header scroll behavior ===== */
 .header-top-bar {
   transition: transform 0.3s ease, opacity 0.3s ease, max-height 0.3s ease;
-  max-height: 80px;
+  max-height: 200px;
   overflow: hidden;
 }
 .header-nav {
