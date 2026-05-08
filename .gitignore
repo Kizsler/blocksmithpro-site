@@ -36,6 +36,19 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local backups (not deployed)
+/.backup-assets/
+
+# playwright + ad-hoc screenshots
+/.playwright-mcp/
+/dev-server-current.png
+/local-after-stash.png
+/local-recovered-*.png
+/mirror-running.png
+/hero-bars-*.png
+/nav-and-rating.png
+/logos-uniform.png
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
+const RECOVERED_HTML_CLASS =
+  "antonio_b47e2d09-module__jHFPkG__variable " +
+  "playfair_display_8b9f05ca-module__VpeZJG__variable " +
+  "barlow_50adef27-module__zJyUna__variable " +
+  "jetbrains_mono_3a70181d-module__P3MDrW__variable";
 
 export const metadata: Metadata = {
   title: "B&B Locksmith | Trusted Bay Area Security & Locksmith Experts",
@@ -25,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="bg-white text-gray-700">
+    <html lang="en" className={RECOVERED_HTML_CLASS}>
+      <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -58,9 +55,7 @@ export default function RootLayout({
             }),
           }}
         />
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

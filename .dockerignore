@@ -5,3 +5,7 @@ Dockerfile
 .dockerignore
 README.md
 .env*.local
+.backup-assets
+.playwright-mcp
+*.png
+!public/**/*.png

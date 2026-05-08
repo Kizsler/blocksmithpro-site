@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./_recovered.css";
 
 @theme {
   --color-brand-red: #E53935;
