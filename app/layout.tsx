@@ -48,7 +48,7 @@ export default function RootLayout({
               priceRange: "$$",
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.9",
+                ratingValue: "5.0",
                 reviewCount: "200",
               },
               url: "https://blocksmithpro.com",

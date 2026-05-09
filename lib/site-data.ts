@@ -329,6 +329,6 @@ export const LOCATIONS = [
 export const STATS = [
   { value: "15+", label: "Years Experience" },
   { value: "1,000+", label: "5-Star Reviews" },
-  { value: "4.9", label: "Yelp Rating" },
+  { value: "5.0", label: "Star Rating" },
   { value: "C-28", label: "Licensed" },
 ] as const;
