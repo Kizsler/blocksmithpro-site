@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const RECOVERED_HTML_CLASS =
   "antonio_b47e2d09-module__jHFPkG__variable " +
@@ -55,7 +57,9 @@ export default function RootLayout({
             }),
           }}
         />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

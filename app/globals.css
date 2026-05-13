@@ -1,10 +1,11 @@
-@import "tailwindcss";
 @import "./_recovered.css";
+@import "tailwindcss";
 
 @theme {
-  --color-brand-red: #E53935;
+  --color-brand-red: #E63946;
   --color-brand-dark: #1A1A1A;
-  --color-brand-darker: #111111;
+  --color-brand-darker: #08080A;
+  --color-brand-cream: #F4F0E6;
   --font-family-sans: "Inter", system-ui, sans-serif;
 }
 
