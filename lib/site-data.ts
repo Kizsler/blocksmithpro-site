@@ -20,6 +20,7 @@ export const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },
+  { label: "WCBFM Gallery", href: "/wcbfm-gallery" },
 ] as const;
 
 export const SERVICES = [
