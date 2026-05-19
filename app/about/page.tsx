@@ -6,14 +6,14 @@ import { STATS } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Prologue | B&B Locksmith",
   description:
-    "Fifteen years securing the Bay Area. A family-run, C-28-licensed crew with over a thousand five-star reviews.",
+    "20+ years securing the Bay Area. A family-run, C-28-licensed crew with over a thousand five-star reviews.",
 };
 
 const VALUES = [
   {
     title: "Experience & Expertise",
     description:
-      "Over 15 years of hands-on locksmith and security experience across the Bay Area. We have seen it all and solved it all.",
+      "Over 20 years of hands-on locksmith and security experience across the Bay Area. We have seen it all and solved it all.",
   },
   {
     title: "Licensed & Insured",
@@ -53,17 +53,11 @@ export default function AboutPage() {
         style={{ backgroundColor: "#1A1A1A", borderColor: "#F4F0E61A" }}
       >
         <div className="mx-auto flex max-w-7xl flex-col justify-center gap-6 px-6 py-20 sm:px-10 lg:py-28">
-          <span
-            className="text-[10px] uppercase tracking-[0.4em]"
-            style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-          >
-            Prologue
-          </span>
           <h1
-            className="mt-6 uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
+            className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
           >
-            Fifteen years.
+            20+ years.
             <br />
             One Bay Area.
           </h1>
@@ -85,14 +79,8 @@ export default function AboutPage() {
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:py-24">
           <div>
-            <span
-              className="text-[10px] uppercase tracking-[0.35em]"
-              style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-            >
-              Act I — The origin
-            </span>
             <h2
-              className="mt-4 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.5rem)]"
+              className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.5rem)]"
               style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
             >
               Family owned.
@@ -104,7 +92,7 @@ export default function AboutPage() {
               style={{ fontFamily: "var(--f-body)", color: "#1A1A1ACC" }}
             >
               <p>
-                Founded by Alex Berger over 15 years ago, B&amp;B Locksmith
+                Founded by Alex Berger over 20 years ago, B&amp;B Locksmith
                 &amp; Security Inc. has grown from a small locksmith operation
                 into the Bay Area&apos;s most trusted full-service security
                 company. As a family-owned business, we treat every customer
@@ -160,14 +148,8 @@ export default function AboutPage() {
         style={{ backgroundColor: "#08080A", borderColor: "#F4F0E61A" }}
       >
         <div className="mx-auto max-w-5xl px-6 py-20 sm:px-10 lg:py-28">
-          <span
-            className="text-[10px] uppercase tracking-[0.4em]"
-            style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-          >
-            Interlude — The credo
-          </span>
           <blockquote
-            className="mt-8 uppercase leading-[0.9] tracking-[-0.01em] text-[clamp(2rem,5vw,4.5rem)]"
+            className="uppercase leading-[0.9] tracking-[-0.01em] text-[clamp(2rem,5vw,4.5rem)]"
             style={{
               fontFamily: "var(--f-italic, var(--f-display))",
               color: "#F4F0E6",
@@ -195,14 +177,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:py-24">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
             <div>
-              <span
-                className="text-[10px] uppercase tracking-[0.35em]"
-                style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-              >
-                Act II — How we work
-              </span>
               <h2
-                className="mt-4 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.5rem)]"
+                className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.5rem)]"
                 style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
               >
                 Six principles
@@ -225,19 +201,6 @@ export default function AboutPage() {
                 className="flex flex-col gap-4 p-8"
                 style={{ backgroundColor: "#FFFFFF" }}
               >
-                <div className="flex items-center justify-between">
-                  <span
-                    className="text-[10px] uppercase tracking-[0.4em]"
-                    style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-                  >
-                    Principle {pad(i + 1)}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="h-px w-8"
-                    style={{ backgroundColor: "#1A1A1A33" }}
-                  />
-                </div>
                 <h3
                   className="uppercase leading-[0.92] text-2xl sm:text-3xl"
                   style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
@@ -284,12 +247,6 @@ export default function AboutPage() {
                 className="flex flex-col items-start justify-between gap-8 p-6 sm:p-8"
                 style={{ backgroundColor: "#F4F0E6" }}
               >
-                <span
-                  className="text-[10px] uppercase tracking-[0.4em]"
-                  style={{ fontFamily: "var(--f-mono)", color: "#08080A66" }}
-                >
-                  No. {pad(i + 1)}
-                </span>
                 <div>
                   <p
                     className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,6vw,5rem)]"
@@ -313,12 +270,6 @@ export default function AboutPage() {
       {/* ===== CTA ===== */}
       <section style={{ backgroundColor: "#08080A" }}>
         <div className="mx-auto flex max-w-5xl flex-col items-start gap-8 px-6 py-20 sm:px-10 lg:py-28">
-          <span
-            className="text-[10px] uppercase tracking-[0.35em]"
-            style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-          >
-            Act III — The call
-          </span>
           <h2
             className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2.5rem,6vw,5rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}

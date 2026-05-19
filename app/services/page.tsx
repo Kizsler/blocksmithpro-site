@@ -20,14 +20,8 @@ export default function ServicesPage() {
         style={{ backgroundColor: "#1A1A1A", borderColor: "#F4F0E61A" }}
       >
         <div className="mx-auto flex max-w-7xl flex-col justify-center gap-6 px-6 py-20 sm:px-10 lg:py-28">
-          <span
-            className="text-[10px] uppercase tracking-[0.35em]"
-            style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-          >
-            Act II — Capabilities
-          </span>
           <h1
-            className="mt-6 uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
+            className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
           >
             Thirteen disciplines.
@@ -90,13 +84,7 @@ export default function ServicesPage() {
                       "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 45%, rgba(0,0,0,0.75) 100%)",
                   }}
                 />
-                <div className="relative flex items-start justify-between">
-                  <span
-                    className="text-[10px] uppercase tracking-[0.35em]"
-                    style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6CC" }}
-                  >
-                    Scene {pad(i + 1)}
-                  </span>
+                <div className="relative flex items-start justify-end">
                   <span
                     aria-hidden="true"
                     className="h-px w-8 transition-all duration-300 group-hover:w-14"
@@ -138,12 +126,6 @@ export default function ServicesPage() {
         style={{ backgroundColor: "#08080A" }}
       >
         <div className="mx-auto flex max-w-5xl flex-col items-start gap-8 px-6 py-20 sm:px-10 lg:py-28">
-          <span
-            className="text-[10px] uppercase tracking-[0.35em]"
-            style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-          >
-            Act III — The call
-          </span>
           <h2
             className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2.5rem,6vw,5rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}

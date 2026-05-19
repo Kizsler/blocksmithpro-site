@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const RECOVERED_HTML_CLASS =
   "antonio_b47e2d09-module__jHFPkG__variable " +
@@ -12,7 +13,7 @@ const RECOVERED_HTML_CLASS =
 export const metadata: Metadata = {
   title: "B&B Locksmith | Trusted Bay Area Security & Locksmith Experts",
   description:
-    "Bay Area's #1 locksmith and commercial security service for over 15 years. Licensed C-28 contractor. Commercial, residential, and automotive locksmith services.",
+    "Bay Area's #1 locksmith and commercial security service for over 20 years. Licensed C-28 contractor. Commercial, residential, and automotive locksmith services.",
   icons: {
     icon: "/images/favicon.png",
   },
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={RECOVERED_HTML_CLASS}>
+    <html lang="en" className={RECOVERED_HTML_CLASS} suppressHydrationWarning>
       <body>
         <script
           type="application/ld+json"
@@ -57,9 +58,41 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Google Analytics */}
+        {GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
         <Header />
         {children}
         <Footer />
+        {/* UserWay Accessibility Widget */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d){
+                var s = d.createElement("script");
+                s.setAttribute("data-account","5GdFmBflq0");
+                s.setAttribute("src","https://cdn.userway.org/widget.js");
+                (d.body || d.head).appendChild(s);
+              })(document)
+            `,
+          }}
+        />
       </body>
     </html>
   );

@@ -23,14 +23,8 @@ export default function ContactPage() {
         style={{ backgroundColor: "#1A1A1A", borderColor: "#F4F0E61A" }}
       >
         <div className="mx-auto flex max-w-7xl flex-col justify-center gap-6 px-6 py-20 sm:px-10 lg:py-28">
-          <span
-            className="text-[10px] uppercase tracking-[0.4em]"
-            style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-          >
-            Act IV — The call
-          </span>
           <h1
-            className="mt-6 uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
+            className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
           >
             Reach us.
@@ -53,14 +47,8 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 lg:grid-cols-[1.5fr_1fr] lg:gap-20 lg:py-24">
           {/* Form column */}
           <div>
-            <span
-              className="text-[10px] uppercase tracking-[0.35em]"
-              style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-            >
-              Scene 01 — The message
-            </span>
             <h2
-              className="mt-4 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
+              className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
               style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
             >
               Tell us what you need
@@ -72,12 +60,6 @@ export default function ContactPage() {
 
           {/* Cue card column */}
           <aside>
-            <span
-              className="text-[10px] uppercase tracking-[0.35em]"
-              style={{ fontFamily: "var(--f-mono)", color: "#1A1A1A66" }}
-            >
-              Scene 02 — Cue card
-            </span>
             <div
               className="mt-4 flex flex-col gap-px"
               style={{ backgroundColor: "#1A1A1A1A" }}

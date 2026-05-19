@@ -81,25 +81,21 @@ export default function Header() {
               </a>
             </div>
 
-            {/* Daily Posts CTA */}
-            <span className="hidden border-2 border-white bg-white px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.15em] text-brand-red sm:block">
-              Daily Posts
-            </span>
           </div>
         </div>
       </div>
 
       {/* Navigation bar */}
-      <nav className="header-nav bg-brand-dark">
+      <nav className="header-nav bg-white border-b border-gray-200">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link href="/">
             <Image
               src="/images/logo.png"
               alt="B&B Locksmith"
-              width={160}
-              height={41}
-              className="h-auto w-[140px] sm:w-[160px]"
+              width={220}
+              height={57}
+              className="h-auto w-[180px] sm:w-[220px]"
             />
           </Link>
 
@@ -109,7 +105,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="nav-link-underline text-xs font-bold uppercase tracking-[0.15em] text-white hover:text-brand-red transition-colors"
+                className="nav-link-underline text-xs font-bold uppercase tracking-[0.15em] text-gray-900 hover:text-brand-red transition-colors"
               >
                 {link.label}
               </Link>

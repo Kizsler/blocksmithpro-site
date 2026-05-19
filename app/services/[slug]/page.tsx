@@ -49,25 +49,6 @@ export default async function ServiceDetailPage({
         style={{ backgroundColor: "#1A1A1A", borderColor: "#F4F0E61A" }}
       >
         <div className="mx-auto flex max-w-7xl flex-col justify-center gap-6 px-6 py-20 sm:px-10 lg:py-28">
-          <div className="flex items-center gap-3">
-            <span
-              className="text-[10px] uppercase tracking-[0.35em]"
-              style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-            >
-              Discipline · {pad(index + 1)}
-            </span>
-            <span
-              aria-hidden="true"
-              className="h-px w-8"
-              style={{ backgroundColor: "#E63946" }}
-            />
-            <span
-              className="text-[10px] uppercase tracking-[0.35em]"
-              style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6CC" }}
-            >
-              of {SERVICES.length}
-            </span>
-          </div>
           <h1
             className="mt-2 uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(2.75rem,7vw,6rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
@@ -123,14 +104,8 @@ export default async function ServiceDetailPage({
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 lg:grid-cols-[1fr_2fr] lg:gap-20 lg:py-24">
           <div>
-            <span
-              className="text-[10px] uppercase tracking-[0.35em]"
-              style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-            >
-              Act I — The work
-            </span>
             <h2
-              className="mt-4 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
+              className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
               style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
             >
               How we do it
@@ -156,14 +131,8 @@ export default async function ServiceDetailPage({
           <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:py-24">
             <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
               <div>
-                <span
-                  className="text-[10px] uppercase tracking-[0.35em]"
-                  style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-                >
-                  Act II — Inclusions
-                </span>
                 <h2
-                  className="mt-4 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
+                  className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
                   style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
                 >
                   What&apos;s on the truck
@@ -187,10 +156,10 @@ export default async function ServiceDetailPage({
                   style={{ backgroundColor: "#1A1A1A" }}
                 >
                   <span
-                    className="shrink-0 text-[10px] uppercase tracking-[0.35em]"
-                    style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
+                    className="shrink-0 text-sm"
+                    style={{ color: "#E63946" }}
                   >
-                    Item {pad(i + 1)}
+                    —
                   </span>
                   <span
                     className="text-sm leading-relaxed"
@@ -262,13 +231,7 @@ export default async function ServiceDetailPage({
                         "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 45%, rgba(0,0,0,0.75) 100%)",
                     }}
                   />
-                  <div className="relative flex items-start justify-between">
-                    <span
-                      className="text-[10px] uppercase tracking-[0.35em]"
-                      style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6CC" }}
-                    >
-                      Scene {pad(rIndex + 1)}
-                    </span>
+                  <div className="relative flex items-start justify-end">
                     <span
                       aria-hidden="true"
                       className="h-px w-8 transition-all duration-300 group-hover:w-14"
@@ -308,12 +271,6 @@ export default async function ServiceDetailPage({
       {/* ===== CTA ===== */}
       <section style={{ backgroundColor: "#08080A" }}>
         <div className="mx-auto flex max-w-5xl flex-col items-start gap-8 px-6 py-20 sm:px-10 lg:py-28">
-          <span
-            className="text-[10px] uppercase tracking-[0.35em]"
-            style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-          >
-            Act III — The call
-          </span>
           <h2
             className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2.5rem,6vw,5rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}

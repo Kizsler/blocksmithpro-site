@@ -16,17 +16,17 @@ export default function MobileNav() {
         aria-label={open ? "Close menu" : "Open menu"}
       >
         <span
-          className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
+          className={`block h-0.5 w-6 bg-gray-900 transition-all duration-300 ${
             open ? "translate-y-2 rotate-45" : ""
           }`}
         />
         <span
-          className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
+          className={`block h-0.5 w-6 bg-gray-900 transition-all duration-300 ${
             open ? "opacity-0" : ""
           }`}
         />
         <span
-          className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
+          className={`block h-0.5 w-6 bg-gray-900 transition-all duration-300 ${
             open ? "-translate-y-2 -rotate-45" : ""
           }`}
         />

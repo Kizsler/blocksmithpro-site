@@ -264,27 +264,35 @@ export const SERVICES = [
 export const TESTIMONIALS = [
   {
     quote:
-      "B&B Locksmith has been my go to locksmith as a property manager for 10 years plus. They are reliable, professional, and always get the job done right.",
-    author: "Alexandra M.",
+      "I needed an extra key for my Subaru. I chose B&B at random after another service never called back. I texted them and they got right back to me. The quote was reasonable for the fob and programming, the work got scheduled for a convenient time.",
+    author: "Pamela Carr",
     rating: 5,
+    source: "Google",
+    date: "4 months ago",
   },
   {
     quote:
-      "I have used B&B over 20 times this year already for a building I managed in Oakland. Their response time and quality of work is outstanding.",
-    author: "J. Lynn",
+      "B&B Locksmith was absolutely phenomenal! I contacted them during the weekend and followed-up with an appointment within a day. The team showed up on time and were professional from beginning to the end. They solved my problems carefully.",
+    author: "CJ Koenig",
     rating: 5,
+    source: "Google",
+    date: "10 months ago",
   },
   {
     quote:
-      "I found B&B Locksmith on Yelp and everything about the experience was great. From scheduling to the actual service, they were top notch.",
-    author: "Leah R.",
+      "B&B Locksmith were awesome from the beginning. I lost my car fob and the dealer quoted me an outrageous price to replace. These guys were the cheapest from other locksmiths I've called and very professional and friendly.",
+    author: "Winona Farris",
     rating: 5,
+    source: "Google",
+    date: "2 years ago",
   },
   {
     quote:
-      "I was a bit skeptical of all of the positive Yelp reviews for B&B Locksmith, but they truly earned every single one. Exceptional service.",
-    author: "Graham D.",
+      "They were one of a few companies that responded to my request on Yelp and had the best price. Aaron called me when on his way and was very professional and extremely personable. He was able to cut a manual key for my car that didn't exist.",
+    author: "Allison White",
     rating: 5,
+    source: "Google",
+    date: "4 years ago",
   },
 ] as const;
 
@@ -297,6 +305,11 @@ export const CLIENT_LOGOS = [
   { name: "Sares Regis Group", src: "/images/logos/sare-raise-group.png" },
   { name: "ZipRent", src: "/images/logos/zip-rent.png" },
   { name: "Dior", src: "/images/logos/dior.svg" },
+  { name: "Herc Rentals", src: "/images/logos/herc-rentals.svg" },
+  { name: "Equinox", src: "/images/logos/equinox.svg" },
+  { name: "Discord", src: "/images/logos/discord.svg" },
+  { name: "Twist Bio", src: "/images/logos/twist-bioscience.svg" },
+  { name: "CHP", src: "/images/logos/chp.svg" },
 ] as const;
 
 export const LOCATIONS = [
@@ -327,8 +340,23 @@ export const LOCATIONS = [
 ] as const;
 
 export const STATS = [
-  { value: "15+", label: "Years Experience" },
+  { value: "20+", label: "Years Experience" },
   { value: "1,000+", label: "5-Star Reviews" },
   { value: "5.0", label: "Star Rating" },
   { value: "C-28", label: "Licensed" },
+] as const;
+
+export const SERVICE_CITIES = [
+  { name: "San Francisco", href: "/locations/san-francisco" },
+  { name: "San Jose", href: "/locations/san-jose" },
+  { name: "Fremont", href: "/locations/fremont" },
+  { name: "Walnut Creek", href: "/locations/walnut-creek" },
+  { name: "Oakland", href: "/contact" },
+  { name: "Berkeley", href: "/contact" },
+  { name: "Concord", href: "/contact" },
+  { name: "San Ramon", href: "/contact" },
+  { name: "Dublin", href: "/contact" },
+  { name: "Pleasanton", href: "/contact" },
+  { name: "Livermore", href: "/contact" },
+  { name: "Richmond", href: "/contact" },
 ] as const;

@@ -20,7 +20,7 @@ export async function generateMetadata({
   }
   return {
     title: `Locksmith in ${location.name} | B&B Locksmith`,
-    description: `Professional locksmith and security services in ${location.name}. Licensed C-28 contractor with over 15 years of trusted service.`,
+    description: `Professional locksmith and security services in ${location.name}. Licensed C-28 contractor with over 20 years of trusted service.`,
   };
 }
 
@@ -47,25 +47,6 @@ export default async function LocationPage({
         style={{ backgroundColor: "#1A1A1A", borderColor: "#F4F0E61A" }}
       >
         <div className="mx-auto flex max-w-7xl flex-col justify-center gap-6 px-6 py-20 sm:px-10 lg:py-28">
-          <div className="flex items-center gap-3">
-            <span
-              className="text-[10px] uppercase tracking-[0.4em]"
-              style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-            >
-              Zone {pad(zoneIndex + 1)}
-            </span>
-            <span
-              aria-hidden="true"
-              className="h-px w-8"
-              style={{ backgroundColor: "#E63946" }}
-            />
-            <span
-              className="text-[10px] uppercase tracking-[0.4em]"
-              style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6CC" }}
-            >
-              Bay Area · 24/7
-            </span>
-          </div>
           <h1
             className="mt-4 uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
@@ -105,12 +86,6 @@ export default async function LocationPage({
                 className="flex flex-col items-start justify-between gap-6 p-6 sm:p-8"
                 style={{ backgroundColor: "#F4F0E6" }}
               >
-                <span
-                  className="text-[10px] uppercase tracking-[0.4em]"
-                  style={{ fontFamily: "var(--f-mono)", color: "#08080A66" }}
-                >
-                  No. {pad(i + 1)}
-                </span>
                 <div>
                   <p
                     className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(2.25rem,5vw,4rem)]"
@@ -186,13 +161,7 @@ export default async function LocationPage({
                       "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 45%, rgba(0,0,0,0.75) 100%)",
                   }}
                 />
-                <div className="relative flex items-start justify-between">
-                  <span
-                    className="text-[10px] uppercase tracking-[0.35em]"
-                    style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6CC" }}
-                  >
-                    Scene {pad(i + 1)}
-                  </span>
+                <div className="relative flex items-start justify-end">
                   <span
                     aria-hidden="true"
                     className="h-px w-8 transition-all duration-300 group-hover:w-14"
@@ -222,12 +191,6 @@ export default async function LocationPage({
       {/* ===== CTA ===== */}
       <section style={{ backgroundColor: "#08080A" }}>
         <div className="mx-auto flex max-w-5xl flex-col items-start gap-8 px-6 py-20 sm:px-10 lg:py-28">
-          <span
-            className="text-[10px] uppercase tracking-[0.35em]"
-            style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
-          >
-            Act III — The call
-          </span>
           <h2
             className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2.5rem,6vw,5rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}

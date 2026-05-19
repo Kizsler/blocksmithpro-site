@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { CONTACT, SOCIAL, NAV_LINKS, SERVICES, LOCATIONS } from "@/lib/site-data";
+import { CONTACT, SOCIAL, NAV_LINKS, SERVICES, SERVICE_CITIES } from "@/lib/site-data";
 
 export default function Footer() {
   return (
@@ -107,13 +107,13 @@ export default function Footer() {
               Service Areas
             </h3>
             <ul className="space-y-2">
-              {LOCATIONS.map((loc) => (
-                <li key={loc.slug}>
+              {SERVICE_CITIES.map((city) => (
+                <li key={city.name}>
                   <Link
-                    href={`/locations/${loc.slug}`}
+                    href={city.href}
                     className="text-sm hover:text-white transition-colors"
                   >
-                    {loc.name}
+                    {city.name}
                   </Link>
                 </li>
               ))}
@@ -160,8 +160,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} B&amp;B Locksmith. All rights
-            reserved.
+            &copy; {new Date().getFullYear()}{" "}B&amp;B Locksmith. All rights reserved.
           </p>
         </div>
       </div>
