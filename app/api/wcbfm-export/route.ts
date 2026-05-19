@@ -1,9 +1,9 @@
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const { data: leads, error } = await supabase
+  const { data: leads, error } = await getSupabase()
     .from("wcbfm_leads")
     .select("first_name, company, email, phone, created_at")
     .order("created_at", { ascending: true });

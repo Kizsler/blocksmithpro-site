@@ -1,6 +1,6 @@
 "use server";
 
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 export type LeadFormState = {
   success: boolean;
@@ -23,7 +23,7 @@ export async function submitLead(
     return { success: false, error: "Please enter a valid email address." };
   if (!phone) return { success: false, error: "Phone number is required." };
 
-  const { error } = await supabase.from("wcbfm_leads").insert({
+  const { error } = await getSupabase().from("wcbfm_leads").insert({
     first_name: firstName,
     company,
     email,

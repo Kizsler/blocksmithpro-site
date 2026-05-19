@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function WCBFMAdminPage() {
-  const { data: leads, error } = await supabase
+  const { data: leads, error } = await getSupabase()
     .from("wcbfm_leads")
     .select("*")
     .order("created_at", { ascending: false });
