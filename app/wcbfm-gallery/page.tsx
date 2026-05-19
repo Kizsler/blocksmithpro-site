@@ -35,7 +35,7 @@ export default function WCBFMGalleryPage() {
           Check back May 21st.
         </p>
         <Link
-          href="/wcbfm"
+          href="/contact"
           className="group mt-10 inline-flex items-center gap-3 border px-7 py-4 text-[11px] uppercase tracking-[0.3em] transition-colors"
           style={{
             borderColor: "#E63946",
@@ -44,7 +44,7 @@ export default function WCBFMGalleryPage() {
             fontFamily: "var(--f-mono)",
           }}
         >
-          See the DoorBird page
+          Contact Us
           <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
         </Link>
       </section>
