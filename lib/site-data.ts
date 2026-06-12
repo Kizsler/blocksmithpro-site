@@ -615,6 +615,56 @@ export const LOCATIONS = [
       },
     ],
   },
+  {
+    slug: "livermore",
+    name: "Livermore",
+    description:
+      "B&B Locksmith works Livermore from downtown's First Street storefronts and tasting rooms out to the ranch properties past the vineyards — locks, gates, safes, and the 24/7 line for when a key quits at the worst time.",
+    body:
+      "Livermore stretches our trucks across more ground than most cities we serve — and more kinds of doors. Downtown, the First Street and railroad-district storefronts and tasting rooms use us for storefront locks, panic hardware, and rekeying between staff seasons. The neighborhoods bring deadbolts, smart locks, and move-in rekeying, while properties out toward the vineyards and ranchland add gate locks, padlock systems, and outbuilding security that suburban locksmiths rarely touch. Wherever the job sits, the rules hold: 24/7 dispatch out of Walnut Creek, non-destructive entry first on lockouts, and a written quote you approve before the work begins.",
+    faq: [
+      {
+        question: "How fast can a locksmith reach Livermore?",
+        answer:
+          "B&B Locksmith dispatches to Livermore 24/7 down the 680/580 corridor from Walnut Creek. Livermore sits at the far edge of our area-wide under-30-minute average, so call 415-423-0182 and dispatch will give you an honest ETA for your address — downtown, Springtown, or out past the vineyards — before the truck rolls.",
+      },
+      {
+        question: "Do you service wineries and tasting rooms?",
+        answer:
+          "Yes. Livermore Valley tasting rooms and the storefronts around First Street use B&B Locksmith for storefront deadbolts, panic and exit hardware, rekeying after seasonal staff changes, and master keying across tasting room, production, and storage spaces. We're a licensed C-28 contractor, bonded and insured, with documentation available for your operator or landlord.",
+      },
+      {
+        question: "Can you handle gates, padlocks, and outbuildings on larger properties?",
+        answer:
+          "That's regular Livermore work for us. We key gate locks and padlocks into the same system as the house so one key runs the property, service and replace gate hardware, and secure barns, shops, and outbuildings. If you're tired of a carabiner full of mismatched padlock keys, one visit consolidates it.",
+      },
+    ],
+  },
+  {
+    slug: "richmond",
+    name: "Richmond",
+    description:
+      "From Point Richmond's historic storefronts to the marina, the Hilltop area, and the industrial corridor, B&B Locksmith covers Richmond with commercial, residential, and 24/7 emergency service.",
+    body:
+      "Richmond's mix runs wider than most Bay Area cities: century-old storefronts and homes in Point Richmond, working waterfront at the marina, warehouses and shops along the industrial corridor, and residential neighborhoods from the Richmond Annex up to Hilltop. For businesses that means storefront hardware, panic devices, roll-up door locks, padlock systems, and master keying that keeps a yard or warehouse under one key plan. For homeowners it's deadbolt and smart-lock upgrades, rekeying at move-in, and security hardware chosen for the door it's actually going on. The 24/7 emergency line covers the whole city — home, business, and vehicle lockouts, non-destructive entry first, written quote before work.",
+    faq: [
+      {
+        question: "How fast can a locksmith get to Richmond?",
+        answer:
+          "B&B Locksmith dispatches to Richmond 24/7 from Walnut Creek. Area-wide our average ETA is under 30 minutes; call 415-423-0182 and dispatch will quote a real ETA for your Richmond address — Point Richmond, the Annex, Hilltop, or the marina — before the truck rolls.",
+      },
+      {
+        question: "Do you secure warehouses and industrial properties in Richmond?",
+        answer:
+          "Yes. Richmond's industrial corridor is core commercial territory for B&B Locksmith: roll-up and overhead door locks, high-security padlock systems keyed to your master plan, panic and exit hardware, and access control for shops and yards. We're a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2009.",
+      },
+      {
+        question: "Can you upgrade security on my Richmond home?",
+        answer:
+          "Yes — and we'll match the hardware to the house, whether that's a 1910 Point Richmond Victorian with a mortise lock worth preserving or a newer home ready for a smart lock. Move-in rekeying makes every unknown key useless in one visit; Grade-1 deadbolts and reinforced strikes do more for most doors than any gadget. You get straight recommendations and a written quote before work begins.",
+      },
+    ],
+  },
 ] as const;
 
 export const STATS = [
@@ -635,6 +685,6 @@ export const SERVICE_CITIES = [
   { name: "San Ramon", href: "/locations/san-ramon" },
   { name: "Dublin", href: "/locations/dublin" },
   { name: "Pleasanton", href: "/locations/pleasanton" },
-  { name: "Livermore", href: "/contact" },
-  { name: "Richmond", href: "/contact" },
+  { name: "Livermore", href: "/locations/livermore" },
+  { name: "Richmond", href: "/locations/richmond" },
 ] as const;

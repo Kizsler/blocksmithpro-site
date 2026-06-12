@@ -31,6 +31,15 @@ San Francisco, San Jose, Fremont, Walnut Creek, Oakland, Berkeley, Concord, San 
 - [San Jose](https://blocksmithpro.com/locations/san-jose)
 - [Fremont](https://blocksmithpro.com/locations/fremont)
 - [Walnut Creek](https://blocksmithpro.com/locations/walnut-creek)
+- [Oakland](https://blocksmithpro.com/locations/oakland)
+- [Berkeley](https://blocksmithpro.com/locations/berkeley)
+- [Concord](https://blocksmithpro.com/locations/concord)
+- [San Ramon](https://blocksmithpro.com/locations/san-ramon)
+- [Dublin](https://blocksmithpro.com/locations/dublin)
+- [Pleasanton](https://blocksmithpro.com/locations/pleasanton)
+- [Livermore](https://blocksmithpro.com/locations/livermore)
+- [Richmond](https://blocksmithpro.com/locations/richmond)
+- [Rekeying service](https://blocksmithpro.com/services/rekeying)
 
 ## About
 - [About the company](https://blocksmithpro.com/about): family-run, founded 2009, led by Alex Berger
