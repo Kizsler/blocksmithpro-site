@@ -101,6 +101,14 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/emergency-locksmith-bay-area"
+                  className="text-sm hover:text-white transition-colors"
+                >
+                  Emergency Locksmith
+                </Link>
+              </li>
             </ul>
 
             <h3 className="mb-4 mt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red">

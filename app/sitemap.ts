@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/about`, lastModified: CONTENT_UPDATED },
     { url: `${baseUrl}/contact`, lastModified: CONTENT_UPDATED },
     { url: `${baseUrl}/blog`, lastModified: CONTENT_UPDATED },
+    { url: `${baseUrl}/emergency-locksmith-bay-area`, lastModified: CONTENT_UPDATED },
   ];
 
   const servicePages: MetadataRoute.Sitemap = SERVICES.map((service) => ({

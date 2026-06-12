@@ -131,6 +131,18 @@ export function locationSchema(location: { slug: string; name: string }) {
   };
 }
 
+export function faqSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+}
+
 export function blogPostingSchema(post: BlogPost) {
   return {
     "@context": "https://schema.org",
