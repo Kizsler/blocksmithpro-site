@@ -14,6 +14,10 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# SITE_ENV must be present at BUILD time so robots.txt / meta robots are
+# baked correctly. Empty for production; staging passes --build-arg SITE_ENV=staging.
+ARG SITE_ENV=""
+ENV SITE_ENV=$SITE_ENV
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
