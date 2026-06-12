@@ -58,7 +58,13 @@ const nextConfig: NextConfig = {
       { source: "/commercial-locksmith-:city", destination: "/services/commercial-locksmith", permanent: true },
       { source: "/residential-locksmith-:city", destination: "/services/residential-locksmith", permanent: true },
       { source: "/automotive-locksmith-:city", destination: "/services/automotive-locksmith", permanent: true },
-      { source: "/emergency-locksmith-:city", destination: "/contact", permanent: true },
+      // NOTE: no wildcard here — "/emergency-locksmith-:city" would also match
+      // and shadow the real page at /emergency-locksmith-bay-area.
+      { source: "/emergency-locksmith-san-francisco", destination: "/emergency-locksmith-bay-area", permanent: true },
+      { source: "/emergency-locksmith-san-jose", destination: "/emergency-locksmith-bay-area", permanent: true },
+      { source: "/emergency-locksmith-walnut-creek", destination: "/emergency-locksmith-bay-area", permanent: true },
+      { source: "/emergency-locksmith-fremont", destination: "/emergency-locksmith-bay-area", permanent: true },
+      { source: "/emergency-locksmith-oakland", destination: "/emergency-locksmith-bay-area", permanent: true },
       { source: "/lock-rekeying-:city", destination: "/services/residential-locksmith", permanent: true },
       { source: "/lock-repair-:city", destination: "/services/residential-locksmith", permanent: true },
       { source: "/safe-installation-opening-:city", destination: "/services/safe-installation", permanent: true },
