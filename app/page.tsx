@@ -34,7 +34,7 @@ const PROOF_STATS = [
   { num: "1,000+", label: "Five-star reviews", sub: "Yelp · Google", red: false },
   { num: "5.0★", label: "Average Yelp rating", sub: "200+ Google reviews", red: false },
   { num: "< 30", label: "Min average ETA", sub: "Bay Area dispatch", red: true },
-  { num: "12", label: "Service disciplines", sub: "One team", red: false },
+  { num: "13", label: "Service disciplines", sub: "One team", red: false },
   { num: "24/7", label: "Emergency response", sub: "We pick up", red: false },
   { num: "C-28", label: "Licensed contractor", sub: "Bonded · Insured", red: true },
   { num: "50+", label: "Technology partners", sub: "50+ national brands", red: false },

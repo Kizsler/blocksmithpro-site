@@ -68,6 +68,50 @@ export const SERVICES = [
     icon: "home",
   },
   {
+    slug: "rekeying",
+    image: "/images/services/residential-locksmith.jpg",
+    title: "Rekeying",
+    description:
+      "Lock rekeying for homes, businesses, and rentals across the Bay Area — every old key stops working, your hardware stays.",
+    detail:
+      "Rekeying changes the pins inside your existing lock so old keys no longer work — without replacing the hardware. It's the right move after moving into a new home, between tenants, after a break-in or lost keys, or when too many copies of a key are floating around. B&B Locksmith rekeys standard door locks, deadbolts, commercial cylinders, and master key systems on-site across the Bay Area. Your technician inspects each lock first; if the hardware is worn or damaged we'll tell you straight whether rekeying or replacement is the better spend. Most homes are done in a single visit, and every lock can be keyed to a single key so one key runs the whole house. You approve the written quote before any work begins.",
+    features: [
+      "Whole-Home Rekeying",
+      "Move-In Rekeying",
+      "Tenant Turnover Rekeying",
+      "Post-Break-In Rekeying",
+      "Key Matching (One Key, Every Door)",
+      "Deadbolt Rekeying",
+      "Commercial Cylinder Rekeying",
+      "Master Key System Rekeying",
+      "Lost Key Lock Changes",
+      "Emergency Rekeying",
+    ],
+    icon: "home",
+    faq: [
+      {
+        question: "How much does it cost to rekey a lock in the Bay Area?",
+        answer:
+          "Cost depends on how many locks you have, the lock type, and whether any hardware needs service — which is why B&B Locksmith gives you a written quote on-site before any work begins. Rekeying is almost always significantly cheaper than replacing locks, because your existing hardware stays on the door and only the pins inside the cylinder change.",
+      },
+      {
+        question: "Should I rekey or replace my locks when I move into a new home?",
+        answer:
+          "Rekey, in most cases. When you move in, you have no idea how many copies of the old key exist — previous owners, their relatives, contractors, neighbors. Rekeying makes every one of those keys useless in a single visit, and B&B Locksmith can key every door to one new key while we're there. Replacement only makes sense if the existing hardware is worn, damaged, or you want to upgrade to higher-security or smart locks.",
+      },
+      {
+        question: "How long does rekeying take?",
+        answer:
+          "A typical single-family home — four to six locks — is usually done in well under an hour once the technician is at the door. B&B Locksmith rekeys on-site from the truck, so there's no taking your locks away or second appointment. Larger jobs like apartment turnovers or commercial master key systems take longer and are quoted up front.",
+      },
+      {
+        question: "Can all my locks be keyed to one key?",
+        answer:
+          "Usually, yes. If your locks are the same brand or compatible keyways, B&B Locksmith can key every exterior door to a single key — one key for the front door, back door, garage entry, and side gate. If you have mixed brands we'll tell you which ones can be matched and what it would take to bring the rest in line.",
+      },
+    ],
+  },
+  {
     slug: "automotive-locksmith",
     image: "/images/services/automotive-locksmith.jpg",
     title: "Automotive Service",

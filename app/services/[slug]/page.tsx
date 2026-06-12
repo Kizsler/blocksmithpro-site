@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SERVICES } from "@/lib/site-data";
 import JsonLd from "@/components/JsonLd";
-import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return SERVICES.map((service) => ({ slug: service.slug }));
@@ -51,6 +51,7 @@ export default async function ServiceDetailPage({
   }
 
   const related = SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
+  const faqs = "faq" in service ? service.faq : undefined;
 
   return (
     <main style={{ backgroundColor: "#F4F0E6", color: "#1A1A1A" }}>
@@ -61,6 +62,7 @@ export default async function ServiceDetailPage({
             { name: "Services", path: "/services" },
             { name: service.title, path: `/services/${service.slug}` },
           ]),
+          ...(faqs ? [faqSchema([...faqs])] : []),
         ]}
       />
       {/* ===== HERO ===== */}
@@ -187,6 +189,41 @@ export default async function ServiceDetailPage({
                   >
                     {feature}
                   </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== FAQ ===== */}
+      {faqs && (
+        <section
+          className="relative border-b"
+          style={{ backgroundColor: "#F4F0E6", borderColor: "#1A1A1A1A" }}
+        >
+          <div className="mx-auto max-w-4xl px-6 py-16 sm:px-10 lg:py-24">
+            <h2
+              className="mb-12 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
+              style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
+            >
+              Common questions
+            </h2>
+            <div className="space-y-10">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3
+                    className="mb-3 text-lg font-semibold sm:text-xl"
+                    style={{ fontFamily: "var(--f-body)", color: "#1A1A1A" }}
+                  >
+                    {faq.question}
+                  </h3>
+                  <p
+                    className="text-base leading-relaxed"
+                    style={{ fontFamily: "var(--f-body)", color: "#1A1A1ACC" }}
+                  >
+                    {faq.answer}
+                  </p>
                 </div>
               ))}
             </div>
