@@ -76,6 +76,9 @@ const nextConfig: NextConfig = {
       { source: "/access-control-systems-:city", destination: "/services/access-control", permanent: true },
       { source: "/buzzer-systems-:city", destination: "/services/buzzer-systems", permanent: true },
 
+      // GSC shows this legacy URL spiking in impressions (June 2026) — it was 404ing
+      { source: "/what-to-do-if-key-breaks-inside-lock", destination: "/emergency-locksmith-bay-area", permanent: true },
+
       // ── Old blog post slugs → blog index ─────────────────────────────────
       { source: "/blog/locksmith-services-in-san-francisco-ca", destination: "/blog", permanent: true },
       { source: "/blog/locksmith-services-in-san-jose-ca", destination: "/blog", permanent: true },
