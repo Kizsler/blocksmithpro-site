@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { SERVICES } from "@/lib/site-data";
+import { SERVICES, CONTACT } from "@/lib/site-data";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 
@@ -52,6 +52,7 @@ export default async function ServiceDetailPage({
 
   const related = SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
   const faqs = "faq" in service ? service.faq : undefined;
+  const isEmergency = "isEmergency" in service && service.isEmergency;
 
   return (
     <main style={{ backgroundColor: "#F4F0E6", color: "#1A1A1A" }}>
@@ -336,24 +337,48 @@ export default async function ServiceDetailPage({
             <br />
             One call away.
           </h2>
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-3 border px-7 py-4 text-[11px] uppercase tracking-[0.3em] transition-colors"
-            style={{
-              borderColor: "#E63946",
-              backgroundColor: "#E63946",
-              color: "#F4F0E6",
-              fontFamily: "var(--f-mono)",
-            }}
-          >
-            Request a free assessment
-            <span
-              aria-hidden="true"
-              className="transition-transform group-hover:translate-x-1"
+          {isEmergency ? (
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href={`tel:${CONTACT.phone1}`}
+                className="group inline-flex items-center gap-3 border px-7 py-4 text-[11px] uppercase tracking-[0.3em] transition-colors"
+                style={{
+                  borderColor: "#E63946",
+                  backgroundColor: "#E63946",
+                  color: "#F4F0E6",
+                  fontFamily: "var(--f-mono)",
+                }}
+              >
+                ☎ Call {CONTACT.phone1} now
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] hover:opacity-70 transition-opacity"
+                style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6CC" }}
+              >
+                Not urgent? Request a free assessment →
+              </Link>
+            </div>
+          ) : (
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-3 border px-7 py-4 text-[11px] uppercase tracking-[0.3em] transition-colors"
+              style={{
+                borderColor: "#E63946",
+                backgroundColor: "#E63946",
+                color: "#F4F0E6",
+                fontFamily: "var(--f-mono)",
+              }}
             >
-              →
-            </span>
-          </Link>
+              Request a free assessment
+              <span
+                aria-hidden="true"
+                className="transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </Link>
+          )}
         </div>
       </section>
     </main>

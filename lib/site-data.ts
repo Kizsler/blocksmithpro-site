@@ -44,6 +44,29 @@ export const SERVICES = [
       "Emergency Lockout Service",
     ],
     icon: "building",
+    isEmergency: true,
+    faq: [
+      {
+        question: "Do you work with property managers and multi-unit buildings?",
+        answer:
+          "Yes. B&B Locksmith handles tenant-turnover rekeying, master key system design, and ongoing hardware service for multi-unit residential and commercial portfolios across the Bay Area. Property managers can reach the same dispatch line for one-off jobs or set up recurring service — one vendor, every building, with a written quote before each job.",
+      },
+      {
+        question: "Can you set up one key that opens everything in our office?",
+        answer:
+          "Yes — that's a master key system. B&B Locksmith designs keying hierarchies so ownership carries one master key while staff keys open only the doors they should. We build them on restricted keyways when key control matters, so copies can't be cut at a hardware store. Existing locks can usually be rekeyed into the system without replacing hardware.",
+      },
+      {
+        question: "Do you meet commercial vendor and insurance requirements?",
+        answer:
+          "B&B Locksmith & Security Inc. is a licensed C-28 contractor, bonded and insured, and has served Bay Area commercial clients since 2009. If your vendor onboarding needs license or insurance documentation, ask when you book and we'll provide what your facilities or compliance team requires.",
+      },
+      {
+        question: "Can you service panic bars and fire-exit hardware?",
+        answer:
+          "Yes. We install and repair panic bars, exit devices, door closers, and the related commercial door hardware that life-safety codes depend on. If an exit device is sticking, failing to latch, or has been propped or chained (a code violation), we'll get it operating correctly and flag anything an inspector would.",
+      },
+    ],
   },
   {
     slug: "residential-locksmith",
@@ -66,6 +89,29 @@ export const SERVICES = [
       "Emergency Service",
     ],
     icon: "home",
+    isEmergency: true,
+    faq: [
+      {
+        question: "Do you handle home lockouts 24/7?",
+        answer:
+          "Yes. B&B Locksmith runs a 24/7 emergency line with an average ETA under 30 minutes across our Bay Area service area. Call 415-423-0182 any hour and dispatch will give you a real ETA for your address. Have photo ID or proof of residence ready — our technicians verify you live there before opening the door, which protects you as much as it protects the property.",
+      },
+      {
+        question: "Can you open my door without damaging the lock?",
+        answer:
+          "In most cases, yes. B&B Locksmith uses non-destructive entry techniques first — picking, bypassing, or decoding the lock so it keeps working after the door is open. Drilling is the last resort, used only when a lock has failed internally or is a high-security cylinder designed to resist everything else, and we'll tell you before it comes to that.",
+      },
+      {
+        question: "Should I get a smart lock or stick with a deadbolt?",
+        answer:
+          "Both, usually. A quality Grade-1 deadbolt is still the backbone of home security; a smart lock adds convenience — codes for guests, remote unlocking, activity logs. B&B Locksmith installs and services August, Yale, Schlage, and Kwikset smart locks and will tell you honestly whether your door, frame, and Wi-Fi setup will support the model you're considering before you buy it.",
+      },
+      {
+        question: "How much does a residential locksmith visit cost?",
+        answer:
+          "It depends on the work — a lockout, a rekey, and a full hardware upgrade are very different jobs. B&B Locksmith quotes the price with you at the door before any work begins, so there are no surprises when the job is done. Rekeying several locks in one visit costs less per lock than separate trips, so it's worth handling everything at once.",
+      },
+    ],
   },
   {
     slug: "rekeying",
@@ -132,6 +178,29 @@ export const SERVICES = [
       "Emergency Service",
     ],
     icon: "car",
+    isEmergency: true,
+    faq: [
+      {
+        question: "I'm locked out of my car — how fast can you get to me?",
+        answer:
+          "B&B Locksmith dispatches 24/7 across the Bay Area with an average ETA under 30 minutes. Call 415-423-0182, tell dispatch where the car is (parking garages and trailheads included), and you'll get a real ETA before the truck rolls. We use non-destructive entry tools, so your door and window come through untouched.",
+      },
+      {
+        question: "Can you make a car key if I lost the original?",
+        answer:
+          "Yes. B&B Locksmith cuts keys by code and programs transponder chips, smart keys, and fobs on the truck for most makes and models. You'll need ID and proof of ownership, like the registration in the glovebox. The whole job happens where your car is parked — no original key needed.",
+      },
+      {
+        question: "Do I have to tow my car to the dealership for a replacement key?",
+        answer:
+          "Usually not. A mobile locksmith programs the new key where the car sits, which means no tow fee and no days-long dealer wait — and locksmith pricing typically comes in under the dealership for the same key. A small number of very new or exotic models do require dealer equipment; if yours is one of them, we'll tell you upfront instead of experimenting on your car.",
+      },
+      {
+        question: "My ignition won't turn — is it the key or the ignition?",
+        answer:
+          "It can be either: a worn key, a failing ignition cylinder, or debris in the keyway. B&B Locksmith diagnoses before replacing anything — sometimes a freshly cut key by code solves what looks like an ignition failure. If the cylinder itself is worn, we repair or replace it on-site and cut keys to match.",
+      },
+    ],
   },
   {
     slug: "security-consulting",
