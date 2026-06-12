@@ -3,10 +3,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SERVICES } from "@/lib/site-data";
+import JsonLd from "@/components/JsonLd";
+import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return SERVICES.map((service) => ({ slug: service.slug }));
 }
+
+// "safe-installation" → "Safe Installation" — searcher vocabulary for titles,
+// while service.title keeps the on-page brand voice.
+const keywordTitle = (slug: string) =>
+  slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 
 export async function generateMetadata({
   params,
@@ -19,8 +29,9 @@ export async function generateMetadata({
     return { title: "Discipline not found | B&B Locksmith" };
   }
   return {
-    title: `${service.title} | B&B Locksmith`,
+    title: `${keywordTitle(service.slug)} Bay Area | B&B Locksmith`,
     description: service.description,
+    alternates: { canonical: `/services/${service.slug}` },
   };
 }
 
@@ -43,6 +54,15 @@ export default async function ServiceDetailPage({
 
   return (
     <main style={{ backgroundColor: "#F4F0E6", color: "#1A1A1A" }}>
+      <JsonLd
+        data={[
+          serviceSchema(service),
+          breadcrumbSchema([
+            { name: "Services", path: "/services" },
+            { name: service.title, path: `/services/${service.slug}` },
+          ]),
+        ]}
+      />
       {/* ===== HERO ===== */}
       <section
         className="relative overflow-hidden border-b"

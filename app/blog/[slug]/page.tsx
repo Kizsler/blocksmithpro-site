@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPost } from "@/lib/blog";
+import JsonLd from "@/components/JsonLd";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   const posts = getAllPosts();
@@ -21,6 +23,13 @@ export async function generateMetadata({
   return {
     title: `${post.title} | B&B Locksmith`,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      publishedTime: post.date,
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 
@@ -112,6 +121,15 @@ export default async function BlogPostPage({
 
   return (
     <main style={{ backgroundColor: "#F4F0E6", color: "#1A1A1A" }}>
+      <JsonLd
+        data={[
+          blogPostingSchema(post),
+          breadcrumbSchema([
+            { name: "Field Notes", path: "/blog" },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        ]}
+      />
       {/* ===== HERO ===== */}
       <section
         className="relative overflow-hidden border-b"

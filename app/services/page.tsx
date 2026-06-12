@@ -4,9 +4,10 @@ import Image from "next/image";
 import { SERVICES } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Capabilities | B&B Locksmith",
+  title: "Locksmith Services Bay Area | B&B Locksmith",
   description:
-    "Thirteen disciplines under one roof — commercial, residential, automotive, access control, and the security infrastructure behind them.",
+    "Commercial, residential, and automotive locksmith services across the Bay Area — access control, smart locks, safes, intercoms, and the security infrastructure behind them.",
+  alternates: { canonical: "/services" },
 };
 
 const pad = (n: number) => String(n).padStart(2, "0");

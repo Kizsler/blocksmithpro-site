@@ -3,9 +3,10 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Field Notes | B&B Locksmith",
+  title: "Locksmith Tips & Security Advice | B&B Locksmith Field Notes",
   description:
-    "Notes from the field — security insights, lock-out playbooks, and Bay Area locksmith dispatches.",
+    "Security insights, lock-out playbooks, and Bay Area locksmith advice from the B&B Locksmith field team.",
+  alternates: { canonical: "/blog" },
 };
 
 const pad = (n: number) => String(n).padStart(2, "0");

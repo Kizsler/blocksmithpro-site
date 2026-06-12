@@ -10,11 +10,14 @@ import {
   SOCIAL,
   SERVICE_CITIES,
 } from "@/lib/site-data";
+import JsonLd from "@/components/JsonLd";
+import { homeBusinessSchema, websiteSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "B&B Locksmith & Security | Bay Area Locksmith Since 2009",
   description:
     "Professional locksmith and security services across the Bay Area. Licensed C-28 contractor with 20+ years of experience, over 1,000 five-star reviews, and 24/7 emergency response.",
+  alternates: { canonical: "/" },
 };
 
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -80,6 +83,7 @@ export default function Home() {
 
   return (
     <main style={{ backgroundColor: "#FFFFFF", color: "#1A1A1A" }}>
+      <JsonLd data={[homeBusinessSchema(), websiteSchema()]} />
       {/* ===== HERO ===== */}
       <section className="relative isolate">
         <div className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
@@ -89,11 +93,11 @@ export default function Home() {
             muted
             loop
             playsInline
-            poster="/images/why-us-sparks.jpg"
+            poster="/images/hero-poster.jpg"
             aria-hidden="true"
           >
-            <source src="/images/hero-video.mp4" type="video/mp4; codecs=avc1.4d401f" />
             <source src="/images/hero-video.webm" type="video/webm" />
+            <source src="/images/hero-video.mp4" type="video/mp4; codecs=avc1.4d401f" />
           </video>
           <div
             aria-hidden="true"

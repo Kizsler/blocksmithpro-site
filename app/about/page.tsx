@@ -4,9 +4,10 @@ import Link from "next/link";
 import { STATS } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Prologue | B&B Locksmith",
+  title: "About B&B Locksmith | Licensed Bay Area Locksmith Since 2009",
   description:
-    "20+ years securing the Bay Area. A family-run, C-28-licensed crew with over a thousand five-star reviews.",
+    "A family-run, C-28-licensed Bay Area locksmith and security crew with over a thousand five-star reviews, securing homes and businesses since 2009.",
+  alternates: { canonical: "/about" },
 };
 
 const VALUES = [

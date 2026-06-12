@@ -4,6 +4,36 @@ const nextConfig: NextConfig = {
   output: "standalone",
   async redirects() {
     return [
+      // ── Canonical host: www → apex ────────────────────────────────────────
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.blocksmithpro.com" }],
+        destination: "https://blocksmithpro.com/:path*",
+        permanent: true,
+      },
+
+      // ── Short vanity URLs → canonical /services/* pages ──────────────────
+      { source: "/commercial-locksmith", destination: "/services/commercial-locksmith", permanent: true },
+      { source: "/residential-locksmith", destination: "/services/residential-locksmith", permanent: true },
+      { source: "/automotive-locksmith", destination: "/services/automotive-locksmith", permanent: true },
+      { source: "/security-consulting", destination: "/services/security-consulting", permanent: true },
+      { source: "/access-control", destination: "/services/access-control", permanent: true },
+      { source: "/buzzer-systems", destination: "/services/buzzer-systems", permanent: true },
+      { source: "/commercial-doors", destination: "/services/commercial-doors", permanent: true },
+      { source: "/commercial-locking-hardware", destination: "/services/commercial-locking-hardware", permanent: true },
+      { source: "/intercom-systems", destination: "/services/intercom-systems", permanent: true },
+      { source: "/keyless-entry", destination: "/services/keyless-entry", permanent: true },
+      { source: "/smart-locks", destination: "/services/smart-locks", permanent: true },
+      { source: "/safe-installation", destination: "/services/safe-installation", permanent: true },
+      { source: "/safes", destination: "/services/safe-installation", permanent: true },
+      { source: "/rekey", destination: "/services/residential-locksmith", permanent: true },
+      { source: "/rekeying", destination: "/services/residential-locksmith", permanent: true },
+      { source: "/commercial", destination: "/services/commercial-locksmith", permanent: true },
+      { source: "/residential", destination: "/services/residential-locksmith", permanent: true },
+      { source: "/automotive", destination: "/services/automotive-locksmith", permanent: true },
+      { source: "/intercom", destination: "/services/intercom-systems", permanent: true },
+      { source: "/doors", destination: "/services/commercial-doors", permanent: true },
+
       // ── Page renames ──────────────────────────────────────────────────────
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/contact-us", destination: "/contact", permanent: true },
@@ -74,6 +104,7 @@ const nextConfig: NextConfig = {
         headers: [
           { key: "Accept-Ranges", value: "bytes" },
           { key: "Content-Type", value: "video/mp4" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
       {
@@ -81,6 +112,20 @@ const nextConfig: NextConfig = {
         headers: [
           { key: "Accept-Ranges", value: "bytes" },
           { key: "Content-Type", value: "video/webm" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        // Self-hosted fonts use content-hashed filenames, safe to cache forever
+        source: "/_recovered/media/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/images/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" },
         ],
       },
     ];

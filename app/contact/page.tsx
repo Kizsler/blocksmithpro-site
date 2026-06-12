@@ -3,9 +3,10 @@ import ContactForm from "@/components/ContactForm";
 import { CONTACT } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "The Call | B&B Locksmith",
+  title: "Contact B&B Locksmith | 24/7 Bay Area Locksmith — Walnut Creek, CA",
   description:
-    "Phone, email, or message us. 24/7 emergency lockout across the Bay Area.",
+    "Call, text, or email B&B Locksmith. 24/7 emergency lockout service across the Bay Area, dispatched from Walnut Creek.",
+  alternates: { canonical: "/contact" },
 };
 
 const HOURS = [

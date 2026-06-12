@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SERVICES, LOCATIONS, STATS } from "@/lib/site-data";
+import JsonLd from "@/components/JsonLd";
+import { locationSchema, breadcrumbSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return LOCATIONS.map((loc) => ({ city: loc.slug }));
@@ -19,8 +21,9 @@ export async function generateMetadata({
     return { title: "Zone not found | B&B Locksmith" };
   }
   return {
-    title: `Locksmith in ${location.name} | B&B Locksmith`,
-    description: `Professional locksmith and security services in ${location.name}. Licensed C-28 contractor with over 20 years of trusted service.`,
+    title: `Locksmith in ${location.name}, CA | B&B Locksmith`,
+    description: `Professional locksmith and security services in ${location.name}, CA. Licensed C-28 contractor, dispatched from Walnut Creek with 24/7 emergency response.`,
+    alternates: { canonical: `/locations/${location.slug}` },
   };
 }
 
@@ -41,6 +44,14 @@ export default async function LocationPage({
 
   return (
     <main style={{ backgroundColor: "#F4F0E6", color: "#1A1A1A" }}>
+      <JsonLd
+        data={[
+          locationSchema(location),
+          breadcrumbSchema([
+            { name: location.name, path: `/locations/${location.slug}` },
+          ]),
+        ]}
+      />
       {/* ===== HERO — Zone ===== */}
       <section
         className="relative overflow-hidden border-b"
