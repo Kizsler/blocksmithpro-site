@@ -450,6 +450,36 @@ export const LOCATIONS = [
     description:
       "Based in Walnut Creek, B&B Locksmith is your local security partner. We serve businesses and residents throughout Walnut Creek, Concord, Pleasant Hill, Lafayette, and the surrounding Contra Costa County communities.",
   },
+  {
+    slug: "oakland",
+    name: "Oakland",
+    description:
+      "B&B Locksmith serves Oakland straight through the Caldecott — our trucks dispatch from Walnut Creek via Highway 24. Storefronts around Downtown and Jack London Square, homes from Rockridge to Fruitvale, and everything up in the hills.",
+    body:
+      "Oakland keeps our trucks busy. A lot of the city's housing stock is older — Craftsman and Victorian homes still running original mortise locks and hardware that nobody makes anymore — and we service, rekey, and retrofit those doors without ripping out their character. On the commercial side, Downtown, Uptown, and Jack London Square storefronts call us for panic bars, storefront locks, master key systems, and access control; property managers across the city use us for tenant-turnover rekeying. And because lockouts don't schedule themselves, the same 24/7 emergency line covers Oakland: home, business, and vehicle lockouts with non-destructive entry first. Whatever the job, your technician confirms the price with you on-site before any work begins.",
+    faq: [
+      {
+        question: "How fast can a locksmith reach me in Oakland?",
+        answer:
+          "B&B Locksmith dispatches to Oakland from our Walnut Creek hub, a straight run through the Caldecott Tunnel on Highway 24. Average ETA across our Bay Area service area is under 30 minutes; call 415-423-0182 and dispatch will give you a real ETA for your Oakland address — Downtown, the hills, or anywhere between — before the truck rolls. The emergency line runs 24/7.",
+      },
+      {
+        question: "Do you cover all Oakland neighborhoods?",
+        answer:
+          "Yes. Downtown, Uptown, Jack London Square, Temescal, Rockridge, Montclair, Fruitvale, the Laurel district, East Oakland, West Oakland — if it's in Oakland, our trucks roll there. We handle residential, commercial, and automotive calls across the entire city, plus neighboring Berkeley, Alameda, and San Leandro on the same dispatch line.",
+      },
+      {
+        question: "Can you rekey my Oakland rental between tenants?",
+        answer:
+          "Yes — tenant-turnover rekeying is one of the most common jobs we run in Oakland. B&B Locksmith works with individual landlords and property management companies across the city, rekeying units so previous tenants' keys stop working without replacing the hardware. If you're a renter rather than the owner, have the owner's authorization ready; we verify before we work, which protects everyone.",
+      },
+      {
+        question: "Do you do commercial locksmith work in Oakland?",
+        answer:
+          "All of it. B&B Locksmith installs and services storefront locks, panic bars and exit devices, master key systems, intercoms, and access control for Oakland businesses — from single storefronts to multi-tenant buildings. We're a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2009. Ask for license and insurance documentation if your building requires vendor onboarding.",
+      },
+    ],
+  },
 ] as const;
 
 export const STATS = [
@@ -464,7 +494,7 @@ export const SERVICE_CITIES = [
   { name: "San Jose", href: "/locations/san-jose" },
   { name: "Fremont", href: "/locations/fremont" },
   { name: "Walnut Creek", href: "/locations/walnut-creek" },
-  { name: "Oakland", href: "/contact" },
+  { name: "Oakland", href: "/locations/oakland" },
   { name: "Berkeley", href: "/contact" },
   { name: "Concord", href: "/contact" },
   { name: "San Ramon", href: "/contact" },

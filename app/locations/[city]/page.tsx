@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SERVICES, LOCATIONS, STATS } from "@/lib/site-data";
 import JsonLd from "@/components/JsonLd";
-import { locationSchema, breadcrumbSchema } from "@/lib/schema";
+import { locationSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return LOCATIONS.map((loc) => ({ city: loc.slug }));
@@ -42,6 +42,9 @@ export default async function LocationPage({
     notFound();
   }
 
+  const body = "body" in location ? location.body : undefined;
+  const faqs = "faq" in location ? location.faq : undefined;
+
   return (
     <main style={{ backgroundColor: "#F4F0E6", color: "#1A1A1A" }}>
       <JsonLd
@@ -50,6 +53,7 @@ export default async function LocationPage({
           breadcrumbSchema([
             { name: location.name, path: `/locations/${location.slug}` },
           ]),
+          ...(faqs ? [faqSchema([...faqs])] : []),
         ]}
       />
       {/* ===== HERO — Zone ===== */}
@@ -116,6 +120,33 @@ export default async function LocationPage({
           </div>
         </div>
       </section>
+
+      {/* ===== CITY DETAIL ===== */}
+      {body && (
+        <section
+          className="relative border-b"
+          style={{ backgroundColor: "#F4F0E6", borderColor: "#1A1A1A1A" }}
+        >
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 lg:grid-cols-[1fr_2fr] lg:gap-20 lg:py-24">
+            <div>
+              <h2
+                className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
+                style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
+              >
+                Working {location.name}
+              </h2>
+            </div>
+            <div>
+              <p
+                className="text-base leading-relaxed sm:text-lg"
+                style={{ fontFamily: "var(--f-body)", color: "#1A1A1ACC" }}
+              >
+                {body}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ===== SCENE GRID — services in this zone ===== */}
       <section
@@ -198,6 +229,41 @@ export default async function LocationPage({
           </div>
         </div>
       </section>
+
+      {/* ===== FAQ ===== */}
+      {faqs && (
+        <section
+          className="relative border-b"
+          style={{ backgroundColor: "#F4F0E6", borderColor: "#1A1A1A1A" }}
+        >
+          <div className="mx-auto max-w-4xl px-6 py-16 sm:px-10 lg:py-24">
+            <h2
+              className="mb-12 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
+              style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
+            >
+              {location.name} questions
+            </h2>
+            <div className="space-y-10">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3
+                    className="mb-3 text-lg font-semibold sm:text-xl"
+                    style={{ fontFamily: "var(--f-body)", color: "#1A1A1A" }}
+                  >
+                    {faq.question}
+                  </h3>
+                  <p
+                    className="text-base leading-relaxed"
+                    style={{ fontFamily: "var(--f-body)", color: "#1A1A1ACC" }}
+                  >
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ===== CTA ===== */}
       <section style={{ backgroundColor: "#08080A" }}>
