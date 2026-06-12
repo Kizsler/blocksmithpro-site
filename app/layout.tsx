@@ -12,6 +12,8 @@ const RECOVERED_HTML_CLASS =
   "barlow_50adef27-module__zJyUna__variable " +
   "jetbrains_mono_3a70181d-module__P3MDrW__variable";
 
+const IS_STAGING = process.env.SITE_ENV === "staging";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://blocksmithpro.com"),
   title: "B&B Locksmith | Trusted Bay Area Security & Locksmith Experts",
@@ -20,6 +22,8 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/favicon.png",
   },
+  // Belt-and-suspenders with robots.ts: keep staging out of every index.
+  ...(IS_STAGING ? { robots: { index: false, follow: false } } : {}),
 };
 
 export default function RootLayout({
