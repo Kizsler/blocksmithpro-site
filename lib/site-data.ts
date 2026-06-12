@@ -480,6 +480,66 @@ export const LOCATIONS = [
       },
     ],
   },
+  {
+    slug: "berkeley",
+    name: "Berkeley",
+    description:
+      "B&B Locksmith covers Berkeley end to end — student apartments off Telegraph, brown-shingle homes in Elmwood and North Berkeley, and the storefronts along Fourth Street, Shattuck, and San Pablo.",
+    body:
+      "Berkeley work has its own rhythm. Every summer the city's rental stock turns over at once, and landlords and property managers call us to rekey apartments by the building — old keys dead, one visit, written quote first. The housing itself runs old: brown-shingles and bungalows with mortise locks and skeleton-key hardware that deserve a careful retrofit, not a tear-out. Around campus and along Shattuck, Telegraph, and Fourth Street, shops and restaurants use us for storefront locks, panic hardware, and access control. And the 24/7 emergency line covers the whole city — home, business, and car lockouts with non-destructive entry first, ID checked before any door opens.",
+    faq: [
+      {
+        question: "How fast can a locksmith get to Berkeley?",
+        answer:
+          "B&B Locksmith dispatches to Berkeley from Walnut Creek through the Caldecott Tunnel — the same Highway 24 run that serves Oakland and Rockridge. Average ETA across our service area is under 30 minutes; call 415-423-0182 and dispatch will quote a real ETA for your Berkeley address before the truck rolls. The emergency line answers 24/7, including student-housing lockouts at 2am.",
+      },
+      {
+        question: "Do you rekey student apartments and rentals in Berkeley?",
+        answer:
+          "Constantly — Berkeley's August turnover is one of the busiest stretches of our year. B&B Locksmith rekeys units one at a time or by the building, keys property managers' stock to a master system, and makes every previous tenant's key useless without replacing the hardware. Owners or managers authorize the work; if you're a tenant, have your landlord's sign-off ready before we arrive.",
+      },
+      {
+        question: "Can you work on the old locks in Berkeley brown-shingle homes?",
+        answer:
+          "Yes — and we'd rather restore than replace. A lot of Berkeley housing still runs original mortise locks and vintage hardware. B&B Locksmith services and rekeys those mechanisms where they're sound, and when one is past saving we fit modern hardware that respects the door instead of butchering it. You get a straight recommendation either way before any work begins.",
+      },
+      {
+        question: "Do you serve businesses near the UC campus?",
+        answer:
+          "Yes. Storefronts and restaurants on Telegraph, Shattuck, Fourth Street, and San Pablo use B&B Locksmith for storefront locks, panic bars and exit devices, rekeying after staff changes, and access control. We're a licensed C-28 contractor, bonded and insured — documentation available if your landlord or insurer requires it.",
+      },
+    ],
+  },
+  {
+    slug: "concord",
+    name: "Concord",
+    description:
+      "Concord is our backyard — ten minutes up the road from the B&B Locksmith hub in Walnut Creek. Homes, businesses around Todos Santos Plaza, and vehicle calls across the city get our fastest response times anywhere.",
+    body:
+      "Because our trucks stage in Walnut Creek, Concord calls are usually our quickest of the day — no bridge, no tunnel, just up the road. We rekey and upgrade locks for homeowners across Concord's neighborhoods, handle storefront hardware and master key systems for the businesses around Todos Santos Plaza and along Clayton Road and Monument Boulevard, and run vehicle lockout and car-key calls all over the city. Property managers in Concord use us for tenant turnovers, and the 24/7 emergency line covers home, business, and auto lockouts with non-destructive entry first. Every job starts the same way: a written quote you approve before the work does.",
+    faq: [
+      {
+        question: "How fast can a locksmith reach me in Concord?",
+        answer:
+          "Concord sits right next to our Walnut Creek dispatch hub, so it gets some of B&B Locksmith's fastest response times anywhere in the Bay Area — often well under our area-wide 30-minute average. Call 415-423-0182 any hour and dispatch will give you a real ETA for your Concord address. The emergency line runs 24/7.",
+      },
+      {
+        question: "Do you handle car lockouts and car keys in Concord?",
+        answer:
+          "Yes — Concord is steady automotive territory for us. B&B Locksmith opens locked vehicles with non-destructive tools and cuts and programs replacement keys, transponders, and fobs on the truck for most makes and models, wherever the car is parked. Bring ID and proof of ownership, like the registration, and the job happens on the spot — no tow needed.",
+      },
+      {
+        question: "Can you upgrade the locks on my Concord home?",
+        answer:
+          "Yes. B&B Locksmith installs and services deadbolts, smart locks (August, Yale, Schlage, Kwikset), keypad locks, and high-security cylinders across Concord. If you've just bought a home, rekeying everything to one new key is usually the smartest first move — every unknown copy of the old key dies in a single visit, and we'll flag any hardware actually worth replacing while we're at the door.",
+      },
+      {
+        question: "Do you work with Concord businesses?",
+        answer:
+          "All over the city — storefronts around Todos Santos Plaza, offices and retail along Clayton Road, Willow Pass, and Monument Boulevard. Panic bars, storefront locks, master key systems, access control, and rekeying after staff turnover. B&B Locksmith is a licensed C-28 contractor, bonded and insured, serving Contra Costa businesses since 2009.",
+      },
+    ],
+  },
 ] as const;
 
 export const STATS = [
@@ -495,8 +555,8 @@ export const SERVICE_CITIES = [
   { name: "Fremont", href: "/locations/fremont" },
   { name: "Walnut Creek", href: "/locations/walnut-creek" },
   { name: "Oakland", href: "/locations/oakland" },
-  { name: "Berkeley", href: "/contact" },
-  { name: "Concord", href: "/contact" },
+  { name: "Berkeley", href: "/locations/berkeley" },
+  { name: "Concord", href: "/locations/concord" },
   { name: "San Ramon", href: "/contact" },
   { name: "Dublin", href: "/contact" },
   { name: "Pleasanton", href: "/contact" },
