@@ -540,6 +540,81 @@ export const LOCATIONS = [
       },
     ],
   },
+  {
+    slug: "san-ramon",
+    name: "San Ramon",
+    description:
+      "B&B Locksmith runs San Ramon straight down the 680 corridor — Bishop Ranch offices, City Center storefronts, and the neighborhoods from Twin Creeks to Dougherty Valley.",
+    body:
+      "San Ramon splits cleanly into two kinds of work for us. On the commercial side, Bishop Ranch and the offices around City Center keep us busy with access control, master key systems, and suite rekeying when tenants and staff change — the kind of work where vendor paperwork matters, and we carry it: licensed C-28, bonded, insured. On the residential side, San Ramon's newer housing means smart locks and keypad hardware more than vintage retrofits; we install and service August, Yale, Schlage, and Kwikset systems and rekey whole homes to a single key. Vehicle lockouts and car keys run on the same 24/7 line, with a written quote approved before any work starts.",
+    faq: [
+      {
+        question: "How fast can a locksmith reach San Ramon?",
+        answer:
+          "Our trucks come straight down the 680 corridor from Walnut Creek — no bridges, no tunnels. Average ETA across the B&B Locksmith service area is under 30 minutes; call 415-423-0182 and dispatch will give you a real ETA for your San Ramon address, whether that's Bishop Ranch, Dougherty Valley, or anywhere between. The emergency line answers 24/7.",
+      },
+      {
+        question: "Do you handle office and suite work in Bishop Ranch?",
+        answer:
+          "Yes. B&B Locksmith services offices across Bishop Ranch and the City Center area — suite rekeying at tenant turnover, master key systems, access control, and exit hardware. We're a licensed C-28 contractor, bonded and insured, and can provide documentation for building-management vendor onboarding before the first visit.",
+      },
+      {
+        question: "Can you install smart locks on my San Ramon home?",
+        answer:
+          "That's the most common residential call we get in San Ramon. We install and service August, Yale, Schlage, and Kwikset smart locks and keypad hardware, and we'll tell you honestly whether your door and frame will take the model you want before you buy it. If you've just moved in, pairing the smart-lock install with a whole-home rekey handles everything in one visit.",
+      },
+    ],
+  },
+  {
+    slug: "dublin",
+    name: "Dublin",
+    description:
+      "B&B Locksmith covers Dublin's fast-growing east side and established west side alike — new townhomes and HOAs, the retail at Hacienda Crossings and Fallon Gateway, and everything along the BART corridor.",
+    body:
+      "Dublin is growth territory: new townhome and condo communities on the east side, HOAs that need key control sorted across dozens of units, and builders' locks that homeowners want rekeyed or upgraded once they actually move in — builder-installed hardware is rarely the hardware you'd choose. B&B Locksmith rekeys new construction to a single key, upgrades to smart locks and keypad systems, and sets up master keying for HOAs and property managers. Retail at Hacienda Crossings and Fallon Gateway calls the same line for storefront locks and panic hardware, and vehicle lockouts around the BART stations and shopping centers run 24/7 with non-destructive entry first.",
+    faq: [
+      {
+        question: "How fast can a locksmith get to Dublin?",
+        answer:
+          "B&B Locksmith dispatches down the 680 corridor from Walnut Creek to Dublin around the clock. Our area-wide average ETA is under 30 minutes; call 415-423-0182 and dispatch will quote a real ETA for your Dublin address — east side, west side, or at a BART station parking lot. Bring photo ID; we verify before we open anything.",
+      },
+      {
+        question: "I just bought new construction in Dublin — should I rekey?",
+        answer:
+          "Yes, and right away. During construction, builder master keys and contractor copies circulate freely, and builder-grade locks are usually the cheapest hardware that passed inspection. B&B Locksmith rekeys every door to one new key in a single visit and will tell you straight which locks are worth upgrading versus which are fine as they are. It's the highest-value hour you'll spend on the house.",
+      },
+      {
+        question: "Do you work with Dublin HOAs and property managers?",
+        answer:
+          "Yes. We design and service master key systems for HOA common areas — pool gates, clubhouses, utility rooms — and handle unit turnovers for property managers across Dublin. One vendor, consistent keying records, written quotes before each job, and a licensed C-28 contractor on file for your board's vendor requirements.",
+      },
+    ],
+  },
+  {
+    slug: "pleasanton",
+    name: "Pleasanton",
+    description:
+      "From the storefronts on Main Street to the offices of Hacienda Business Park, B&B Locksmith serves Pleasanton with the same crew and the same rule: the quote comes before the work.",
+    body:
+      "Pleasanton mixes a historic downtown with one of the East Bay's biggest business parks, and we work both ends. Main Street's storefronts use us for traditional storefront locks, panic hardware, and rekeying after staff changes — often on older doors that deserve hardware sympathetic to the building. Hacienda Business Park brings suite rekeying, master key systems, and access control, with vendor documentation ready for property management. In the neighborhoods — Birdland, Val Vista, Ruby Hill and the rest — it's deadbolts, smart locks, move-in rekeying, and the occasional 2am lockout, all on the same 24/7 dispatch line out of Walnut Creek.",
+    faq: [
+      {
+        question: "How fast can a locksmith reach Pleasanton?",
+        answer:
+          "B&B Locksmith runs Pleasanton calls down 680 from our Walnut Creek hub, 24/7. Area-wide our average ETA is under 30 minutes; call 415-423-0182 and dispatch gives you a real ETA for your Pleasanton address before the truck rolls — downtown, Hacienda, or out by Ruby Hill.",
+      },
+      {
+        question: "Do you service the storefronts on Main Street?",
+        answer:
+          "Yes — downtown Pleasanton retail is regular work for us: storefront deadbolts and mortise locks, panic bars and exit devices, rekeying when employees change, and master keying for owners with more than one location. Older downtown doors get hardware that fits the building, not whatever's cheapest on the truck.",
+      },
+      {
+        question: "Can you handle vendor requirements for Hacienda Business Park?",
+        answer:
+          "Yes. B&B Locksmith & Security Inc. is a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2009. We provide license and insurance documentation for property-management vendor onboarding, and handle suite rekeying, master key systems, and access control across Hacienda and Pleasanton's other office parks.",
+      },
+    ],
+  },
 ] as const;
 
 export const STATS = [
@@ -557,9 +632,9 @@ export const SERVICE_CITIES = [
   { name: "Oakland", href: "/locations/oakland" },
   { name: "Berkeley", href: "/locations/berkeley" },
   { name: "Concord", href: "/locations/concord" },
-  { name: "San Ramon", href: "/contact" },
-  { name: "Dublin", href: "/contact" },
-  { name: "Pleasanton", href: "/contact" },
+  { name: "San Ramon", href: "/locations/san-ramon" },
+  { name: "Dublin", href: "/locations/dublin" },
+  { name: "Pleasanton", href: "/locations/pleasanton" },
   { name: "Livermore", href: "/contact" },
   { name: "Richmond", href: "/contact" },
 ] as const;
