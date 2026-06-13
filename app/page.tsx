@@ -16,7 +16,7 @@ import { homeBusinessSchema, websiteSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "B&B Locksmith & Security | Bay Area Locksmith Since 2009",
   description:
-    "Professional locksmith and security services across the Bay Area. Licensed C-28 contractor with 20+ years of experience, over 1,000 five-star reviews, and 24/7 emergency response.",
+    "Professional locksmith and security services across the Bay Area. Licensed C-28 contractor with 20+ years of experience, over 1,000 five-star reviews, and same-day emergency response.",
   alternates: { canonical: "/" },
 };
 
@@ -35,7 +35,7 @@ const PROOF_STATS = [
   { num: "5.0★", label: "Average Yelp rating", sub: "200+ Google reviews", red: false },
   { num: "< 30", label: "Min average ETA", sub: "Bay Area dispatch", red: true },
   { num: "15", label: "Service disciplines", sub: "One team", red: false },
-  { num: "24/7", label: "Emergency response", sub: "We pick up", red: false },
+  { num: "Same-Day", label: "Emergency response", sub: "We pick up", red: false },
   { num: "C-28", label: "Licensed contractor", sub: "Bonded · Insured", red: true },
   { num: "50+", label: "Technology partners", sub: "50+ national brands", red: false },
   { num: "12", label: "Cities served", sub: "Bay Area coverage", red: false },

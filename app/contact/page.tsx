@@ -3,9 +3,9 @@ import ContactForm from "@/components/ContactForm";
 import { CONTACT } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Contact B&B Locksmith | 24/7 Bay Area Locksmith — Walnut Creek, CA",
+  title: "Contact B&B Locksmith | Bay Area Locksmith — Walnut Creek, CA",
   description:
-    "Call, text, or email B&B Locksmith. 24/7 emergency lockout service across the Bay Area, dispatched from Walnut Creek.",
+    "Call, text, or email B&B Locksmith. Same-day and emergency lockout service across the Bay Area, dispatched from Walnut Creek, Mon–Sat 7am–6pm.",
   alternates: { canonical: "/contact" },
 };
 
@@ -180,7 +180,7 @@ export default function ContactPage() {
                   className="mt-2 text-[11px] uppercase tracking-[0.2em]"
                   style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
                 >
-                  24/7 emergency line open
+                  Same-day &amp; emergency service
                 </p>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ===== 24/7 STRIP ===== */}
+      {/* ===== EMERGENCY STRIP ===== */}
       <section
         className="relative overflow-hidden"
         style={{ backgroundColor: "#08080A" }}

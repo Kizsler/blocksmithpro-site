@@ -22,7 +22,7 @@ export async function generateMetadata({
   }
   return {
     title: `Locksmith in ${location.name}, CA | B&B Locksmith`,
-    description: `Professional locksmith and security services in ${location.name}, CA. Licensed C-28 contractor, dispatched from Walnut Creek with 24/7 emergency response.`,
+    description: `Professional locksmith and security services in ${location.name}, CA. Licensed C-28 contractor, dispatched from Walnut Creek with same-day emergency response, Mon–Sat 7am–6pm.`,
     alternates: { canonical: `/locations/${location.slug}` },
   };
 }

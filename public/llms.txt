@@ -39,7 +39,15 @@ San Francisco, San Jose, Fremont, Walnut Creek, Oakland, Berkeley, Concord, San 
 - [Pleasanton](https://blocksmithpro.com/locations/pleasanton)
 - [Livermore](https://blocksmithpro.com/locations/livermore)
 - [Richmond](https://blocksmithpro.com/locations/richmond)
-- [Rekeying service](https://blocksmithpro.com/services/rekeying)
+- [Vallejo](https://blocksmithpro.com/locations/vallejo)
+- [Morgan Hill](https://blocksmithpro.com/locations/morgan-hill)
+- [Tiburon](https://blocksmithpro.com/locations/tiburon)
+
+## Key service pages
+- [Rekeying](https://blocksmithpro.com/services/rekeying)
+- [Master Key Systems](https://blocksmithpro.com/services/master-key-systems)
+- [Door & Gate Repair](https://blocksmithpro.com/services/door-gate-repair)
+- [Property Managers & HOAs](https://blocksmithpro.com/property-management)
 
 ## About
 - [About the company](https://blocksmithpro.com/about): family-run, founded 2009, led by Alex Berger

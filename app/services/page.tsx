@@ -57,7 +57,7 @@ export default function ServicesPage() {
               className="text-[10px] uppercase tracking-[0.35em]"
               style={{ fontFamily: "var(--f-mono)", color: "#1A1A1A66" }}
             >
-              Bay Area · 24/7
+              Bay Area · Mon–Sat
             </span>
           </div>
 

@@ -5,9 +5,9 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema, BUSINESS_ID, SITE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Emergency Locksmith Bay Area | 24/7 Dispatch | B&B Locksmith",
+  title: "Emergency & Same-Day Locksmith Bay Area | B&B Locksmith",
   description:
-    "Locked out? B&B Locksmith dispatches 24/7 across the Bay Area with a under-30-minute average ETA. Home, business, and car lockouts. Licensed C-28, bonded & insured. Call now.",
+    "Locked out? B&B Locksmith dispatches fast across the Bay Area with an under-30-minute average ETA. Home, business, and car lockouts, Mon–Sat 7am–6pm. Licensed C-28, bonded & insured. Call now.",
   alternates: { canonical: "/emergency-locksmith-bay-area" },
 };
 
@@ -41,7 +41,7 @@ const EMERGENCIES = [
 const STEPS = [
   {
     title: "Call or text",
-    desc: `Reach us any hour at ${CONTACT.phone1} or text ${CONTACT.phone2}. A person answers — no phone tree.`,
+    desc: `Reach us during business hours (Mon–Sat, 7am–6pm) at ${CONTACT.phone1} or text ${CONTACT.phone2}. A person answers — no phone tree.`,
   },
   {
     title: "We dispatch",
@@ -61,7 +61,7 @@ const FAQS = [
   {
     question: "How fast can an emergency locksmith reach me in the Bay Area?",
     answer:
-      "B&B Locksmith dispatches from Walnut Creek 24 hours a day, 7 days a week, with an average ETA under 30 minutes across our Bay Area service area. We serve San Francisco, Oakland, San Jose, Fremont, Walnut Creek, Berkeley, Concord, San Ramon, Dublin, Pleasanton, Livermore, and Richmond. Exact timing depends on where you are and traffic, so call 415-423-0182 and dispatch will give you a real ETA for your location before the truck rolls.",
+      "During business hours (Monday–Saturday, 7am–6pm), B&B Locksmith dispatches from Walnut Creek with an average ETA under 30 minutes across our Bay Area service area. We serve San Francisco, Oakland, San Jose, Fremont, Walnut Creek, Berkeley, Concord, San Ramon, Dublin, Pleasanton, Livermore, and Richmond. Exact timing depends on where you are and traffic, so call 415-423-0182 and dispatch will give you a real ETA for your location before the truck rolls.",
   },
   {
     question: "How much does an emergency locksmith cost?",
@@ -90,9 +90,9 @@ const emergencyServiceSchema = {
   "@type": "Service",
   "@id": `${SITE_URL}/emergency-locksmith-bay-area#service`,
   name: "Emergency Locksmith",
-  serviceType: "24/7 Emergency Locksmith",
+  serviceType: "Emergency Locksmith",
   description:
-    "24/7 emergency lockout service for homes, businesses, and vehicles across the San Francisco Bay Area.",
+    "Emergency and same-day lockout service for homes, businesses, and vehicles across the San Francisco Bay Area, Monday–Saturday 7am–6pm.",
   url: `${SITE_URL}/emergency-locksmith-bay-area`,
   provider: { "@id": BUSINESS_ID },
   areaServed: { "@type": "Place", name: "San Francisco Bay Area" },
@@ -105,10 +105,9 @@ const emergencyServiceSchema = {
       "Thursday",
       "Friday",
       "Saturday",
-      "Sunday",
     ],
-    opens: "00:00",
-    closes: "23:59",
+    opens: "07:00",
+    closes: "18:00",
   },
 };
 
@@ -138,7 +137,7 @@ export default function EmergencyLocksmithPage() {
             className="text-[10px] uppercase tracking-[0.4em]"
             style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
           >
-            24/7 · Bay Area dispatch · &lt; 30 min average ETA
+            Same-day · Bay Area dispatch · &lt; 30 min average ETA
           </span>
           <h1
             className="mt-2 uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(2.75rem,7vw,6rem)]"
@@ -153,8 +152,8 @@ export default function EmergencyLocksmithPage() {
             style={{ fontFamily: "var(--f-body)", color: "#F4F0E6CC" }}
           >
             Locked out of your home, business, or car? B&B Locksmith dispatches
-            from Walnut Creek around the clock. A licensed technician confirms
-            the price with you on-site before any work begins.
+            fast from Walnut Creek, Monday–Saturday 7am–6pm. A licensed
+            technician confirms the price with you on-site before any work begins.
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-4">
             <a
@@ -312,9 +311,9 @@ export default function EmergencyLocksmithPage() {
             className="uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2.5rem,6vw,5rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
           >
-            Still locked out?
+            Locked out?
             <br />
-            We&apos;re already awake.
+            Let&apos;s get you in.
           </h2>
           <div className="flex flex-wrap items-center gap-4">
             <a
