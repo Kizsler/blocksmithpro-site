@@ -33,6 +33,12 @@ const nextConfig: NextConfig = {
       { source: "/automotive", destination: "/services/automotive-locksmith", permanent: true },
       { source: "/intercom", destination: "/services/intercom-systems", permanent: true },
       { source: "/doors", destination: "/services/commercial-doors", permanent: true },
+      { source: "/door-repair", destination: "/services/door-gate-repair", permanent: true },
+      { source: "/gate-repair", destination: "/services/door-gate-repair", permanent: true },
+      { source: "/door-gate-repair", destination: "/services/door-gate-repair", permanent: true },
+      { source: "/property-managers", destination: "/property-management", permanent: true },
+      { source: "/vendor", destination: "/property-management", permanent: true },
+      { source: "/hoa", destination: "/property-management", permanent: true },
 
       // ── Page renames ──────────────────────────────────────────────────────
       { source: "/about-us", destination: "/about", permanent: true },

@@ -298,6 +298,50 @@ export const SERVICES = [
     icon: "lock",
   },
   {
+    slug: "door-gate-repair",
+    image: "/images/services/commercial-doors-installation-and-replacement.jpg",
+    title: "Door & Gate Repair",
+    description:
+      "Commercial and residential door and gate repair — closers, hinges, latches, sliding and patio doors, frames, and gate locking mechanisms.",
+    detail:
+      "A door that won't latch, a closer that slams or sticks, a sagging hinge, a sliding patio door that won't lock, or a gate mechanism that won't catch — these are everyday calls for B&B Locksmith. We repair and adjust commercial and residential door hardware across the Bay Area: door closers (surface and concealed), continuous and butt hinges, latches and strikes, panic and exit devices, mortise and cylindrical locksets, door frames, and automatic and manual gate locking mechanisms. For property managers and HOAs we handle gate hardware compliance and recurring repair work orders. We diagnose on-site, carry common hardware on the truck, and give you a written quote before any work begins.",
+    features: [
+      "Door Won't Latch / Misalignment",
+      "Door Closer Repair & Adjustment",
+      "Door Hinge Repair & Replacement",
+      "Patio & Sliding Door Lock Repair",
+      "Commercial Door Lock Repair",
+      "Latch & Strike Repair",
+      "Door Frame Repair & Replacement",
+      "Gate Lock & Mechanism Repair",
+      "Automatic Gate Hardware Repair",
+      "Panic Bar & Exit Device Repair",
+    ],
+    icon: "lock",
+    faq: [
+      {
+        question: "My commercial door won't latch — can you fix it?",
+        answer:
+          "Yes — a door that won't latch is one of our most common repair calls. Usually it's a misaligned strike, a worn latch, a sagging hinge, or a door that's dropped in its frame. B&B Locksmith diagnoses the actual cause on-site and adjusts or replaces the hardware so the door latches and locks properly, rather than just forcing it. We carry common closers, hinges, latches, and strikes on the truck so most repairs are done in one visit.",
+      },
+      {
+        question: "Do you repair commercial door closers?",
+        answer:
+          "Yes. We repair and adjust surface-mounted and concealed door closers — doors that slam, drift, stick, or won't close fully. When a closer is past adjustment we replace it with a correctly sized commercial unit (LCN, Norton, and similar). For storefronts and offices this also keeps you compliant with fire-door and ADA closing requirements.",
+      },
+      {
+        question: "Can you repair a gate lock or automatic gate mechanism for our HOA?",
+        answer:
+          "Yes — HOA and commercial gate repair is regular work for B&B Locksmith. We repair manual and automatic gate locking mechanisms, replace worn gate hardware, and handle gate hardware compliance inspections. For property managers and HOA boards we work from your work orders and provide a written quote before any repair, plus license and insurance documentation on request.",
+      },
+      {
+        question: "Do you fix sliding and patio door locks?",
+        answer:
+          "Yes. Sliding and patio door locks — especially in apartments and rentals — wear out, jam, or come out of alignment. We repair or replace the latch, hook, and keeper hardware, adjust the door so it seats correctly, and can upgrade to higher-security patio locks where security is a concern.",
+      },
+    ],
+  },
+  {
     slug: "intercom-systems",
     image: "/images/services/intercom-systems-1.jpg",
     title: "Intercom Systems",

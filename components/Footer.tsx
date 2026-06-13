@@ -109,6 +109,14 @@ export default function Footer() {
                   Emergency Locksmith
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/property-management"
+                  className="text-sm hover:text-white transition-colors"
+                >
+                  Property Managers &amp; HOAs
+                </Link>
+              </li>
             </ul>
 
             <h3 className="mb-4 mt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red">
