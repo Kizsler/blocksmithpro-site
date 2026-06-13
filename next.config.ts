@@ -39,6 +39,8 @@ const nextConfig: NextConfig = {
       { source: "/property-managers", destination: "/property-management", permanent: true },
       { source: "/vendor", destination: "/property-management", permanent: true },
       { source: "/hoa", destination: "/property-management", permanent: true },
+      { source: "/master-key", destination: "/services/master-key-systems", permanent: true },
+      { source: "/master-key-systems", destination: "/services/master-key-systems", permanent: true },
 
       // ── Page renames ──────────────────────────────────────────────────────
       { source: "/about-us", destination: "/about", permanent: true },

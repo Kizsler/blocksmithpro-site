@@ -342,6 +342,50 @@ export const SERVICES = [
     ],
   },
   {
+    slug: "master-key-systems",
+    image: "/images/services/commercial-locking-hardware.jpg",
+    title: "Master Key Systems",
+    description:
+      "Master key system design and installation for offices, apartment buildings, and commercial properties — one master key, controlled access per door.",
+    detail:
+      "A master key system lets one key open every door while each individual key opens only its own — so management holds a master, staff open only their areas, and key control stays with you. B&B Locksmith designs, installs, and maintains master key systems for office buildings, apartment complexes, retail, and multi-tenant properties across the Bay Area. We can rekey your existing locks into a new hierarchy without replacing hardware, build the system on restricted keyways so keys can't be copied at a hardware store, and key common doors so one key runs the whole building. For property managers we document the keying schedule and provide a written quote before any work begins.",
+    features: [
+      "Master Key System Design",
+      "Grand Master & Sub-Master Hierarchies",
+      "Rekey Existing Locks to One Key",
+      "Restricted Keyway Key Control",
+      "Office Building Master Keying",
+      "Apartment & Multi-Unit Systems",
+      "Commercial Suite Rekeying",
+      "Keying Schedule Documentation",
+      "Master Key System Expansion",
+      "Lost Master Key Rekeying",
+    ],
+    icon: "lock",
+    faq: [
+      {
+        question: "How does a master key system work?",
+        answer:
+          "A master key system is built so that one master key opens every door in the system, while each door also has its own change key that opens only that door. B&B Locksmith designs the hierarchy — for example, a building master for management, sub-masters for floors or departments, and individual keys per office or unit — so everyone holds exactly the access they should and no more.",
+      },
+      {
+        question: "Can you rekey all my locks to one key?",
+        answer:
+          "Yes — keying multiple locks to a single key is one of the most common requests we handle. If your locks share compatible keyways, B&B Locksmith can rekey them so one key opens the front door, back door, suite, and common areas. Where you also want individual control, we build a full master key system instead, so one master covers everything while each door keeps its own key.",
+      },
+      {
+        question: "Can you set up a master key system for an office building?",
+        answer:
+          "Yes. Office buildings are a core use case: management gets a master, each tenant or department gets keys to their own space, and shared doors (entrances, utility rooms) are keyed into the plan. B&B Locksmith can usually rekey your existing hardware into the new system rather than replacing it, and we document the full keying schedule for your records.",
+      },
+      {
+        question: "What is a restricted keyway, and do I need one?",
+        answer:
+          "A restricted keyway uses patented key blanks that can't be cut at an ordinary hardware store — copies can only be made by an authorized locksmith with your authorization. For master key systems where key control matters (offices, multi-unit buildings, anywhere unauthorized copies are a risk), restricted keyways are strongly worth it. B&B Locksmith will walk you through whether it fits your property and budget.",
+      },
+    ],
+  },
+  {
     slug: "intercom-systems",
     image: "/images/services/intercom-systems-1.jpg",
     title: "Intercom Systems",
