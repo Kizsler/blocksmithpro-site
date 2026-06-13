@@ -17,15 +17,16 @@ const POSTAL_ADDRESS = {
 const OPENING_HOURS = [
   {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "08:00",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    opens: "07:00",
     closes: "18:00",
-  },
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: "Saturday",
-    opens: "09:00",
-    closes: "15:00",
   },
 ];
 
@@ -38,7 +39,7 @@ export function businessSchema() {
     "@id": BUSINESS_ID,
     name: "B&B Locksmith & Security Inc.",
     url: SITE_URL,
-    telephone: `+1-${CONTACT.phone2}`,
+    telephone: `+1-${CONTACT.phone1}`,
     email: CONTACT.email,
     priceRange: "$$",
     image: `${SITE_URL}/images/logo.png`,
@@ -121,7 +122,7 @@ export function locationSchema(location: { slug: string; name: string }) {
     "@id": `${SITE_URL}/locations/${location.slug}#business`,
     name: "B&B Locksmith & Security Inc.",
     url: `${SITE_URL}/locations/${location.slug}`,
-    telephone: `+1-${CONTACT.phone2}`,
+    telephone: `+1-${CONTACT.phone1}`,
     email: CONTACT.email,
     priceRange: "$$",
     address: POSTAL_ADDRESS,
