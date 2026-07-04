@@ -7,6 +7,7 @@ export type BlogPost = {
   date: string;
   excerpt: string;
   content: string;
+  image?: string;
 };
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
@@ -56,6 +57,7 @@ export function getAllPosts(): BlogPost[] {
       date: data.date || "",
       excerpt: data.excerpt || "",
       content,
+      ...(data.image ? { image: data.image } : {}),
     };
   });
 

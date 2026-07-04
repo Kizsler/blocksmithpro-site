@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { SERVICES, LOCATIONS, STATS } from "@/lib/site-data";
+import { SERVICES, LOCATIONS, STATS, CONTACT } from "@/lib/site-data";
 import JsonLd from "@/components/JsonLd";
 import { locationSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 
@@ -276,24 +276,27 @@ export default async function LocationPage({
             <br />
             in {location.name}?
           </h2>
-          <Link
-            href="/contact"
-            className="group inline-flex items-center gap-3 border px-7 py-4 text-[11px] uppercase tracking-[0.3em] transition-colors"
-            style={{
-              borderColor: "#E63946",
-              backgroundColor: "#E63946",
-              color: "#F4F0E6",
-              fontFamily: "var(--f-mono)",
-            }}
-          >
-            Request a free assessment
-            <span
-              aria-hidden="true"
-              className="transition-transform group-hover:translate-x-1"
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href={`tel:${CONTACT.phone1}`}
+              className="group inline-flex items-center gap-3 border px-7 py-4 text-[11px] uppercase tracking-[0.3em] transition-colors"
+              style={{
+                borderColor: "#E63946",
+                backgroundColor: "#E63946",
+                color: "#F4F0E6",
+                fontFamily: "var(--f-mono)",
+              }}
             >
-              →
-            </span>
-          </Link>
+              ☎ Call {CONTACT.phone1} now
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] hover:opacity-70 transition-opacity"
+              style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6CC" }}
+            >
+              Not urgent? Request a free assessment →
+            </Link>
+          </div>
         </div>
       </section>
     </main>

@@ -19,6 +19,22 @@ export const metadata: Metadata = {
   title: "B&B Locksmith | Trusted Bay Area Security & Locksmith Experts",
   description:
     "Professional locksmith and commercial security services across the Bay Area. Licensed C-28 contractor. Commercial, residential, and automotive locksmith services.",
+  openGraph: {
+    type: "website",
+    siteName: "B&B Locksmith & Security Inc.",
+    title: "B&B Locksmith | Trusted Bay Area Security & Locksmith Experts",
+    description:
+      "Professional locksmith and commercial security services across the Bay Area. Licensed C-28 contractor, serving since 2009.",
+    url: "https://blocksmithpro.com",
+    images: [{ url: "/images/hero-poster.jpg", width: 1200, height: 675 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "B&B Locksmith | Trusted Bay Area Security & Locksmith Experts",
+    description:
+      "Professional locksmith and commercial security services across the Bay Area. Licensed C-28 contractor, serving since 2009.",
+    images: ["/images/hero-poster.jpg"],
+  },
   icons: {
     icon: "/images/favicon.png",
   },

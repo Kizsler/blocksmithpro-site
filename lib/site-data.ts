@@ -28,7 +28,7 @@ export const SERVICES = [
     image: "/images/services/commercial-locksmith-1.jpg",
     title: "Commercial Service",
     description:
-      "Complete commercial locksmith solutions including master key systems, high-security locks, and building access management.",
+      "Master key systems, panic bars, high-security locks & business lockouts. Licensed C-28, bonded & insured — free on-site quote, same-day service.",
     detail:
       "Running a business comes with enough challenges without worrying about security. B&B Locksmith offers fast and dependable commercial locksmith services across the Bay Area. We provide professional installation and upgrades for commercial door locks and access control systems, including keypads, smart locks, and master key systems. We also deliver fast, reliable commercial lockout services to get you back inside quickly without causing damage.",
     features: [
@@ -117,6 +117,7 @@ export const SERVICES = [
     slug: "rekeying",
     image: "/images/services/residential-locksmith.jpg",
     title: "Rekeying",
+    isEmergency: true,
     description:
       "Lock rekeying for homes, businesses, and rentals across the Bay Area — every old key stops working, your hardware stays.",
     detail:
@@ -292,7 +293,7 @@ export const SERVICES = [
     image: "/images/services/commercial-doors-installation-and-replacement.jpg",
     title: "Commercial Doors",
     description:
-      "Installation and replacement of commercial-grade doors including automatic closers, panic bars, and ADA-compliant hardware.",
+      "Storefront, hollow-metal & ADA-compliant commercial door installation and repair — closers, panic bars, frames. Code-compliant work, free written quote.",
     detail:
       "We install and replace commercial-grade doors and hardware for offices, retail spaces, and industrial properties. Our services include commercial door installation, automatic door closer installation and adjustment, panic bar and exit device installation, ADA-compliant hardware upgrades, hollow metal frame repair, and storefront aluminum door service. Every installation meets local building codes and fire safety requirements.",
     features: [
@@ -490,7 +491,7 @@ export const SERVICES = [
     image: "/images/services/safe-installation-and-opening.jpg",
     title: "Safe Installation",
     description:
-      "Professional safe installation, relocation, and opening services for residential and commercial safes of all types.",
+      "Safe installation, bolt-down, relocation & locked-safe opening for homes and businesses — done by a licensed, insured Bay Area locksmith, not a delivery crew.",
     detail:
       "Professional safe installation and opening services help protect your valuables and important documents with proper care and precision. We handle residential and commercial safe installation for homes and businesses including wall safes, floor safes, fireproof safes, and burglary safes, with a focus on proper placement, strong anchoring, and long-term security. For safe opening and access recovery, we use non-destructive methods and provide discreet, respectful service protecting your contents throughout.",
     features: [
@@ -564,24 +565,120 @@ export const LOCATIONS = [
     name: "San Francisco",
     description:
       "B&B Locksmith provides professional locksmith and security services throughout San Francisco. From commercial buildings in the Financial District to residential homes in the Sunset, our mobile fleet serves every neighborhood in the city.",
+    body:
+      "San Francisco is apartment-building country, and that's where we do some of our most specialized work: buzzer and intercom systems, keyed building entries, mailbox locks, and access control for multi-tenant properties from the Mission to Nob Hill. Property managers use us for unit turnovers — rekeying by the door or by the building — and for keeping common-area hardware compliant and working. The city's Victorian and Edwardian housing stock still runs plenty of original mortise locks; we service and retrofit those without wrecking hundred-year-old doors. Downtown, FiDi and SoMa offices call us for master key systems, panic hardware, and electronic access control. Our 415 line rings straight to dispatch, and trucks reach the city via the Bay Bridge from our Walnut Creek hub — same-day service, Monday through Saturday, with the price confirmed on-site before any work begins.",
+    faq: [
+      {
+        question: "Do you really serve San Francisco from the East Bay?",
+        answer:
+          "Yes — our trucks cross the Bay Bridge for San Francisco calls every week, and our primary line (415-423-0182) is a San Francisco number that rings straight to dispatch. Call and we'll quote a realistic ETA for your SF address up front; average ETA across our service area is under 30 minutes, and dispatch will tell you honestly what bridge traffic means for yours.",
+      },
+      {
+        question: "Do you repair apartment buzzer and intercom systems in San Francisco?",
+        answer:
+          "Yes — buzzer and intercom work for San Francisco apartment buildings is one of our specialties. We repair and replace door-release buzzers, audio and video intercoms, and telephone-entry systems, and we install modern smartphone-connected systems for buildings ready to upgrade. Property managers get one vendor for the intercom, the door hardware, and the keying.",
+      },
+      {
+        question: "Can you work on old Victorian mortise locks?",
+        answer:
+          "We do it constantly. San Francisco's Victorians and Edwardians often still run original mortise hardware, and the right answer is usually service or a careful retrofit — not tearing out a century-old door. We rekey, repair, and where needed replace mortise locks with period-appropriate hardware that keeps the door looking right and locking properly.",
+      },
+      {
+        question: "Do you handle commercial buildings in downtown San Francisco?",
+        answer:
+          "Yes. FiDi, SoMa, Union Square, and the rest of the city's commercial districts — master key systems, panic bars and exit devices, high-security cylinders, and access control. B&B Locksmith is a licensed C-28 contractor, bonded and insured, with documentation available for building-vendor onboarding.",
+      },
+    ],
   },
   {
     slug: "san-jose",
     name: "San Jose",
     description:
       "Serving businesses and homeowners across San Jose and the South Bay. Our team provides fast, reliable locksmith and security services to the largest city in the Bay Area, from downtown offices to suburban communities.",
+    body:
+      "San Jose is the Bay Area's biggest city, and commercial doors are the work we're asked about most here: storefront aluminum doors, hollow-metal doors and frames, closers, panic bars, and ADA-compliant hardware for retail, office, and industrial buildings from Downtown to North San Jose. We install, repair, and bring doors up to code — one licensed C-28 contractor for the door, the hardware, and the keying. Offices and tech buildings add master key systems and access control; property managers across Willow Glen, Berryessa, Evergreen, and Almaden use us for turnover rekeying; and South Bay drivers call us for car lockouts, transponder keys, and fob programming handled at the curb. Trucks run down I-680 from our Walnut Creek hub, with Santa Clara, Campbell, and Milpitas covered on the same dispatch line. Price confirmed on-site, before the work starts — every time.",
+    faq: [
+      {
+        question: "How fast can a locksmith reach San Jose?",
+        answer:
+          "Our trucks run down I-680 to San Jose, and dispatch quotes a realistic ETA for your address before a truck rolls — call 415-423-0182. Average ETA across our Bay Area service area is under 30 minutes; for the South Bay we'll tell you honestly what traffic means for yours. Same-day and emergency calls run Monday–Saturday, 7am–6pm.",
+      },
+      {
+        question: "Do you repair commercial doors in San Jose?",
+        answer:
+          "Yes — commercial door work is one of our biggest San Jose services. We repair and replace storefront aluminum doors, hollow-metal doors and frames, door closers, panic bars and exit devices, and ADA-compliant hardware, and every installation meets local building codes and fire safety requirements. One vendor handles the door, the hardware, and the keys.",
+      },
+      {
+        question: "Can you handle both my San Jose business and my home?",
+        answer:
+          "That's the point of 15 disciplines under one roof. Businesses get master key systems, access control, high-security locks, and door hardware; homeowners get rekeying, deadbolts, smart locks, and lockout response across Willow Glen, Almaden, Evergreen, Berryessa, and the rest of the city. One dispatch line covers both — plus your car.",
+      },
+      {
+        question: "Do you cover the wider South Bay?",
+        answer:
+          "Yes. San Jose calls run on the same dispatch line as Santa Clara, Campbell, Milpitas, and Morgan Hill further south. If your business has sites across the South Bay, one call books them all — and we can key multiple locations into a single master key system.",
+      },
+    ],
   },
   {
     slug: "fremont",
     name: "Fremont",
     description:
       "B&B Locksmith is proud to serve Fremont and the Tri-City area with professional locksmith and security solutions. From tech campuses to residential neighborhoods, we deliver trusted service throughout the East Bay.",
+    body:
+      "Fremont runs on commutes and shift work, and that shows up in our call log: car lockouts, lost transponder keys, and fob programming are everyday jobs here — handled at your vehicle, no tow to a dealership. The industrial and R&D corridors around Warm Springs and Bayside keep our commercial side busy with warehouse door hardware, panic bars, master key systems, and access control for facilities that badge hundreds of employees. Residentially we work every district from Mission San Jose and Niles to Ardenwood and Irvington: move-in rekeying, deadbolt upgrades, smart locks, and lockout calls. Trucks reach Fremont via 680 over the Sunol Grade or 880 down the East Bay, and the same dispatch line covers Newark and Union City, so the whole Tri-City area is one call. As always, your technician confirms the price on-site before any work begins.",
+    faq: [
+      {
+        question: "How fast can a locksmith get to Fremont?",
+        answer:
+          "B&B Locksmith reaches Fremont via I-680 or I-880, and our average ETA across the Bay Area service area is under 30 minutes. Call 415-423-0182 and dispatch will quote a real ETA for your Fremont address before the truck rolls — same-day and emergency calls run Monday–Saturday, 7am–6pm, covering all of Fremont plus Newark and Union City.",
+      },
+      {
+        question: "Can you replace or program car keys in Fremont?",
+        answer:
+          "Yes — automotive work is a big part of what we do in Fremont. We cut and program transponder keys, replace and program key fobs including push-to-start proximity keys, and open locked vehicles without damage, all at your location. It's typically faster and less expensive than the dealership, with no tow required.",
+      },
+      {
+        question: "Do you handle commercial and warehouse work in Fremont?",
+        answer:
+          "All of it. B&B Locksmith installs and services panic bars and exit devices, commercial door hardware, master key systems, intercoms, and access control for Fremont facilities — from Warm Springs R&D buildings to Bayside warehouses and retail along Fremont Boulevard. We're a licensed C-28 contractor, bonded and insured, with vendor documentation available for facility teams.",
+      },
+      {
+        question: "Which Fremont neighborhoods do you cover?",
+        answer:
+          "Every one of them: Mission San Jose, Niles, Irvington, Centerville, Ardenwood, Warm Springs, and the rest of the city, plus Newark and Union City on the same dispatch line. Residential, commercial, and automotive calls all run through the same number — 415-423-0182.",
+      },
+    ],
   },
   {
     slug: "walnut-creek",
     name: "Walnut Creek",
     description:
       "Based in Walnut Creek, B&B Locksmith is your local security partner. We serve businesses and residents throughout Walnut Creek, Concord, Pleasant Hill, Lafayette, and the surrounding Contra Costa County communities.",
+    body:
+      "Walnut Creek is home base — our trucks start and end every day here, which makes it the fastest address in our entire service area. Downtown retail around Broadway Plaza and the North Main corridor keeps us busy with storefront locks, panic hardware, master key systems, and access control; office parks along Ygnacio Valley Road and Treat Boulevard call us for tenant-turnover rekeying and vendor lock work. On the residential side we cover everything from downtown condos to Northgate and Rudgear family homes: rekeying after a move, deadbolt and smart-lock upgrades, and same-day lockout response. We're members of the Walnut Creek Chamber of Commerce (plus the Concord, Pleasant Hill, and Lafayette chambers next door), and because dispatch sits here, an emergency call from a Walnut Creek address usually gets our shortest ETA of the day. Your technician confirms the price on-site before any work begins.",
+    faq: [
+      {
+        question: "How fast can a locksmith reach me in Walnut Creek?",
+        answer:
+          "Faster than anywhere else we serve — Walnut Creek is our home base, so trucks are usually minutes away rather than a highway drive. Call 415-423-0182 and dispatch will give you a real ETA for your address; same-day and emergency calls run Monday–Saturday, 7am–6pm. Average ETA across the Bay Area is under 30 minutes, and in Walnut Creek we routinely beat it.",
+      },
+      {
+        question: "Do you work with Walnut Creek businesses?",
+        answer:
+          "Every week. B&B Locksmith services storefronts around Broadway Plaza and North Main, offices along Ygnacio Valley Road, and commercial buildings across downtown — storefront locks, panic bars and exit devices, master key systems, intercoms, and access control. We're a licensed C-28 contractor, bonded and insured, and a member of the Walnut Creek Chamber of Commerce; vendor documentation is available for property managers.",
+      },
+      {
+        question: "Can you rekey my Walnut Creek home after I move in?",
+        answer:
+          "Yes — move-in rekeying is one of our most common Walnut Creek jobs. We rekey your existing locks so every previous key stops working, usually in a single visit, and can match multiple doors to one key while we're there. It keeps your current hardware, so it costs less than replacing locks. We quote first: your technician confirms the price on-site before starting.",
+      },
+      {
+        question: "Do you cover the rest of central Contra Costa County?",
+        answer:
+          "Yes. From the Walnut Creek hub we cover Concord, Pleasant Hill, Lafayette, Alamo, Danville, and the surrounding communities on the same dispatch line — residential, commercial, and automotive calls alike. If you're anywhere in central Contra Costa, you're effectively in our backyard.",
+      },
+    ],
   },
   {
     slug: "oakland",
@@ -876,8 +973,8 @@ export const LOCATIONS = [
 ] as const;
 
 export const STATS = [
-  { value: "20+", label: "Years Experience" },
-  { value: "1,000+", label: "5-Star Reviews" },
+  { value: "15+", label: "Years Experience" },
+  { value: "165+", label: "5-Star Yelp Reviews" },
   { value: "5.0", label: "Star Rating" },
   { value: "C-28", label: "Licensed" },
 ] as const;

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { CONTACT } from "@/lib/site-data";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Contact B&B Locksmith | Bay Area Locksmith — Walnut Creek, CA",
@@ -17,6 +19,7 @@ const HOURS = [
 export default function ContactPage() {
   return (
     <main style={{ backgroundColor: "#F4F0E6", color: "#1A1A1A" }}>
+      <JsonLd data={breadcrumbSchema([{ name: "Contact", path: "/contact" }])} />
       {/* ===== HERO — The call ===== */}
       <section
         className="relative overflow-hidden border-b"

@@ -25,7 +25,7 @@ export default function ServicesPage() {
             className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
           >
-            Thirteen disciplines.
+            Fifteen disciplines.
             <br />
             One crew.
           </h1>

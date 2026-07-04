@@ -39,7 +39,7 @@ const VALUES = [
   {
     title: "Customer First",
     description:
-      "Your security is our priority. We build lasting relationships through reliable service, honest advice, and over 1,000 five-star reviews.",
+      "Your security is our priority. We build lasting relationships through reliable service, honest advice, and a 5.0-star Yelp rating earned one job at a time.",
   },
 ] as const;
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
             className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
           >
-            20+ years.
+            Since 2009.
             <br />
             One Bay Area.
           </h1>
@@ -66,8 +66,8 @@ export default function AboutPage() {
             className="max-w-2xl text-base sm:text-lg"
             style={{ fontFamily: "var(--f-body)", color: "#F4F0E6CC" }}
           >
-            A family-run locksmith and security crew. Licensed C-28. Over a
-            thousand five-star reviews. We answer the phone, we show up, and
+            A family-run locksmith and security crew. Licensed C-28. 165+
+            five-star Yelp reviews. We answer the phone, we show up, and
             we leave the door closed behind us.
           </p>
         </div>
@@ -93,14 +93,14 @@ export default function AboutPage() {
               style={{ fontFamily: "var(--f-body)", color: "#1A1A1ACC" }}
             >
               <p>
-                Founded by Alex Berger over 20 years ago, B&amp;B Locksmith
+                Founded by Alex Berger in 2009, B&amp;B Locksmith
                 &amp; Security Inc. has grown from a small locksmith operation
                 into the Bay Area&apos;s most trusted full-service security
                 company. As a family-owned business, we treat every customer
                 like a neighbor.
               </p>
               <p>
-                With over 1,000 five-star reviews across Yelp and Google, our
+                With 165+ five-star Yelp reviews and a 5.0 average, our
                 reputation speaks for itself. We offer master key systems,
                 access control, smart locks, commercial door hardware, intercom
                 and buzzer systems, safe installation, and emergency lockout —

@@ -11,12 +11,12 @@ import {
   SERVICE_CITIES,
 } from "@/lib/site-data";
 import JsonLd from "@/components/JsonLd";
-import { homeBusinessSchema, websiteSchema } from "@/lib/schema";
+import { websiteSchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "B&B Locksmith & Security | Bay Area Locksmith Since 2009",
   description:
-    "Professional locksmith and security services across the Bay Area. Licensed C-28 contractor with 20+ years of experience, over 1,000 five-star reviews, and same-day emergency response.",
+    "Professional locksmith and security services across the Bay Area. Licensed C-28 contractor serving since 2009, 5.0-star rated on Yelp, same-day emergency response Mon–Sat 7am–6pm.",
   alternates: { canonical: "/" },
 };
 
@@ -24,22 +24,50 @@ const pad = (n: number) => String(n).padStart(2, "0");
 
 const STATS_BAR = [
   { num: "15+", sub: "Years Experience", red: true },
-  { num: "1,000+", sub: "5-Star Reviews", red: false },
+  { num: "165+", sub: "5-Star Yelp Reviews", red: false },
   { num: "5.0★", sub: "Star Rating", red: false },
   { num: "C-28", sub: "Licensed", red: false },
 ] as const;
 
 const PROOF_STATS = [
   { num: "15+", label: "Years serving the Bay", sub: "Since 2009", red: true },
-  { num: "1,000+", label: "Five-star reviews", sub: "Yelp · Google", red: false },
-  { num: "5.0★", label: "Average Yelp rating", sub: "200+ Google reviews", red: false },
+  { num: "165+", label: "Five-star Yelp reviews", sub: "5.0 average", red: false },
+  { num: "5.0★", label: "Average Yelp rating", sub: "Verified reviews", red: false },
   { num: "< 30", label: "Min average ETA", sub: "Bay Area dispatch", red: true },
   { num: "15", label: "Service disciplines", sub: "One team", red: false },
   { num: "Same-Day", label: "Emergency response", sub: "We pick up", red: false },
   { num: "C-28", label: "Licensed contractor", sub: "Bonded · Insured", red: true },
   { num: "50+", label: "Technology partners", sub: "50+ national brands", red: false },
-  { num: "12", label: "Cities served", sub: "Bay Area coverage", red: false },
+  { num: "15", label: "Cities served", sub: "Bay Area coverage", red: false },
   { num: "Master", label: "Level technicians", sub: "Licensed & certified", red: true },
+] as const;
+
+const HOME_FAQS = [
+  {
+    question: "How fast can B&B Locksmith get to me in the Bay Area?",
+    answer:
+      "B&B Locksmith dispatches a mobile fleet from our Walnut Creek hub across the entire Bay Area, with an average ETA under 30 minutes inside our service area. Call 415-423-0182 and dispatch will quote a real ETA for your address before a truck rolls. We handle same-day and emergency calls Monday through Saturday, 7am to 6pm — home, business, and vehicle lockouts, broken key extraction, and urgent rekeying after a break-in or move-out.",
+  },
+  {
+    question: "What cities does B&B Locksmith serve?",
+    answer:
+      "We serve 15 Bay Area cities with dedicated coverage: San Francisco, San Jose, Fremont, Walnut Creek, Oakland, Berkeley, Concord, San Ramon, Dublin, Pleasanton, Livermore, Richmond, Vallejo, Morgan Hill, and Tiburon — plus the surrounding communities between them. Our trucks dispatch from Walnut Creek, so East Bay and central Contra Costa addresses typically see the fastest response times, with the rest of the Bay covered on the same dispatch line.",
+  },
+  {
+    question: "Is B&B Locksmith licensed and insured?",
+    answer:
+      "Yes. B&B Locksmith & Security Inc. is a licensed C-28 (Lock and Security Equipment) contractor, bonded and insured, serving the Bay Area since 2009. For commercial clients, we routinely provide license and insurance documentation for vendor onboarding — property managers and facility teams can request it before work begins.",
+  },
+  {
+    question: "How much does a locksmith visit cost?",
+    answer:
+      "It depends on the job — a residential rekey, a car lockout, and a commercial access-control install are very different scopes, so we quote first rather than publish one-size-fits-all prices. For planned work, we offer a free on-site assessment with a written quote. For emergency calls, your technician confirms the price with you on-site before any work begins, so there are no surprises.",
+  },
+  {
+    question: "Do you handle commercial as well as residential work?",
+    answer:
+      "Both, plus automotive. B&B Locksmith covers 15 disciplines under one roof: commercial locksmithing (master key systems, panic bars, storefront hardware), residential work (rekeying, deadbolts, smart locks), automotive keys and lockouts, plus access control, intercom and buzzer systems, commercial doors, safes, and security consulting. One team, one dispatch line, the whole Bay.",
+  },
 ] as const;
 
 const PROTECT_CATEGORIES = [
@@ -83,7 +111,7 @@ export default function Home() {
 
   return (
     <main style={{ backgroundColor: "#FFFFFF", color: "#1A1A1A" }}>
-      <JsonLd data={[homeBusinessSchema(), websiteSchema()]} />
+      <JsonLd data={[websiteSchema(), faqSchema([...HOME_FAQS])]} />
       {/* ===== HERO ===== */}
       <section className="relative isolate">
         <div className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
@@ -93,6 +121,7 @@ export default function Home() {
             muted
             loop
             playsInline
+            preload="metadata"
             poster="/images/hero-poster.jpg"
             aria-hidden="true"
           >
@@ -116,7 +145,7 @@ export default function Home() {
                 className="text-[11px] uppercase tracking-[0.4em]"
                 style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
               >
-                A Bay Area locksmith, 20+ years in
+                A Bay Area locksmith since 2009
               </p>
               <h1
                 className="mt-6 uppercase leading-[0.85] tracking-[-0.01em]"
@@ -135,7 +164,7 @@ export default function Home() {
               >
                 At B&amp;B Locksmith &amp; Security, our business is securing yours. We blend
                 industry-leading technology with hands-on trade mastery to create security
-                solutions clients can trust. With over two decades of experience, we&apos;ve built
+                solutions clients can trust. Since 2009, we&apos;ve built
                 our reputation on professionalism, responsiveness, quality workmanship, and lasting
                 customer relationships.
               </p>
@@ -172,7 +201,7 @@ export default function Home() {
                   <span style={{ color: "#F2B441" }}>★★★★★</span> 5.0 on Yelp
                 </span>
                 <span className="hidden opacity-30 sm:inline">·</span>
-                <span>1,000+ five-star reviews</span>
+                <span>165+ five-star reviews</span>
                 <span className="hidden opacity-30 sm:inline">·</span>
                 <span>Licensed C-28 contractor</span>
                 <span className="hidden opacity-30 sm:inline">·</span>
@@ -260,7 +289,7 @@ export default function Home() {
               style={{ color: "#1A1A1ACC" }}
             >
               We blend industry-leading technology with hands-on trade mastery to create security
-              solutions clients can trust. With over two decades of experience, we&apos;ve built our
+              solutions clients can trust. Since 2009, we&apos;ve built our
               reputation on professionalism, responsiveness, quality workmanship, and lasting
               customer relationships.
             </p>
@@ -289,7 +318,7 @@ export default function Home() {
               className="max-w-sm text-sm leading-snug sm:text-base"
               style={{ color: "#1A1A1AAA" }}
             >
-              Commercial, residential, and automotive — backed by 20+ years of Bay Area expertise
+              Commercial, residential, and automotive — backed by Bay Area expertise since 2009
               and the same team that picks up when you call.
             </p>
           </div>
@@ -818,6 +847,39 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FAQ ===== */}
+      <section className="border-b" style={{ borderColor: "#1A1A1A14", backgroundColor: "#FFFFFF" }}>
+        <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-28">
+          <h2
+            className="mb-12 uppercase leading-[0.88] tracking-[-0.01em]"
+            style={{
+              fontFamily: "var(--f-display)",
+              fontSize: "clamp(2.5rem, 6vw, 5rem)",
+            }}
+          >
+            Straight <span style={{ color: "#E63946" }}>answers.</span>
+          </h2>
+          <div className="space-y-10">
+            {HOME_FAQS.map((faq) => (
+              <div key={faq.question}>
+                <h3
+                  className="mb-3 text-lg font-semibold sm:text-xl"
+                  style={{ fontFamily: "var(--f-body)", color: "#1A1A1A" }}
+                >
+                  {faq.question}
+                </h3>
+                <p
+                  className="text-base leading-relaxed"
+                  style={{ fontFamily: "var(--f-body)", color: "#1A1A1ACC" }}
+                >
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

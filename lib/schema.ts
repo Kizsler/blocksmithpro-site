@@ -38,6 +38,7 @@ export function businessSchema() {
     "@type": "Locksmith",
     "@id": BUSINESS_ID,
     name: "B&B Locksmith & Security Inc.",
+    alternateName: "BlockSmithPro",
     url: SITE_URL,
     telephone: `+1-${CONTACT.phone1}`,
     email: CONTACT.email,
@@ -48,24 +49,14 @@ export function businessSchema() {
       url: `${SITE_URL}/images/logo.png`,
     },
     address: POSTAL_ADDRESS,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 37.9101,
+      longitude: -122.0652,
+    },
     areaServed: SERVICE_CITIES.map((c) => ({ "@type": "City", name: c.name })),
     openingHoursSpecification: OPENING_HOURS,
     sameAs: [SOCIAL.instagram, SOCIAL.facebook, SOCIAL.youtube, SOCIAL.linkedin],
-  };
-}
-
-/** Homepage-only: rating is displayed on-page there (testimonials + stats bar).
- *  reviewCount must match the verifiable platform count — update when confirmed. */
-export function homeBusinessSchema() {
-  return {
-    ...businessSchema(),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: 5,
-      reviewCount: 200,
-      bestRating: 5,
-      worstRating: 1,
-    },
   };
 }
 
@@ -151,6 +142,7 @@ export function blogPostingSchema(post: BlogPost) {
     "@id": `${SITE_URL}/blog/${post.slug}#article`,
     headline: post.title,
     description: post.excerpt,
+    image: `${SITE_URL}${post.image ?? "/images/hero-poster.jpg"}`,
     url: `${SITE_URL}/blog/${post.slug}`,
     datePublished: post.date,
     dateModified: post.date,
