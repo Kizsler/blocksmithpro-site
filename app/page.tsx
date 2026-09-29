@@ -22,16 +22,18 @@ export const metadata: Metadata = {
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
+const YELP_URL = "https://www.yelp.com/biz/b-and-b-locksmith-and-security-daly-city";
+
 const STATS_BAR = [
-  { num: "15+", sub: "Years Experience", red: true },
-  { num: "165+", sub: "5-Star Yelp Reviews", red: false },
-  { num: "5.0★", sub: "Star Rating", red: false },
-  { num: "C-28", sub: "Licensed", red: false },
+  { num: "15+", sub: "Years Experience", red: true, href: null },
+  { num: "1,000+", sub: "5-Star Reviews", red: false, href: YELP_URL },
+  { num: "5.0★", sub: "Star Rating", red: false, href: null },
+  { num: "C-28", sub: "Licensed", red: false, href: null },
 ] as const;
 
 const PROOF_STATS = [
   { num: "15+", label: "Years serving the Bay", sub: "Since 2009", red: true },
-  { num: "165+", label: "Five-star Yelp reviews", sub: "5.0 average", red: false },
+  { num: "1,000+", label: "Five-star reviews", sub: "5.0 average", red: false },
   { num: "5.0★", label: "Average Yelp rating", sub: "Verified reviews", red: false },
   { num: "< 30", label: "Min average ETA", sub: "Bay Area dispatch", red: true },
   { num: "15", label: "Service disciplines", sub: "One team", red: false },
@@ -201,7 +203,14 @@ export default function Home() {
                   <span style={{ color: "#F2B441" }}>★★★★★</span> 5.0 on Yelp
                 </span>
                 <span className="hidden opacity-30 sm:inline">·</span>
-                <span>165+ five-star reviews</span>
+                <a
+                  href={YELP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-4 hover:underline"
+                >
+                  1,000+ five-star reviews
+                </a>
                 <span className="hidden opacity-30 sm:inline">·</span>
                 <span>Licensed C-28 contractor</span>
                 <span className="hidden opacity-30 sm:inline">·</span>
@@ -216,30 +225,46 @@ export default function Home() {
           className="grid grid-cols-2 divide-x divide-y text-center sm:grid-cols-4 sm:divide-y-0"
           style={{ backgroundColor: "#F4F4F5", borderColor: "#1A1A1A14" }}
         >
-          {STATS_BAR.map((stat, i) => (
-            <div
-              key={stat.sub}
-              className="flex flex-col items-center justify-center px-5 py-8 sm:px-8 sm:py-12"
-              style={{ borderColor: "#1A1A1A14" }}
-            >
-              <p
-                className="mt-3 text-6xl leading-none sm:text-7xl"
-                style={{
-                  fontFamily: "var(--f-display)",
-                  color: stat.red ? "#E63946" : "#1A1A1A",
-                  fontVariantNumeric: "tabular-nums",
-                }}
+          {STATS_BAR.map((stat, i) => {
+            const tileClass =
+              "flex flex-col items-center justify-center px-5 py-8 sm:px-8 sm:py-12";
+            const tileBody = (
+              <>
+                <p
+                  className="mt-3 text-6xl leading-none sm:text-7xl"
+                  style={{
+                    fontFamily: "var(--f-display)",
+                    color: stat.red ? "#E63946" : "#1A1A1A",
+                    fontVariantNumeric: "tabular-nums",
+                  }}
+                >
+                  {stat.num}
+                </p>
+                <p
+                  className="mt-2 text-sm"
+                  style={{ color: "#1A1A1AAA", fontFamily: "var(--f-body)" }}
+                >
+                  {stat.sub}
+                </p>
+              </>
+            );
+            return stat.href ? (
+              <a
+                key={stat.sub}
+                href={stat.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${tileClass} transition-colors hover:bg-black/5`}
+                style={{ borderColor: "#1A1A1A14" }}
               >
-                {stat.num}
-              </p>
-              <p
-                className="mt-2 text-sm"
-                style={{ color: "#1A1A1AAA", fontFamily: "var(--f-body)" }}
-              >
-                {stat.sub}
-              </p>
-            </div>
-          ))}
+                {tileBody}
+              </a>
+            ) : (
+              <div key={stat.sub} className={tileClass} style={{ borderColor: "#1A1A1A14" }}>
+                {tileBody}
+              </div>
+            );
+          })}
         </div>
       </section>
 

@@ -66,8 +66,8 @@ export default function AboutPage() {
             className="max-w-2xl text-base sm:text-lg"
             style={{ fontFamily: "var(--f-body)", color: "#F4F0E6CC" }}
           >
-            A family-run locksmith and security crew. Licensed C-28. 165+
-            five-star Yelp reviews. We answer the phone, we show up, and
+            A family-run locksmith and security crew. Licensed C-28. 1,000+
+            five-star reviews. We answer the phone, we show up, and
             we leave the door closed behind us.
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 like a neighbor.
               </p>
               <p>
-                With 165+ five-star Yelp reviews and a 5.0 average, our
+                With 1,000+ five-star reviews across Yelp and Google, our
                 reputation speaks for itself. We offer master key systems,
                 access control, smart locks, commercial door hardware, intercom
                 and buzzer systems, safe installation, and emergency lockout —
