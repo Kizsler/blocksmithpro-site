@@ -112,6 +112,50 @@ const nextConfig: NextConfig = {
       { source: "/blog/how-to-choose-a-locksmith", destination: "/blog", permanent: true },
       { source: "/blog/importance-of-rekeying-your-locks", destination: "/blog", permanent: true },
       { source: "/blog/benefits-of-access-control-systems", destination: "/blog", permanent: true },
+
+      // ── Legacy WordPress URLs (GSC "Not found (404)", crawled Aug 2026) ───
+      // Truncated vanity URLs Google discovered with a dangling hyphen. These
+      // fall through the "/smart-locks-:city" style rules above because :city
+      // requires at least one character.
+      { source: "/smart-locks-", destination: "/services/smart-locks", permanent: true },
+      { source: "/keyless-", destination: "/services/keyless-entry", permanent: true },
+      { source: "/safe-", destination: "/services/safe-installation", permanent: true },
+
+      // Old WordPress service URL
+      { source: "/services/buzzer-systems-installation-repair", destination: "/services/buzzer-systems", permanent: true },
+
+      // Old company pages
+      { source: "/company/bb-locksmith", destination: "/about", permanent: true },
+      { source: "/bblocksmith", destination: "/about", permanent: true },
+
+      // Legacy WordPress blog posts → closest equivalent current page
+      { source: "/how-to-install-a-door-buzzer-system", destination: "/services/buzzer-systems", permanent: true },
+      { source: "/enhancing-security-in-the-san-francisco-bay-area-latch-guard-installations", destination: "/locations/san-francisco", permanent: true },
+      { source: "/importance-of-access-control-systems-for-businesses", destination: "/services/access-control", permanent: true },
+      { source: "/why-mul-t-lock", destination: "/services/commercial-locking-hardware", permanent: true },
+      { source: "/how-locksmiths-fix-sticking-or-hard-to-turn-locks", destination: "/services/door-gate-repair", permanent: true },
+      { source: "/how-bb-locksmith-can-help-your-business-thrive", destination: "/services/commercial-locksmith", permanent: true },
+      { source: "/one-doorbird-at-a-time", destination: "/services/intercom-systems", permanent: true },
+      { source: "/securing-san-francisco-gate-security-solutions", destination: "/services/door-gate-repair", permanent: true },
+      { source: "/need-car-keys-dont-let-the-dealership-rip-you-off", destination: "/services/automotive-locksmith", permanent: true },
+      { source: "/enhancing-commercial-security-electrified-panic-devices-with-remote-access", destination: "/services/commercial-locking-hardware", permanent: true },
+      { source: "/top-signs-door-locks-need-replacement", destination: "/services/residential-locksmith", permanent: true },
+      { source: "/how-rekeying-restores-home-security-after-break-in", destination: "/services/rekeying", permanent: true },
+      { source: "/common-locksmith-scams-and-how-to-avoid-them", destination: "/blog", permanent: true },
+      { source: "/do-not-duplicate-keys", destination: "/services/master-key-systems", permanent: true },
+      { source: "/the-evolution-of-home-security-why-traditional-locks-are-becoming-obsolete", destination: "/services/smart-locks", permanent: true },
+      { source: "/benefits-of-continuous-hinges-why-you-should-install-them", destination: "/services/commercial-doors", permanent: true },
+      { source: "/the-role-of-intercom-systems-in-modern-home-security", destination: "/services/intercom-systems", permanent: true },
+      { source: "/smart-lock-misconceptions-homeowners-should-know", destination: "/services/smart-locks", permanent: true },
+      { source: "/high-security-locks", destination: "/services/commercial-locking-hardware", permanent: true },
+
+      // WordPress taxonomy archives that no longer exist
+      { source: "/category/:slug*", destination: "/blog", permanent: true },
+      { source: "/author/:slug*", destination: "/blog", permanent: true },
+
+      // NOTE: /wp-admin/*, /wp-content/*, /wp-*.php are deliberately left as
+      // 404s. They were never real pages; redirecting them would generate
+      // soft-404 signals instead of removing the noise.
     ];
   },
   async headers() {
