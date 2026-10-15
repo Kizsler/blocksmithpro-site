@@ -7,6 +7,8 @@ app = 'blocksmithpro'
 primary_region = 'sjc'
 
 [build]
+  [build.args]
+    NEXT_PUBLIC_GA_ID = "G-XBJY9CXK0S"
 
 [http_service]
   internal_port = 3000

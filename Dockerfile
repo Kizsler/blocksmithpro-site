@@ -18,6 +18,12 @@ COPY . .
 # baked correctly. Empty for production; staging passes --build-arg SITE_ENV=staging.
 ARG SITE_ENV=""
 ENV SITE_ENV=$SITE_ENV
+
+# NEXT_PUBLIC_* vars are inlined at BUILD time, so a Fly runtime secret never
+# reaches the pages. The GA4 measurement ID is public by design; it is passed
+# as a build arg from fly.toml [build.args].
+ARG NEXT_PUBLIC_GA_ID=""
+ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
