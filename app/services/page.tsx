@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { SERVICES } from "@/lib/site-data";
+import { VISIBLE_SERVICES as SERVICES } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Locksmith Services Bay Area | B&B Locksmith",

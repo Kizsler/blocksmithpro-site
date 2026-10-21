@@ -17,6 +17,7 @@ export const SOCIAL = {
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Safes", href: "/services/safe-installation" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },
@@ -507,6 +508,19 @@ export const SERVICES = [
     icon: "safe",
   },
 ] as const;
+
+// Services kept live (for search engines and old links) but not promoted
+// anywhere on the site: menus, footer, homepage grid, services index.
+export const HIDDEN_SERVICE_SLUGS: readonly string[] = ["residential-locksmith"];
+
+// SERVICES in display order: hidden ones removed, Safes moved up to the
+// second slot so it shows in the footer and homepage grid.
+export const VISIBLE_SERVICES = (() => {
+  const visible = SERVICES.filter((s) => !HIDDEN_SERVICE_SLUGS.includes(s.slug));
+  const safes = visible.find((s) => s.slug === "safe-installation");
+  const rest = visible.filter((s) => s.slug !== "safe-installation");
+  return safes ? [rest[0], safes, ...rest.slice(1)] : visible;
+})();
 
 export const TESTIMONIALS = [
   {

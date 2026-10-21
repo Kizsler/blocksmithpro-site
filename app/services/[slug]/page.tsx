@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { SERVICES, CONTACT } from "@/lib/site-data";
+import { SERVICES, VISIBLE_SERVICES, CONTACT } from "@/lib/site-data";
 import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
-  return SERVICES.map((service) => ({ slug: service.slug }));
+  // safe-installation has its own dedicated route (app/services/safe-installation).
+  return SERVICES.filter((service) => service.slug !== "safe-installation").map(
+    (service) => ({ slug: service.slug })
+  );
 }
 
 // "safe-installation" → "Safe Installation" — searcher vocabulary for titles,
@@ -50,7 +53,7 @@ export default async function ServiceDetailPage({
     notFound();
   }
 
-  const related = SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
+  const related = VISIBLE_SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
   const faqs = "faq" in service ? service.faq : undefined;
   const isEmergency = "isEmergency" in service && service.isEmergency;
 

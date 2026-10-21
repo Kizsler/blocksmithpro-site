@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   SERVICES,
+  VISIBLE_SERVICES,
   TESTIMONIALS,
   CLIENT_LOGOS,
   CONTACT,
@@ -74,17 +75,6 @@ const HOME_FAQS = [
 
 const PROTECT_CATEGORIES = [
   {
-    title: "Residential",
-    desc: "Smart locks, rekeying, deadbolts, and emergency lockouts for your home.",
-    items: [
-      "Smart Lock Installation",
-      "Rekeying & Repin",
-      "Deadbolt Upgrades",
-      "Emergency Lockouts",
-    ],
-    href: "/services/residential-locksmith",
-  },
-  {
     title: "Commercial",
     desc: "Access control, master key systems, and commercial doors for your business.",
     items: [
@@ -94,6 +84,17 @@ const PROTECT_CATEGORIES = [
       "Panic Bar & Exit Devices",
     ],
     href: "/services/commercial-locksmith",
+  },
+  {
+    title: "Safes",
+    desc: "Safe sales, delivery, bolt-down installation, opening and combination changes.",
+    items: [
+      "Hollon, AMSEC & Gardall Safes",
+      "Drop & Depository Safes",
+      "Delivery & Bolt-Down",
+      "Safe Opening & Combinations",
+    ],
+    href: "/services/safe-installation",
   },
   {
     title: "Automotive",
@@ -109,7 +110,7 @@ const PROTECT_CATEGORIES = [
 ] as const;
 
 export default function Home() {
-  const displayedServices = SERVICES.slice(0, 8);
+  const displayedServices = VISIBLE_SERVICES.slice(0, 8);
 
   return (
     <main style={{ backgroundColor: "#FFFFFF", color: "#1A1A1A" }}>
@@ -343,7 +344,7 @@ export default function Home() {
               className="max-w-sm text-sm leading-snug sm:text-base"
               style={{ color: "#1A1A1AAA" }}
             >
-              Commercial, residential, and automotive — backed by Bay Area expertise since 2009
+              Commercial, safes, and automotive — backed by Bay Area expertise since 2009
               and the same team that picks up when you call.
             </p>
           </div>
@@ -408,7 +409,7 @@ export default function Home() {
               className="text-xs uppercase tracking-[0.3em]"
               style={{ fontFamily: "var(--f-mono)", color: "#1A1A1A66" }}
             >
-              8 of {SERVICES.length} disciplines
+              8 of {VISIBLE_SERVICES.length} disciplines
             </p>
             <Link
               href="/services"
@@ -444,7 +445,7 @@ export default function Home() {
               className="mt-4 max-w-xl text-base sm:text-lg"
               style={{ fontFamily: "var(--f-body)", color: "#F4F0E6AA" }}
             >
-              Residential &amp; commercial — we secure it all
+              Businesses, safes, and vehicles — we secure it all
             </p>
           </div>
           <div

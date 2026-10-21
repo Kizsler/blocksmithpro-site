@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { CONTACT, SOCIAL, NAV_LINKS, SERVICES, SERVICE_CITIES } from "@/lib/site-data";
+import { CONTACT, SOCIAL, NAV_LINKS, VISIBLE_SERVICES, SERVICE_CITIES } from "@/lib/site-data";
 
 export default function Footer() {
   return (
@@ -72,7 +72,7 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-2">
-              {SERVICES.slice(0, 6).map((service) => (
+              {VISIBLE_SERVICES.slice(0, 6).map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
