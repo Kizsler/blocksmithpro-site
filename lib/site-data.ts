@@ -161,7 +161,7 @@ export const SERVICES = [
   },
   {
     slug: "automotive-locksmith",
-    image: "/images/services/automotive-locksmith.jpg",
+    image: "/images/services/automotive/porsche-key-fob-card.jpg",
     title: "Automotive Service",
     description:
       "Car key cutting, transponder key programming, key fob replacement, and emergency vehicle lockout services.",
