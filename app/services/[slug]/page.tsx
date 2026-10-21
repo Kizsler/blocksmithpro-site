@@ -7,8 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
-  // safe-installation has its own dedicated route (app/services/safe-installation).
-  return SERVICES.filter((service) => service.slug !== "safe-installation").map(
+  // safe-installation and automotive-locksmith have their own dedicated routes.
+  return SERVICES.filter((service) => !["safe-installation", "automotive-locksmith"].includes(service.slug)).map(
     (service) => ({ slug: service.slug })
   );
 }
