@@ -60,7 +60,7 @@ export const SERVICES = [
       {
         question: "Do you meet commercial vendor and insurance requirements?",
         answer:
-          "B&B Locksmith & Security Inc. is a licensed C-28 contractor, bonded and insured, and has served Bay Area commercial clients since 2009. If your vendor onboarding needs license or insurance documentation, ask when you book and we'll provide what your facilities or compliance team requires.",
+          "B&B Locksmith & Security Inc. is a licensed C-28 contractor, bonded and insured, and has served Bay Area commercial clients since 2011. If your vendor onboarding needs license or insurance documentation, ask when you book and we'll provide what your facilities or compliance team requires.",
       },
       {
         question: "Can you service panic bars and fire-exit hardware?",
@@ -720,7 +720,7 @@ export const LOCATIONS = [
       {
         question: "Do you do commercial locksmith work in Oakland?",
         answer:
-          "All of it. B&B Locksmith installs and services storefront locks, panic bars and exit devices, master key systems, intercoms, and access control for Oakland businesses — from single storefronts to multi-tenant buildings. We're a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2009. Ask for license and insurance documentation if your building requires vendor onboarding.",
+          "All of it. B&B Locksmith installs and services storefront locks, panic bars and exit devices, master key systems, intercoms, and access control for Oakland businesses — from single storefronts to multi-tenant buildings. We're a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2011. Ask for license and insurance documentation if your building requires vendor onboarding.",
       },
     ],
   },
@@ -780,7 +780,7 @@ export const LOCATIONS = [
       {
         question: "Do you work with Concord businesses?",
         answer:
-          "All over the city — storefronts around Todos Santos Plaza, offices and retail along Clayton Road, Willow Pass, and Monument Boulevard. Panic bars, storefront locks, master key systems, access control, and rekeying after staff turnover. B&B Locksmith is a licensed C-28 contractor, bonded and insured, serving Contra Costa businesses since 2009.",
+          "All over the city — storefronts around Todos Santos Plaza, offices and retail along Clayton Road, Willow Pass, and Monument Boulevard. Panic bars, storefront locks, master key systems, access control, and rekeying after staff turnover. B&B Locksmith is a licensed C-28 contractor, bonded and insured, serving Contra Costa businesses since 2011.",
       },
     ],
   },
@@ -855,7 +855,7 @@ export const LOCATIONS = [
       {
         question: "Can you handle vendor requirements for Hacienda Business Park?",
         answer:
-          "Yes. B&B Locksmith & Security Inc. is a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2009. We provide license and insurance documentation for property-management vendor onboarding, and handle suite rekeying, master key systems, and access control across Hacienda and Pleasanton's other office parks.",
+          "Yes. B&B Locksmith & Security Inc. is a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2011. We provide license and insurance documentation for property-management vendor onboarding, and handle suite rekeying, master key systems, and access control across Hacienda and Pleasanton's other office parks.",
       },
     ],
   },
@@ -900,7 +900,7 @@ export const LOCATIONS = [
       {
         question: "Do you secure warehouses and industrial properties in Richmond?",
         answer:
-          "Yes. Richmond's industrial corridor is core commercial territory for B&B Locksmith: roll-up and overhead door locks, high-security padlock systems keyed to your master plan, panic and exit hardware, and access control for shops and yards. We're a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2009.",
+          "Yes. Richmond's industrial corridor is core commercial territory for B&B Locksmith: roll-up and overhead door locks, high-security padlock systems keyed to your master plan, panic and exit hardware, and access control for shops and yards. We're a licensed C-28 contractor, bonded and insured, serving Bay Area commercial clients since 2011.",
       },
       {
         question: "Can you upgrade security on my Richmond home?",

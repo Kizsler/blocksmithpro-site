@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "B&B Locksmith & Security Inc.",
     title: "B&B Locksmith | Trusted Bay Area Security & Locksmith Experts",
     description:
-      "Professional locksmith and commercial security services across the Bay Area. Licensed C-28 contractor, serving since 2009.",
+      "Professional locksmith and commercial security services across the Bay Area. Licensed C-28 contractor, serving since 2011.",
     url: "https://blocksmithpro.com",
     images: [{ url: "/images/hero-poster.jpg", width: 1200, height: 675 }],
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "B&B Locksmith | Trusted Bay Area Security & Locksmith Experts",
     description:
-      "Professional locksmith and commercial security services across the Bay Area. Licensed C-28 contractor, serving since 2009.",
+      "Professional locksmith and commercial security services across the Bay Area. Licensed C-28 contractor, serving since 2011.",
     images: ["/images/hero-poster.jpg"],
   },
   icons: {

@@ -205,7 +205,7 @@ export default function PropertyManagementPage() {
             >
               We make vendor setup painless. B&B Locksmith & Security Inc. is a
               licensed C-28 contractor, bonded and insured, serving Bay Area
-              commercial clients since 2009. Send us your vendor packet and we'll
+              commercial clients since 2011. Send us your vendor packet and we'll
               return a certificate of insurance naming your company as additional
               insured, our license and bond details, and W-9 — whatever your
               onboarding requires.

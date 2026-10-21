@@ -81,7 +81,7 @@ const FAQS = [
   {
     question: "Are your emergency technicians licensed?",
     answer:
-      "Yes. B&B Locksmith & Security Inc. is a licensed C-28 contractor, bonded and insured, serving the Bay Area since 2009. Our technicians verify ownership before opening any home, business, or vehicle — bring photo ID or proof of residence. That protects you: a locksmith who will open any door for anyone is a locksmith you don't want to hire.",
+      "Yes. B&B Locksmith & Security Inc. is a licensed C-28 contractor, bonded and insured, serving the Bay Area since 2011. Our technicians verify ownership before opening any home, business, or vehicle — bring photo ID or proof of residence. That protects you: a locksmith who will open any door for anyone is a locksmith you don't want to hire.",
   },
 ] as const;
 
@@ -180,7 +180,7 @@ export default function EmergencyLocksmithPage() {
             className="text-[10px] uppercase tracking-[0.25em]"
             style={{ fontFamily: "var(--f-mono)", color: "#F4F0E699" }}
           >
-            Licensed C-28 contractor · Bonded &amp; insured · Since 2009
+            Licensed C-28 contractor · Bonded &amp; insured · Since 2011
           </p>
         </div>
       </section>

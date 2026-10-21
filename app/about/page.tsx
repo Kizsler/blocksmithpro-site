@@ -4,9 +4,9 @@ import Link from "next/link";
 import { STATS } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "About B&B Locksmith | Licensed Bay Area Locksmith Since 2009",
+  title: "About B&B Locksmith | Licensed Bay Area Locksmith Since 2011",
   description:
-    "A family-run, C-28-licensed Bay Area locksmith and security crew with over a thousand five-star reviews, securing homes and businesses since 2009.",
+    "A family-run, C-28-licensed Bay Area locksmith and security crew with over a thousand five-star reviews, securing homes and businesses since 2011.",
   alternates: { canonical: "/about" },
 };
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
             className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
           >
-            Since 2009.
+            Since 2011.
             <br />
             One Bay Area.
           </h1>
@@ -93,7 +93,7 @@ export default function AboutPage() {
               style={{ fontFamily: "var(--f-body)", color: "#1A1A1ACC" }}
             >
               <p>
-                Founded by Alex Berger in 2009, B&amp;B Locksmith
+                Founded by Alex Berger in 2011, B&amp;B Locksmith
                 &amp; Security Inc. has grown from a small locksmith operation
                 into the Bay Area&apos;s most trusted full-service security
                 company. As a family-owned business, we treat every customer
@@ -236,7 +236,7 @@ export default function AboutPage() {
             className="mt-4 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.5rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
           >
-            The math, since 2009
+            The math, since 2011
           </h2>
           <div
             className="mt-12 grid grid-cols-2 gap-px sm:grid-cols-4"

@@ -15,9 +15,9 @@ import JsonLd from "@/components/JsonLd";
 import { websiteSchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "B&B Locksmith & Security | Bay Area Locksmith Since 2009",
+  title: "B&B Locksmith & Security | Bay Area Locksmith Since 2011",
   description:
-    "Professional locksmith and security services across the Bay Area. Licensed C-28 contractor serving since 2009, 5.0-star rated on Yelp, same-day emergency response Mon–Sat 7am–6pm.",
+    "Professional locksmith and security services across the Bay Area. Licensed C-28 contractor serving since 2011, 5.0-star rated on Yelp, same-day emergency response Mon–Sat 7am–6pm.",
   alternates: { canonical: "/" },
 };
 
@@ -33,7 +33,7 @@ const STATS_BAR = [
 ] as const;
 
 const PROOF_STATS = [
-  { num: "15+", label: "Years serving the Bay", sub: "Since 2009", red: true },
+  { num: "15+", label: "Years serving the Bay", sub: "Since 2011", red: true },
   { num: "1,000+", label: "Five-star reviews", sub: "5.0 average", red: false },
   { num: "5.0★", label: "Average Yelp rating", sub: "Verified reviews", red: false },
   { num: "< 30", label: "Min average ETA", sub: "Bay Area dispatch", red: true },
@@ -59,7 +59,7 @@ const HOME_FAQS = [
   {
     question: "Is B&B Locksmith licensed and insured?",
     answer:
-      "Yes. B&B Locksmith & Security Inc. is a licensed C-28 (Lock and Security Equipment) contractor, bonded and insured, serving the Bay Area since 2009. For commercial clients, we routinely provide license and insurance documentation for vendor onboarding — property managers and facility teams can request it before work begins.",
+      "Yes. B&B Locksmith & Security Inc. is a licensed C-28 (Lock and Security Equipment) contractor, bonded and insured, serving the Bay Area since 2011. For commercial clients, we routinely provide license and insurance documentation for vendor onboarding — property managers and facility teams can request it before work begins.",
   },
   {
     question: "How much does a locksmith visit cost?",
@@ -148,7 +148,7 @@ export default function Home() {
                 className="text-[11px] uppercase tracking-[0.4em]"
                 style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
               >
-                A Bay Area locksmith since 2009
+                A Bay Area locksmith since 2011
               </p>
               <h1
                 className="mt-6 uppercase leading-[0.85] tracking-[-0.01em]"
@@ -167,7 +167,7 @@ export default function Home() {
               >
                 At B&amp;B Locksmith &amp; Security, our business is securing yours. We blend
                 industry-leading technology with hands-on trade mastery to create security
-                solutions clients can trust. Since 2009, we&apos;ve built
+                solutions clients can trust. Since 2011, we&apos;ve built
                 our reputation on professionalism, responsiveness, quality workmanship, and lasting
                 customer relationships.
               </p>
@@ -315,7 +315,7 @@ export default function Home() {
               style={{ color: "#1A1A1ACC" }}
             >
               We blend industry-leading technology with hands-on trade mastery to create security
-              solutions clients can trust. Since 2009, we&apos;ve built our
+              solutions clients can trust. Since 2011, we&apos;ve built our
               reputation on professionalism, responsiveness, quality workmanship, and lasting
               customer relationships.
             </p>
@@ -344,7 +344,7 @@ export default function Home() {
               className="max-w-sm text-sm leading-snug sm:text-base"
               style={{ color: "#1A1A1AAA" }}
             >
-              Commercial, safes, and automotive — backed by Bay Area expertise since 2009
+              Commercial, safes, and automotive — backed by Bay Area expertise since 2011
               and the same team that picks up when you call.
             </p>
           </div>
