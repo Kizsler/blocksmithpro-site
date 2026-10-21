@@ -489,7 +489,7 @@ export const SERVICES = [
   },
   {
     slug: "safe-installation",
-    image: "/images/services/safe-installation-and-opening.jpg",
+    image: "/images/services/safes/hollon-safes-card.jpg",
     title: "Safe Installation",
     description:
       "Safe installation, bolt-down, relocation & locked-safe opening for homes and businesses — done by a licensed, insured Bay Area locksmith, not a delivery crew.",
