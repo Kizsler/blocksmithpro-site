@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       {
         url: "/images/services/automotive/jaguar-f-type-key-fobs-fleet.jpg",
         width: 1200,
-        height: 1200,
+        height: 900,
       },
     ],
   },
@@ -248,7 +248,7 @@ export default function AutomotivePage() {
               src="/images/services/automotive/jaguar-f-type-key-fobs-fleet.jpg"
               alt="Two new Jaguar smart keys held in front of a black Jaguar F-Type convertible with the B&B Locksmith van fleet behind it"
               width={1200}
-              height={1200}
+              height={900}
               priority
               sizes="(min-width: 1024px) 560px, 100vw"
               className="block h-auto w-full rounded-[10px] border-4"
