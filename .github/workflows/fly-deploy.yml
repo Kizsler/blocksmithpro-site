@@ -1,0 +1,35 @@
+# Deploys the site to Fly.io whenever master changes.
+# Needs a repo secret named FLY_API_TOKEN (Fly.io dashboard > Tokens > Create deploy token).
+# Until that secret exists, this workflow skips the deploy instead of failing.
+
+name: Deploy to Fly.io
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: fly-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    env:
+      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+    steps:
+      - name: Check for Fly.io token
+        if: env.FLY_API_TOKEN == ''
+        run: echo "::warning::FLY_API_TOKEN secret is not set, so the deploy was skipped. Add it under Settings > Secrets and variables > Actions."
+
+      - uses: actions/checkout@v4
+        if: env.FLY_API_TOKEN != ''
+
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+        if: env.FLY_API_TOKEN != ''
+
+      - name: Deploy
+        if: env.FLY_API_TOKEN != ''
+        run: flyctl deploy --remote-only
