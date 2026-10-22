@@ -2,6 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  experimental: {
+    serverActions: {
+      // Job applications can include a resume (capped at 4 MB in the action).
+      bodySizeLimit: "5mb",
+    },
+  },
   async redirects() {
     return [
       // ── Canonical host: www → apex ────────────────────────────────────────

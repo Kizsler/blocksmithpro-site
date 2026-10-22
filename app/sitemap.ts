@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { SERVICES, LOCATIONS } from "@/lib/site-data";
+import { JOBS, JOBS_POSTED } from "@/lib/careers-data";
 
 // Bump this date whenever page content meaningfully changes — using new Date()
 // stamps every URL with the build time, which teaches Google to ignore lastmod.
@@ -35,5 +36,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.date),
   }));
 
-  return [...staticPages, ...servicePages, ...locationPages, ...blogPages];
+  const careerPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/careers`, lastModified: new Date(JOBS_POSTED) },
+    ...JOBS.map((job) => ({
+      url: `${baseUrl}/careers/${job.slug}`,
+      lastModified: new Date(JOBS_POSTED),
+    })),
+  ];
+
+  return [...staticPages, ...servicePages, ...locationPages, ...blogPages, ...careerPages];
 }
