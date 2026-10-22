@@ -55,6 +55,7 @@ export default async function ServiceDetailPage({
 
   const related = VISIBLE_SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
   const faqs = "faq" in service ? service.faq : undefined;
+  const gallery = "gallery" in service ? service.gallery : undefined;
   const isEmergency = "isEmergency" in service && service.isEmergency;
 
   return (
@@ -120,6 +121,22 @@ export default async function ServiceDetailPage({
               className="object-cover"
             />
           </div>
+
+          {gallery && gallery.length > 0 && (
+            <div className="mt-px grid grid-cols-2 gap-px lg:grid-cols-3" style={{ backgroundColor: "#1A1A1A1A" }}>
+              {gallery.map((photo) => (
+                <figure key={photo.src} className="relative aspect-[4/5] overflow-hidden" style={{ backgroundColor: "#F4F0E6" }}>
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 50vw"
+                    className="object-cover"
+                  />
+                </figure>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

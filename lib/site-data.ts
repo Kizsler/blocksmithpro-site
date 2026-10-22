@@ -333,6 +333,14 @@ export const SERVICES = [
     slug: "gates-welding",
     image: "/images/services/gates/gates-welding-card.jpg",
     title: "Gates & Welding",
+    gallery: [
+      { src: "/images/services/gates/latch-guard-electric-strike.jpg", alt: "Interlocking latch guard and electric strike welded onto a steel entry gate" },
+      { src: "/images/services/gates/anti-reach-mesh-gate.jpg", alt: "Gate with anti-reach mesh welded on and a lever lock installed" },
+      { src: "/images/services/gates/keypad-closer-entry-gate.jpg", alt: "Building entry gate with a heavy-duty closer and a keypad lock mounted on welded plates" },
+      { src: "/images/services/gates/pool-gate-mesh-closer.jpg", alt: "Pool gate with mesh and self-closing hardware" },
+      { src: "/images/services/gates/welded-lock-plate.jpg", alt: "Steel plate welded across a gate to mount a lock" },
+      { src: "/images/services/gates/gate-welding-in-progress.jpg", alt: "Welding a lock mount onto a gate on-site, with the welder and helmet" },
+    ],
     description:
       "Security-focused gate work: anti-reach mesh welding, weatherproof electric strikes, gate keypads, and heavy-duty closers for heavy and pool gates.",
     detail:
