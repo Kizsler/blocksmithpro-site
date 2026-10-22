@@ -428,6 +428,11 @@ export const SERVICES = [
     slug: "intercom-buzzer-systems",
     image: "/images/services/intercom/intercom-buzzer-card.jpg",
     title: "Intercom & Buzzer Systems",
+    gallery: [
+      { src: "/images/services/intercom/intercom-panel-steel-housing.jpg", alt: "Video intercom panel set into a custom steel housing on a security gate" },
+      { src: "/images/services/intercom/flush-intercom-gate-pull.jpg", alt: "Flush-mounted video intercom with keypad beside a slatted entry gate" },
+      { src: "/images/services/intercom/intercom-modern-slat-gate.jpg", alt: "Modern slatted entry gate with a wall-mounted video intercom and keypad" },
+    ],
     description:
       "Intercom and buzzer entry systems for apartments, offices, HOAs, and schools: installation, repair, upgrades, and access control integration.",
     detail:
