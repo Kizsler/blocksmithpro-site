@@ -430,8 +430,11 @@ export const SERVICES = [
     title: "Intercom & Buzzer Systems",
     gallery: [
       { src: "/images/services/intercom/intercom-panel-steel-housing.jpg", alt: "Video intercom panel set into a custom steel housing on a security gate" },
+      { src: "/images/services/intercom/directory-panel-touchscreen.jpg", alt: "Building entry panel with a touchscreen tenant directory, keypad, and card reader" },
+      { src: "/images/services/intercom/multi-tenant-buzzer-panel.jpg", alt: "Multi-tenant video intercom with six call buttons at an apartment entrance" },
+      { src: "/images/services/intercom/intercom-keypad-mesh-gate.jpg", alt: "Video intercom with keypad mounted on a mesh security gate with a welded plate" },
+      { src: "/images/services/intercom/intercom-custom-gate-frame.jpg", alt: "Video intercom with keypad built into a custom-cut steel gate frame" },
       { src: "/images/services/intercom/flush-intercom-gate-pull.jpg", alt: "Flush-mounted video intercom with keypad beside a slatted entry gate" },
-      { src: "/images/services/intercom/intercom-modern-slat-gate.jpg", alt: "Modern slatted entry gate with a wall-mounted video intercom and keypad" },
     ],
     description:
       "Intercom and buzzer entry systems for apartments, offices, HOAs, and schools: installation, repair, upgrades, and access control integration.",
