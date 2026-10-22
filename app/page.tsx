@@ -145,8 +145,8 @@ export default function Home() {
           >
             <div className="mx-auto w-full max-w-6xl">
               <p
-                className="text-[11px] uppercase tracking-[0.4em]"
-                style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
+                className="inline-block border-l-4 border-[#E63946] bg-black/55 px-3 py-1.5 text-[13px] font-semibold uppercase tracking-[0.3em]"
+                style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6" }}
               >
                 A Bay Area locksmith since 2011
               </p>
