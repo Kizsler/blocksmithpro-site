@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { VISIBLE_SERVICES as SERVICES } from "@/lib/site-data";
+import { CONTACT, VISIBLE_SERVICES as SERVICES } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Locksmith Services Bay Area | B&B Locksmith",
@@ -25,7 +25,7 @@ export default function ServicesPage() {
             className="uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(3rem,8vw,7rem)]"
             style={{ fontFamily: "var(--f-display)", color: "#F4F0E6" }}
           >
-            Fifteen disciplines.
+            Fourteen disciplines.
             <br />
             One crew.
           </h1>
@@ -117,6 +117,51 @@ export default function ServicesPage() {
                 </div>
               </Link>
             ))}
+
+            {/* Closing tile: spans 2 columns on desktop so the 13-service grid ends on a full row. */}
+            <div
+              className="relative flex min-h-80 flex-col justify-between gap-8 p-6 sm:p-8 lg:col-span-2"
+              style={{ backgroundColor: "#1A1A1A", color: "#F4F0E6" }}
+            >
+              <span
+                className="text-[10px] uppercase tracking-[0.35em]"
+                style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
+              >
+                Free on-site assessment
+              </span>
+              <div>
+                <h2
+                  className="text-3xl uppercase leading-[0.95] sm:text-5xl"
+                  style={{ fontFamily: "var(--f-display)" }}
+                >
+                  Not sure what you need?
+                </h2>
+                <p
+                  className="mt-3 max-w-xl text-sm sm:text-base"
+                  style={{ fontFamily: "var(--f-body)", color: "#F4F0E6CC" }}
+                >
+                  Tell us what you&apos;re trying to protect. A licensed locksmith
+                  looks at the doors, gates, and hardware on-site and gives you a
+                  written quote.
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-3 px-6 py-4 text-[11px] uppercase tracking-[0.3em] transition-colors hover:bg-[#B8212E]"
+                  style={{ fontFamily: "var(--f-mono)", backgroundColor: "#E63946", color: "#F4F0E6" }}
+                >
+                  Book a free assessment →
+                </Link>
+                <a
+                  href={`tel:+1${CONTACT.phone1.replace(/-/g, "")}`}
+                  className="text-[11px] uppercase tracking-[0.3em] underline-offset-4 hover:underline"
+                  style={{ fontFamily: "var(--f-mono)", color: "#F4F0E6" }}
+                >
+                  Or call {CONTACT.phone1}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -69,7 +69,7 @@ const HOME_FAQS = [
   {
     question: "Do you handle commercial as well as residential work?",
     answer:
-      "Both, plus automotive. B&B Locksmith covers 15 disciplines under one roof: commercial locksmithing (master key systems, panic bars, storefront hardware), residential work (rekeying, deadbolts, smart locks), automotive keys and lockouts, plus access control, intercom and buzzer systems, commercial doors, safes, and security consulting. One team, one dispatch line, the whole Bay.",
+      "Both, plus automotive. B&B Locksmith covers 14 disciplines under one roof: commercial locksmithing (master key systems, panic bars, storefront hardware), residential work (rekeying, deadbolts, smart locks), automotive keys and lockouts, plus access control, intercom and buzzer systems, commercial doors, safes, and security consulting. One team, one dispatch line, the whole Bay.",
   },
 ] as const;
 

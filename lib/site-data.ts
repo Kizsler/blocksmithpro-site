@@ -272,31 +272,13 @@ export const SERVICES = [
     ],
   },
   {
-    slug: "buzzer-systems",
-    image: "/images/services/buzzer-systems.jpg",
-    title: "Buzzer Systems",
-    description:
-      "Installation and repair of buzzer and intercom entry systems for multi-tenant buildings and commercial properties.",
-    detail:
-      "We specialize in buzzer system installation and repair for multi-tenant buildings and commercial properties. Our services include new buzzer system installation, existing system repair and upgrades, video buzzer systems, integration with access control, and tenant directory setup. We work with all major brands and can retrofit older buildings with modern entry solutions that improve security and convenience for tenants and property managers alike.",
-    features: [
-      "New System Installation",
-      "System Repair & Upgrades",
-      "Video Buzzer Systems",
-      "Access Control Integration",
-      "Tenant Directory Setup",
-      "Multi-Unit Solutions",
-    ],
-    icon: "bell",
-  },
-  {
     slug: "commercial-doors",
     image: "/images/services/commercial-doors-installation-and-replacement.jpg",
     title: "Commercial Doors",
     description:
-      "Storefront, hollow-metal & ADA-compliant commercial door installation and repair — closers, panic bars, frames. Code-compliant work, free written quote.",
+      "Commercial door installation and repair: storefront and hollow-metal doors, closers, panic bars, hinges, latches, and frames. Free written quote.",
     detail:
-      "We install and replace commercial-grade doors and hardware for offices, retail spaces, and industrial properties. Our services include commercial door installation, automatic door closer installation and adjustment, panic bar and exit device installation, ADA-compliant hardware upgrades, hollow metal frame repair, and storefront aluminum door service. Every installation meets local building codes and fire safety requirements.",
+      "We install and replace commercial-grade doors and hardware for offices, retail spaces, and industrial properties. Our services include commercial door installation, automatic door closer installation and adjustment, panic bar and exit device installation, ADA-compliant hardware upgrades, hollow metal frame repair, and storefront aluminum door service. We also repair the everyday problems: doors that won't latch, closers that slam or drift, sagging hinges, worn latches and strikes, damaged frames, and sliding or patio doors that won't lock. We diagnose on-site, carry common hardware on the truck, and give you a written quote before any work begins. Every installation meets local building codes and fire safety requirements.",
     features: [
       "Commercial Door Installation",
       "Door Closer Installation",
@@ -304,8 +286,29 @@ export const SERVICES = [
       "ADA-Compliant Hardware",
       "Hollow Metal Frame Repair",
       "Storefront Aluminum Doors",
+      "Door Won't Latch / Misalignment",
+      "Door Closer Repair & Adjustment",
+      "Hinge, Latch & Strike Repair",
+      "Patio & Sliding Door Lock Repair",
     ],
     icon: "door",
+    faq: [
+      {
+        question: "My commercial door won't latch — can you fix it?",
+        answer:
+          "Yes — a door that won't latch is one of our most common repair calls. Usually it's a misaligned strike, a worn latch, a sagging hinge, or a door that's dropped in its frame. B&B Locksmith diagnoses the actual cause on-site and adjusts or replaces the hardware so the door latches and locks properly, rather than just forcing it. We carry common closers, hinges, latches, and strikes on the truck so most repairs are done in one visit.",
+      },
+      {
+        question: "Do you repair commercial door closers?",
+        answer:
+          "Yes. We repair and adjust surface-mounted and concealed door closers — doors that slam, drift, stick, or won't close fully. When a closer is past adjustment we replace it with a correctly sized commercial unit (LCN, Norton, and similar). For storefronts and offices this also keeps you compliant with fire-door and ADA closing requirements.",
+      },
+      {
+        question: "Do you fix sliding and patio door locks?",
+        answer:
+          "Yes. Sliding and patio door locks — especially in apartments and rentals — wear out, jam, or come out of alignment. We repair or replace the latch, hook, and keeper hardware, adjust the door so it seats correctly, and can upgrade to higher-security patio locks where security is a concern.",
+      },
+    ],
   },
   {
     slug: "commercial-locking-hardware",
@@ -327,46 +330,44 @@ export const SERVICES = [
     icon: "lock",
   },
   {
-    slug: "door-gate-repair",
-    image: "/images/services/commercial-doors-installation-and-replacement.jpg",
-    title: "Door & Gate Repair",
+    slug: "gates-welding",
+    image: "/images/services/gates/gates-welding-card.jpg",
+    title: "Gates & Welding",
     description:
-      "Commercial and residential door and gate repair — closers, hinges, latches, sliding and patio doors, frames, and gate locking mechanisms.",
+      "Security-focused gate work: anti-reach mesh welding, weatherproof electric strikes, gate keypads, and heavy-duty closers for heavy and pool gates.",
     detail:
-      "A door that won't latch, a closer that slams or sticks, a sagging hinge, a sliding patio door that won't lock, or a gate mechanism that won't catch — these are everyday calls for B&B Locksmith. We repair and adjust commercial and residential door hardware across the Bay Area: door closers (surface and concealed), continuous and butt hinges, latches and strikes, panic and exit devices, mortise and cylindrical locksets, door frames, and automatic and manual gate locking mechanisms. For property managers and HOAs we handle gate hardware compliance and recurring repair work orders. We diagnose on-site, carry common hardware on the truck, and give you a written quote before any work begins.",
+      "Most gate hardware is put on by welding shops. B&B Locksmith approaches gates as a security problem first. We weld mesh panels onto gates so no one can reach through and open them from the inside, and we modify gates to take high-security, weatherproof and vandal-resistant electric strikes instead of the cheap units that fail in a season. We install mechanical and digital standalone keypads made for gates and do the welding needed to mount them solidly. For heavy and oversized gates we fit heavy-duty closers, and we custom-modify closers for pool gates and other gates that a standard closer can't handle, so the gate closes and latches every time.",
     features: [
-      "Door Won't Latch / Misalignment",
-      "Door Closer Repair & Adjustment",
-      "Door Hinge Repair & Replacement",
-      "Patio & Sliding Door Lock Repair",
-      "Commercial Door Lock Repair",
-      "Latch & Strike Repair",
-      "Door Frame Repair & Replacement",
-      "Gate Lock & Mechanism Repair",
-      "Automatic Gate Hardware Repair",
-      "Panic Bar & Exit Device Repair",
+      "Anti-Reach Mesh Welding",
+      "Gate Modifications & Custom Welding",
+      "Weatherproof, Vandal-Resistant Electric Strikes",
+      "Mechanical & Digital Standalone Gate Keypads",
+      "Welding to Mount Keypads & Hardware",
+      "Heavy-Duty Closers for Heavy Gates",
+      "Custom Door Closer Modifications",
+      "Pool Gate Closers & Latching",
     ],
     icon: "lock",
     faq: [
       {
-        question: "My commercial door won't latch — can you fix it?",
+        question: "People reach through our gate and open it from the inside. Can you stop that?",
         answer:
-          "Yes — a door that won't latch is one of our most common repair calls. Usually it's a misaligned strike, a worn latch, a sagging hinge, or a door that's dropped in its frame. B&B Locksmith diagnoses the actual cause on-site and adjusts or replaces the hardware so the door latches and locks properly, rather than just forcing it. We carry common closers, hinges, latches, and strikes on the truck so most repairs are done in one visit.",
+          "Yes. We weld mesh panels onto the gate around the lock and handle so no one can reach through from the outside and open it. It's one of the most effective fixes for apartment, HOA, and commercial gates, and we match the mesh to the gate so it looks like part of it.",
       },
       {
-        question: "Do you repair commercial door closers?",
+        question: "Why have a locksmith install the gate lock instead of a welding shop?",
         answer:
-          "Yes. We repair and adjust surface-mounted and concealed door closers — doors that slam, drift, stick, or won't close fully. When a closer is past adjustment we replace it with a correctly sized commercial unit (LCN, Norton, and similar). For storefronts and offices this also keeps you compliant with fire-door and ADA closing requirements.",
+          "Because we start from security. A welding shop can mount hardware, but often fits a cheap strike or lock that rusts, gets forced, or fails in a season. We install weatherproof, vandal-resistant electric strikes and gate keypads, and we do the welding and modifications needed to mount them properly, so the gate actually stays secure.",
       },
       {
-        question: "Can you repair a gate lock or automatic gate mechanism for our HOA?",
+        question: "Can you install a keypad on our gate?",
         answer:
-          "Yes — HOA and commercial gate repair is regular work for B&B Locksmith. We repair manual and automatic gate locking mechanisms, replace worn gate hardware, and handle gate hardware compliance inspections. For property managers and HOA boards we work from your work orders and provide a written quote before any repair, plus license and insurance documentation on request.",
+          "Yes. We install mechanical and digital standalone keypads made for gates, and we do the welding needed to mount them solidly so they can't be pried off or knocked out of alignment.",
       },
       {
-        question: "Do you fix sliding and patio door locks?",
+        question: "Our gate is too heavy and won't close on its own. Can you fix it?",
         answer:
-          "Yes. Sliding and patio door locks — especially in apartments and rentals — wear out, jam, or come out of alignment. We repair or replace the latch, hook, and keeper hardware, adjust the door so it seats correctly, and can upgrade to higher-security patio locks where security is a concern.",
+          "Yes. We install heavy-duty closers rated for heavy and oversized gates, and we custom-modify closers where a standard unit won't fit. That includes pool gates, which are common in our area and need to close and latch on their own every time.",
       },
     ],
   },
@@ -415,21 +416,22 @@ export const SERVICES = [
     ],
   },
   {
-    slug: "intercom-systems",
-    image: "/images/services/intercom-systems-1.jpg",
-    title: "Intercom Systems",
+    slug: "intercom-buzzer-systems",
+    image: "/images/services/intercom/intercom-buzzer-card.jpg",
+    title: "Intercom & Buzzer Systems",
     description:
-      "Modern intercom system installation and service for residential complexes and commercial buildings.",
+      "Intercom and buzzer entry systems for apartments, offices, HOAs, and schools: installation, repair, upgrades, and access control integration.",
     detail:
-      "Intercom systems make communication and visitor access easier for homes, offices, and commercial buildings. B&B Locksmith provides professional intercom installation for single-family homes, apartments, offices, schools, and gated buildings. We connect access systems with audio and video intercoms so residents or staff can see and talk to visitors before allowing entry. Our team also handles updates, repairs, and routine maintenance so systems keep working without trouble. For multi-unit spaces, we set up shared access that is simple for approved users and limited for others.",
+      "Intercom and buzzer systems let residents and staff see or talk to visitors before letting them in. B&B Locksmith installs, repairs, and upgrades audio and video intercoms and buzzer entry systems for single-family homes, apartments and multi-tenant buildings, offices, schools, HOAs, and gated properties. We set up tenant directories, retrofit older buildings with modern entry panels, and connect the system to electronic door access so an approved user can release the door from a handset, app, or call station. We work with all major brands and handle repairs and routine maintenance so the system keeps working.",
     features: [
-      "Audio Intercom Systems",
-      "Video Intercom Systems",
+      "New System Installation",
+      "Repair & Upgrades",
+      "Audio & Video Intercoms",
+      "Buzzer Entry Systems",
       "IP-Based Solutions",
       "Multi-Tenant Directories",
       "HOA Security Solutions",
       "School & Classroom Intercoms",
-      "System Repairs & Maintenance",
       "Access Control Integration",
     ],
     icon: "mic",
