@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { submitContactForm, type ContactFormState } from "@/app/actions/contact";
 import { SERVICES } from "@/lib/site-data";
 
@@ -11,6 +11,15 @@ export default function ContactForm() {
     submitContactForm,
     initialState
   );
+
+  useEffect(() => {
+    if (state.success && typeof window !== "undefined") {
+      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+      w.gtag?.("event", "conversion", {
+        send_to: "AW-973764595/otwTCI7MjKYdEPPvqdAD",
+      });
+    }
+  }, [state.success]);
 
   if (state.success) {
     return (
