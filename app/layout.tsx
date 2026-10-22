@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { businessSchema } from "@/lib/schema";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// Google Ads conversion tracking (account 722-385-3410)
+const ADS_ID = "AW-973764595";
+const ADS_PHONE_CLICK = "AW-973764595/4OVUCJHMjKYdEPPvqdAD";
 
 const RECOVERED_HTML_CLASS =
   "antonio_b47e2d09-module__jHFPkG__variable " +
@@ -51,25 +54,26 @@ export default function RootLayout({
     <html lang="en" className={RECOVERED_HTML_CLASS} suppressHydrationWarning>
       <body>
         <JsonLd data={businessSchema()} />
-        {/* Google Analytics */}
-        {GA_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}');
-                `,
-              }}
-            />
-          </>
-        )}
+        {/* Google tag: Analytics + Google Ads */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID || ADS_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              ${GA_ID ? `gtag('config', '${GA_ID}');` : ""}
+              gtag('config', '${ADS_ID}');
+              document.addEventListener('click', function (e) {
+                var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+                if (a) { gtag('event', 'conversion', { send_to: '${ADS_PHONE_CLICK}' }); }
+              }, true);
+            `,
+          }}
+        />
         <Header />
         {children}
         <Footer />
