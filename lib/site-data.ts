@@ -336,9 +336,10 @@ export const SERVICES = [
     description:
       "Security-focused gate work: anti-reach mesh welding, weatherproof electric strikes, gate keypads, and heavy-duty closers for heavy and pool gates.",
     detail:
-      "Most gate hardware is put on by welding shops. B&B Locksmith approaches gates as a security problem first. We weld mesh panels onto gates so no one can reach through and open them from the inside, and we modify gates to take high-security, weatherproof and vandal-resistant electric strikes instead of the cheap units that fail in a season. We install mechanical and digital standalone keypads made for gates and do the welding needed to mount them solidly. For heavy and oversized gates we fit heavy-duty closers, and we custom-modify closers for pool gates and other gates that a standard closer can't handle, so the gate closes and latches every time.",
+      "Most gate hardware is put on by welding shops. B&B Locksmith approaches gates as a security problem first. We weld mesh panels onto gates so no one can reach through and open them from the inside, install interlocking latch guards (welded or screwed on) so the latch can't be pried or shimmed, and we modify gates to take high-security, weatherproof and vandal-resistant electric strikes instead of the cheap units that fail in a season. We install mechanical and digital standalone keypads made for gates and do the welding needed to mount them solidly. For heavy and oversized gates we fit heavy-duty closers, and we custom-modify closers for pool gates and other gates that a standard closer can't handle, so the gate closes and latches every time.",
     features: [
       "Anti-Reach Mesh Welding",
+      "Interlocking Latch Guards (Welded or Screw-On)",
       "Gate Modifications & Custom Welding",
       "Weatherproof, Vandal-Resistant Electric Strikes",
       "Mechanical & Digital Standalone Gate Keypads",
