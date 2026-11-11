@@ -235,26 +235,37 @@ export const JOBS: Job[] = [
     title: "Commercial Sales Rep / Estimator",
     department: "sales",
     type: "Full-time",
-    payLabel: "$70,000 to $90,000 base + uncapped commission",
-    payMin: 70000,
-    payMax: 90000,
+    payLabel: "$80,000 to $95,000 base + uncapped commission",
+    payMin: 80000,
+    payMax: 95000,
     payUnit: "YEAR",
-    payNote: "Expected total pay: $110,000 to $140,000+ per year (base salary + commission).",
+    payNote: "Expected total pay at target: $135,000 to $150,000 per year. Top performers: $180,000+.",
     summary:
-      "Find and win new commercial clients. Prospect property managers, facility managers, and GCs, then walk sites and quote locksmith, door hardware, and access control work. Some leads come from us. Most come from you.",
+      "Find and win new commercial clients in the East Bay and Solano County. Prospect property managers, facility teams, HOAs, and maintenance contractors, then walk sites and quote locksmith, door hardware, and access control work. Some leads come from us. Most come from you.",
     about: [
-      "This is a hunter role. Your main job is to go out and find new commercial business: property managers, facility managers, general contractors, and building owners across the Bay Area who need locksmith, door hardware, and access control work.",
-      "We'll pass you the leads that come in from our website and phones, but that's the smaller part of the job. You'll build your own pipeline, open new accounts, quote the work accurately, and close it. Roughly 60% of your time goes to finding new clients, 25% to site walks and estimating, and 15% to leads we hand you.",
+      "This is a hunter role. Your main job is to go out and find new commercial business: property managers, facility managers, maintenance contractors, and building owners who need locksmith, door hardware, and access control work.",
+      "Territory: Contra Costa, Alameda, and Solano counties. You'll work out of our Walnut Creek office and report directly to the owners.",
+      "On day one we'll walk you through our top accounts. Your job is to find more like them, open the account, quote the work accurately, and close it. We'll pass you the leads that come in from our website and phones, but that's the smaller part of the job. Roughly 60% of your time goes to finding new clients, 25% to site walks and estimating, and 15% to leads we hand you.",
     ],
     sections: [
       {
+        heading: "Who you'll sell to",
+        items: [
+          "Property management companies with large multifamily and commercial portfolios",
+          "Multi-location businesses like fitness chains and retail",
+          "Large HOAs",
+          "Maintenance and facility service contractors",
+          "Construction companies that hold maintenance agreements on multi-building sites like churches, schools, and campuses",
+        ],
+      },
+      {
         heading: "Find and open new accounts",
         items: [
-          "Prospect every day: property management companies, facility managers, GCs, office parks, industrial sites, schools, medical offices, and HOAs",
+          "Prospect every day across Contra Costa, Alameda, and Solano counties",
           "Cold call, email, LinkedIn, and walk in. You set the meetings, not us",
-          "Network where our clients are: BOMA, IREM, local chambers, and industry events",
-          "Get B&B on GC bid lists and on property managers' approved vendor lists",
-          "Spot bigger opportunities inside existing buildings: master key systems, access control upgrades, and full door hardware retrofits",
+          "Network where our clients are: BOMA, IREM, CAI, local chambers, and industry events",
+          "Get B&B on property managers' approved vendor lists and on maintenance contractors' sub lists",
+          "Grow every account you open: more buildings, master key systems, access control upgrades, and full door hardware retrofits",
         ],
       },
       {
@@ -272,15 +283,16 @@ export const JOBS: Job[] = [
         heading: "Track it",
         items: [
           "Log every call, meeting, quote, and deal in our CRM",
-          "Own your weekly numbers on our EOS scorecard: outreach, meetings set, quotes sent, and revenue closed",
+          "Own your weekly numbers on our EOS scorecard: outreach, meetings, site walks, quotes sent, and revenue closed",
+          "Weekly pipeline review with the owners",
         ],
       },
       {
         heading: "What success looks like",
         items: [
-          "First 30 days: ride along with our techs, learn our services and pricing, and quote your first jobs with a senior team member",
-          "First 90 days: build a target list of 200 property managers, facility managers, and GCs, reach out to every one of them, and land your first 5 new commercial accounts",
-          "First year: 30+ new commercial accounts and $400,000+ in closed revenue, with most of it from clients you found yourself",
+          "First 30 days: ride along with our techs, learn our services and pricing, and build a target list of 150+ companies that match our best clients",
+          "First 90 days: 25+ face-to-face meetings with decision makers, $250,000+ in quotes sent, and 3 to 5 new commercial accounts closed",
+          "First year: $600,000+ in new revenue, building to a $1M per year run rate, with most of it from clients you found yourself",
         ],
       },
       {
@@ -288,6 +300,7 @@ export const JOBS: Job[] = [
         items: [
           "2+ years in locksmith, access control, door hardware, or low voltage, in the field or in sales",
           "A track record of finding your own clients, not just working inbound leads",
+          "Experience selling to property managers, facility teams, or maintenance contractors",
           "Enough technical knowledge of commercial door hardware and access control to quote a job accurately",
           "Comfortable with cold outreach, follow-up, and rejection",
           "Organized with a CRM and good at follow-through",
@@ -297,7 +310,7 @@ export const JOBS: Job[] = [
       {
         heading: "Nice to have",
         items: [
-          "Existing relationships with Bay Area property managers, facility managers, or GCs",
+          "Existing relationships with East Bay property managers, facility managers, or HOA management companies",
           "Estimating from plans and door hardware schedules",
           "DHI certification",
         ],
@@ -305,10 +318,13 @@ export const JOBS: Job[] = [
       {
         heading: "Pay and benefits",
         items: [
-          "$70,000 to $90,000 base, based on experience",
-          "Uncapped commission. The more you find and close, the more you make",
-          "Expected total pay: $110,000 to $140,000+ per year (base salary + commission)",
-          "Car allowance, with a company car after probation",
+          "$80,000 to $95,000 base, based on experience",
+          "Commission on gross profit, paid monthly on collected invoices: 10% on accounts you bring in, 5% on leads we give you",
+          "15% on your own accounts once you pass $1M in new revenue for the year",
+          "Full commission on accounts you open for 24 months, then 4% for as long as you're with us",
+          "Your accounts are yours: you earn on every location of a client you bring in, anywhere in the Bay Area, plus any companies they refer to us",
+          "Expected total pay at target: $135,000 to $150,000 per year. Top performers: $180,000+",
+          "Branded company car with gas paid, yours to take home",
           ...STANDARD_BENEFITS,
         ],
       },
