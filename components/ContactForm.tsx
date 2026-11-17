@@ -14,10 +14,14 @@ export default function ContactForm() {
 
   useEffect(() => {
     if (state.success && typeof window !== "undefined") {
-      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+      const w = window as unknown as {
+        gtag?: (...args: unknown[]) => void;
+        fbq?: (...args: unknown[]) => void;
+      };
       w.gtag?.("event", "conversion", {
         send_to: "AW-973764595/otwTCI7MjKYdEPPvqdAD",
       });
+      w.fbq?.("track", "Lead");
     }
   }, [state.success]);
 

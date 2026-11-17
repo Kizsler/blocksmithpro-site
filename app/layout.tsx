@@ -8,6 +8,8 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 // Google Ads conversion tracking (account 722-385-3410)
 const ADS_ID = "AW-973764595";
 const ADS_PHONE_CLICK = "AW-973764595/4OVUCJHMjKYdEPPvqdAD";
+// Meta Pixel: dataset "B&B Website Pixel (blocksmithpro.com)", B&B business portfolio
+const META_PIXEL_ID = "4016314765189819";
 
 const RECOVERED_HTML_CLASS =
   "antonio_b47e2d09-module__jHFPkG__variable " +
@@ -74,6 +76,26 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Meta Pixel: PageView, plus Contact on call/text taps. Off on staging. */}
+        {!IS_STAGING && META_PIXEL_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+                n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                document,'script','https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '${META_PIXEL_ID}');
+                fbq('track', 'PageView');
+                document.addEventListener('click', function (e) {
+                  var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"], a[href^="sms:"]') : null;
+                  if (a) { fbq('track', 'Contact', { method: a.getAttribute('href').indexOf('sms:') === 0 ? 'text' : 'call' }); }
+                }, true);
+              `,
+            }}
+          />
+        )}
         <Header />
         {children}
         <Footer />
