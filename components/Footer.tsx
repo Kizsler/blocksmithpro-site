@@ -176,7 +176,10 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs text-gray-500">
-            &copy; {new Date().getFullYear()}{" "}B&amp;B Locksmith. All rights reserved.
+            &copy; {new Date().getFullYear()}{" "}B&amp;B Locksmith. All rights reserved.{" "}
+            <a href="/privacy" className="underline hover:text-gray-300">
+              Privacy Policy
+            </a>
           </p>
         </div>
       </div>
