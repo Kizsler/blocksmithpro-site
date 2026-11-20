@@ -46,6 +46,11 @@ export const SERVICES = [
     ],
     icon: "building",
     isEmergency: true,
+    guides: [
+      { title: "How a master key system works for offices and buildings", href: "/blog/master-key-system-for-offices" },
+      { title: "Do you need to rekey your business when an employee leaves?", href: "/blog/rekey-business-when-employee-leaves" },
+      { title: "Stopping mail theft with a welded latch guard", href: "/blog/apartment-mail-theft-latch-guard" },
+    ],
     faq: [
       {
         question: "Do you work with property managers and multi-unit buildings?",
@@ -95,7 +100,7 @@ export const SERVICES = [
       {
         question: "Do you handle emergency home lockouts?",
         answer:
-          "Yes. B&B Locksmith handles same-day emergency lockouts Monday–Saturday, 7am–6pm, with an average ETA under 30 minutes across our Bay Area service area. Call 415-423-0182 during business hours and dispatch will give you a real ETA for your address. Have photo ID or proof of residence ready — our technicians verify you live there before opening the door, which protects you as much as it protects the property.",
+          "Yes. B&B Locksmith handles same-day emergency lockouts Monday–Saturday, 7am–6pm, across our Bay Area service area. Call 415-423-0182 during business hours and dispatch will give you a real ETA for your address. Have photo ID or proof of residence ready — our technicians verify you live there before opening the door, which protects you as much as it protects the property.",
       },
       {
         question: "Can you open my door without damaging the lock?",
@@ -185,7 +190,7 @@ export const SERVICES = [
       {
         question: "I'm locked out of my car — how fast can you get to me?",
         answer:
-          "B&B Locksmith dispatches across the Bay Area Monday–Saturday, 7am–6pm, with an average ETA under 30 minutes. Call 415-423-0182, tell dispatch where the car is (parking garages and trailheads included), and you'll get a real ETA before the truck rolls. We use non-destructive entry tools, so your door and window come through untouched.",
+          "B&B Locksmith dispatches across the Bay Area Monday–Saturday, 7am–6pm. Call 415-423-0182, tell dispatch where the car is (parking garages and trailheads included), and you'll get a real ETA before the truck rolls. We use non-destructive entry tools, so your door and window come through untouched.",
       },
       {
         question: "Can you make a car key if I lost the original?",
@@ -253,6 +258,11 @@ export const SERVICES = [
       "Emergency Access Recovery",
     ],
     icon: "shield",
+    guides: [
+      { title: "Key fob or card reader not working? 7 common causes", href: "/blog/key-fob-card-reader-not-working" },
+      { title: "Key fob, keycard and keypad door locks for offices", href: "/blog/key-fob-door-lock-for-office" },
+      { title: "Why we skip maglocks and use electric strikes and panic hardware", href: "/blog/why-we-skip-maglocks" },
+    ],
     faq: [
       {
         question: "Our fob reader stopped working — can you repair it?",
@@ -401,6 +411,10 @@ export const SERVICES = [
       "Lost Master Key Rekeying",
     ],
     icon: "lock",
+    guides: [
+      { title: "How a master key system works for offices and buildings", href: "/blog/master-key-system-for-offices" },
+      { title: "Do you need to rekey your business when an employee leaves?", href: "/blog/rekey-business-when-employee-leaves" },
+    ],
     faq: [
       {
         question: "How does a master key system work?",
@@ -452,6 +466,9 @@ export const SERVICES = [
       "Access Control Integration",
     ],
     icon: "mic",
+    guides: [
+      { title: "Door buzzer or video intercom for an office building", href: "/blog/door-buzzer-intercom-for-office-building" },
+    ],
     faq: [
       {
         question: "Do you install intercom systems for schools and classrooms?",
@@ -604,7 +621,7 @@ export const LOCATIONS = [
       {
         question: "Do you really serve San Francisco from the East Bay?",
         answer:
-          "Yes — our trucks cross the Bay Bridge for San Francisco calls every week, and our primary line (415-423-0182) is a San Francisco number that rings straight to dispatch. Call and we'll quote a realistic ETA for your SF address up front; average ETA across our service area is under 30 minutes, and dispatch will tell you honestly what bridge traffic means for yours.",
+          "Yes — our trucks cross the Bay Bridge for San Francisco calls every week, and our primary line (415-423-0182) is a San Francisco number that rings straight to dispatch. Call and we'll quote a realistic ETA for your SF address up front, and dispatch will tell you honestly what bridge traffic means for yours.",
       },
       {
         question: "Do you repair apartment buzzer and intercom systems in San Francisco?",
@@ -634,7 +651,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith reach San Jose?",
         answer:
-          "Our trucks run down I-680 to San Jose, and dispatch quotes a realistic ETA for your address before a truck rolls — call 415-423-0182. Average ETA across our Bay Area service area is under 30 minutes; for the South Bay we'll tell you honestly what traffic means for yours. Same-day and emergency calls run Monday–Saturday, 7am–6pm.",
+          "Our trucks run down I-680 to San Jose, and dispatch quotes a realistic ETA for your address before a truck rolls — call 415-423-0182. For the South Bay we'll tell you honestly what traffic means for yours. Same-day and emergency calls run Monday–Saturday, 7am–6pm.",
       },
       {
         question: "Do you repair commercial doors in San Jose?",
@@ -644,7 +661,7 @@ export const LOCATIONS = [
       {
         question: "Can you handle both my San Jose business and my home?",
         answer:
-          "That's the point of 15 disciplines under one roof. Businesses get master key systems, access control, high-security locks, and door hardware; homeowners get rekeying, deadbolts, smart locks, and lockout response across Willow Glen, Almaden, Evergreen, Berryessa, and the rest of the city. One dispatch line covers both — plus your car.",
+          "That's the point of 14 disciplines under one roof. Businesses get master key systems, access control, high-security locks, and door hardware; homeowners get rekeying, deadbolts, smart locks, and lockout response across Willow Glen, Almaden, Evergreen, Berryessa, and the rest of the city. One dispatch line covers both — plus your car.",
       },
       {
         question: "Do you cover the wider South Bay?",
@@ -664,7 +681,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith get to Fremont?",
         answer:
-          "B&B Locksmith reaches Fremont via I-680 or I-880, and our average ETA across the Bay Area service area is under 30 minutes. Call 415-423-0182 and dispatch will quote a real ETA for your Fremont address before the truck rolls — same-day and emergency calls run Monday–Saturday, 7am–6pm, covering all of Fremont plus Newark and Union City.",
+          "B&B Locksmith reaches Fremont via I-680 or I-880. Call 415-423-0182 and dispatch will quote a real ETA for your Fremont address before the truck rolls — same-day and emergency calls run Monday–Saturday, 7am–6pm, covering all of Fremont plus Newark and Union City.",
       },
       {
         question: "Can you replace or program car keys in Fremont?",
@@ -694,7 +711,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith reach me in Walnut Creek?",
         answer:
-          "Faster than anywhere else we serve — Walnut Creek is our home base, so trucks are usually minutes away rather than a highway drive. Call 415-423-0182 and dispatch will give you a real ETA for your address; same-day and emergency calls run Monday–Saturday, 7am–6pm. Average ETA across the Bay Area is under 30 minutes, and in Walnut Creek we routinely beat it.",
+          "Faster than anywhere else we serve — Walnut Creek is our home base, so trucks are usually minutes away rather than a highway drive. Call 415-423-0182 and dispatch will give you a real ETA for your address; same-day and emergency calls run Monday–Saturday, 7am–6pm.",
       },
       {
         question: "Do you work with Walnut Creek businesses?",
@@ -724,7 +741,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith reach me in Oakland?",
         answer:
-          "B&B Locksmith dispatches to Oakland from our Walnut Creek hub, a straight run through the Caldecott Tunnel on Highway 24. Average ETA across our Bay Area service area is under 30 minutes; call 415-423-0182 and dispatch will give you a real ETA for your Oakland address — Downtown, the hills, or anywhere between — before the truck rolls. We're open for same-day and emergency calls Monday–Saturday, 7am–6pm.",
+          "B&B Locksmith dispatches to Oakland from our Walnut Creek hub, a straight run through the Caldecott Tunnel on Highway 24. Call 415-423-0182 and dispatch will give you a real ETA for your Oakland address — Downtown, the hills, or anywhere between — before the truck rolls. We're open for same-day and emergency calls Monday–Saturday, 7am–6pm.",
       },
       {
         question: "Do you cover all Oakland neighborhoods?",
@@ -754,7 +771,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith get to Berkeley?",
         answer:
-          "B&B Locksmith dispatches to Berkeley from Walnut Creek through the Caldecott Tunnel — the same Highway 24 run that serves Oakland and Rockridge. Average ETA across our service area is under 30 minutes; call 415-423-0182 and dispatch will quote a real ETA for your Berkeley address before the truck rolls. We handle same-day and emergency calls Monday–Saturday, 7am–6pm, including student-housing lockouts.",
+          "B&B Locksmith dispatches to Berkeley from Walnut Creek through the Caldecott Tunnel — the same Highway 24 run that serves Oakland and Rockridge. Call 415-423-0182 and dispatch will quote a real ETA for your Berkeley address before the truck rolls. We handle same-day and emergency calls Monday–Saturday, 7am–6pm, including student-housing lockouts.",
       },
       {
         question: "Do you rekey student apartments and rentals in Berkeley?",
@@ -784,7 +801,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith reach me in Concord?",
         answer:
-          "Concord sits right next to our Walnut Creek dispatch hub, so it gets some of B&B Locksmith's fastest response times anywhere in the Bay Area — often well under our area-wide 30-minute average. Call 415-423-0182 during business hours and dispatch will give you a real ETA for your Concord address. We're open for same-day and emergency calls Monday–Saturday, 7am–6pm.",
+          "Concord sits right next to our Walnut Creek dispatch hub, so it gets some of B&B Locksmith's fastest response times anywhere in the Bay Area. Call 415-423-0182 during business hours and dispatch will give you a real ETA for your Concord address. We're open for same-day and emergency calls Monday–Saturday, 7am–6pm.",
       },
       {
         question: "Do you handle car lockouts and car keys in Concord?",
@@ -804,6 +821,186 @@ export const LOCATIONS = [
     ],
   },
   {
+    slug: "pleasant-hill",
+    name: "Pleasant Hill",
+    description:
+      "Pleasant Hill is right next door to our Walnut Creek shop. B&B Locksmith works with offices, medical and dental suites, and shops around Downtown Pleasant Hill and along Contra Costa Boulevard.",
+    body:
+      "Pleasant Hill is one of the closest cities to our Walnut Creek shop, so it's a short drive for our trucks. Most of our work here is commercial: key fob and keycard entry for offices and medical suites, master key systems for multi-tenant buildings, panic hardware and storefront door repairs for retail around Downtown Pleasant Hill and Contra Costa Boulevard, and rekeying when staff turns over. We also handle intercoms and buzzer systems for apartment and condo buildings, and we deliver and bolt down safes for businesses that handle cash. Every job starts with a price you approve before work begins.",
+    faq: [
+      {
+        question: "Do you install key fob or keycard entry in Pleasant Hill?",
+        answer:
+          "Yes. We install and repair key fob, keycard and keypad entry for offices, medical and dental practices, retail and apartment buildings in Pleasant Hill. We work with PDK (ProdataKey), Verkada, DoorBird and CDVI, and we can service systems we didn't install. Call 415-423-0182 for a free on-site assessment.",
+      },
+      {
+        question: "Can you set up a master key system for my building?",
+        answer:
+          "Yes. We walk the doors, plan who needs access to what, and rekey or replace cylinders to fit the plan. Restricted keyways like Primus and Mul-T-Lock keep copies under your control.",
+      },
+      {
+        question: "Do you deliver and install business safes in Pleasant Hill?",
+        answer:
+          "Yes. We sell Hollon, AMSEC and Gardall safes, we're Tidel certified, and we deliver with our own safe-moving equipment, set the safe level and bolt it to the floor.",
+      },
+      {
+        question: "How do I get an arrival time?",
+        answer:
+          "Call 415-423-0182 during business hours, Monday to Saturday, 7am to 6pm. Dispatch will give you a real ETA for your address when you call.",
+      },
+    ],
+  },
+  {
+    slug: "lafayette",
+    name: "Lafayette",
+    description:
+      "B&B Locksmith serves Lafayette businesses and buildings from our Walnut Creek shop, just over the hill on Highway 24. Offices, medical suites and shops along Mount Diablo Boulevard are regular work for us.",
+    body:
+      "Lafayette is a quick run from our Walnut Creek shop on Highway 24. Along Mount Diablo Boulevard and downtown Lafayette we work with professional offices, medical and dental practices, salons and retail shops: key fob and keycard entry, electric strikes and panic hardware, master key systems, and rekeying after a staff change or lost key. Property managers use us for apartment and condo entry systems, intercoms and tenant turnover. We also open, move, deliver and install safes for businesses. You get a price to approve before any work starts.",
+    faq: [
+      {
+        question: "Do you work with offices and medical practices in Lafayette?",
+        answer:
+          "Yes. Offices and medical suites are a big part of our Lafayette work: key fob and keycard entry, keypad locks, master key systems and rekeying when someone leaves. We're a C-28 licensed, bonded and insured contractor and can provide documents your landlord or insurer asks for.",
+      },
+      {
+        question: "Can you repair a key fob or card reader that stopped working?",
+        answer:
+          "Yes. We troubleshoot readers, controllers, power supplies, wiring and electric strikes, and we service PDK, Verkada, CDVI and most major systems, including ones we didn't install.",
+      },
+      {
+        question: "Do you install intercoms for Lafayette apartment buildings?",
+        answer:
+          "Yes. We replace old buzzer and call box systems with video intercoms and phone-based entry, and we tie them into the door hardware so the door actually releases.",
+      },
+      {
+        question: "How do I book?",
+        answer:
+          "Call 415-423-0182 or text 925-266-3393 to book a free on-site assessment. We work Monday to Saturday, 7am to 6pm.",
+      },
+    ],
+  },
+  {
+    slug: "danville",
+    name: "Danville",
+    description:
+      "B&B Locksmith covers Danville down the I-680 corridor from Walnut Creek. Offices, medical suites and shops around downtown Danville and Hartz Avenue call us for access control, master keys and safes.",
+    body:
+      "Danville is a straight run down I-680 from our Walnut Creek shop. Downtown along Hartz Avenue and in the office and medical buildings around town, we install and service key fob and keycard entry, keypad locks, electric strikes and panic hardware, and set up master key systems so managers carry one key. HOAs and property managers use us for gate and pool entry, intercoms and tenant turnover. We sell, deliver and bolt down safes for businesses and offices, and we're Tidel certified for cash-handling safes. Every job starts with a price you approve.",
+    faq: [
+      {
+        question: "Do you handle gate and pool entry for Danville HOAs?",
+        answer:
+          "Yes. We install and repair keypads, fob readers, electric strikes and closers on gates and pool entries, and we can manage credentials so lost fobs get shut off instead of rekeying everything.",
+      },
+      {
+        question: "Do you install safes in Danville?",
+        answer:
+          "Yes. We sell Hollon, AMSEC and Gardall safes, deliver them with our own equipment, set them level and bolt them to the floor. We're also Tidel certified.",
+      },
+      {
+        question: "Can you rekey our office after an employee leaves?",
+        answer:
+          "Yes. We rekey the affected locks so old keys stop working, and if you're tired of rekeying we can show you how a master key system or key fobs would work for your office.",
+      },
+      {
+        question: "How do I get an arrival time?",
+        answer:
+          "Call 415-423-0182 Monday to Saturday, 7am to 6pm, and dispatch will give you a real ETA for your address.",
+      },
+    ],
+  },
+  {
+    slug: "martinez",
+    name: "Martinez",
+    description:
+      "B&B Locksmith serves Martinez from our Walnut Creek shop. Offices, government contractors, shops downtown along Main Street and multifamily buildings call us for commercial locks, access control and safes.",
+    body:
+      "Martinez is a short drive up Highway 4 and Alhambra Avenue from our Walnut Creek shop. Downtown along Main Street and in the office and industrial buildings around the city, we install commercial locks, panic hardware, door closers and electric strikes, set up master key systems, and install key fob and keycard entry. Property managers use us for apartment entry systems, intercoms and rekeying at tenant turnover. We also deliver, install and open safes for businesses (proof of ownership required). Every job starts with a price you approve before work begins.",
+    faq: [
+      {
+        question: "Do you install panic bars and door closers in Martinez?",
+        answer:
+          "Yes. We install and repair panic hardware, door closers and commercial locks, including electrified panic devices tied into card or fob access.",
+      },
+      {
+        question: "Can you add key fob entry to an existing door?",
+        answer:
+          "Usually, yes. Most commercial doors can take an electric strike or electrified panic hardware plus a reader. We'll look at the door and frame on a free on-site visit and tell you what it takes.",
+      },
+      {
+        question: "Do you open safes for businesses?",
+        answer:
+          "Yes. We open locked safes when the code is lost or the lock fails, after confirming proof of ownership.",
+      },
+      {
+        question: "How do I book?",
+        answer:
+          "Call 415-423-0182 or text 925-266-3393. We work Monday to Saturday, 7am to 6pm.",
+      },
+    ],
+  },
+  {
+    slug: "orinda",
+    name: "Orinda",
+    description:
+      "B&B Locksmith serves Orinda from our Walnut Creek shop, a few minutes west on Highway 24. Offices, shops near Orinda Village and Theatre Square, and residential buildings are regular work for us.",
+    body:
+      "Orinda is a short trip west on Highway 24 from our Walnut Creek shop. For offices and shops around Orinda Village and Theatre Square we install key fob and keycard entry, keypad locks, electric strikes and commercial door hardware, and set up master key systems. Building owners and HOAs use us for entry systems, intercoms, gate access and rekeying. We also sell, deliver and bolt down safes. You get a price to approve before any work begins.",
+    faq: [
+      {
+        question: "Do you install access control for small offices in Orinda?",
+        answer:
+          "Yes. Even a single door with a fob reader lets you shut off a lost fob instead of rekeying. We install PDK, Verkada, DoorBird and CDVI systems sized for small offices.",
+      },
+      {
+        question: "Can you upgrade an old call box or buzzer?",
+        answer:
+          "Yes. We replace old call boxes with video intercoms or phone-based entry and make sure the door hardware releases properly.",
+      },
+      {
+        question: "Do you deliver safes in Orinda?",
+        answer:
+          "Yes. We deliver with our own safe-moving equipment, set the safe level and bolt it to the floor.",
+      },
+      {
+        question: "How do I book?",
+        answer:
+          "Call 415-423-0182 or text 925-266-3393, Monday to Saturday, 7am to 6pm, for a free on-site assessment.",
+      },
+    ],
+  },
+  {
+    slug: "alamo",
+    name: "Alamo",
+    description:
+      "B&B Locksmith covers Alamo just south of our Walnut Creek shop on I-680. Offices, shops along Danville Boulevard, HOAs and gated communities call us for entry systems, locks and safes.",
+    body:
+      "Alamo sits just south of our Walnut Creek shop on I-680. We work with offices and shops along Danville Boulevard and with HOAs and gated communities around Alamo: gate and pool entry with keypads and fob readers, electric strikes and closers, intercoms, master key systems and rekeying. We also sell, deliver and bolt down safes for homes and businesses, and we're Tidel certified for cash-handling safes. Every job starts with a price you approve.",
+    faq: [
+      {
+        question: "Do you service gate entry systems in Alamo?",
+        answer:
+          "Yes. We install and repair gate keypads, fob readers, intercoms, electric strikes and closers, and help HOAs manage who has access.",
+      },
+      {
+        question: "Do you install safes in Alamo?",
+        answer:
+          "Yes. We sell Hollon, AMSEC and Gardall safes and deliver, level and bolt them down with our own equipment.",
+      },
+      {
+        question: "Can you set up a master key system for our office or HOA?",
+        answer:
+          "Yes. We plan the key system with you, rekey or replace cylinders, and can use restricted keyways like Primus or Mul-T-Lock so copies stay under control.",
+      },
+      {
+        question: "How do I get an arrival time?",
+        answer:
+          "Call 415-423-0182 Monday to Saturday, 7am to 6pm, and dispatch will give you a real ETA for your address.",
+      },
+    ],
+  },
+  {
     slug: "san-ramon",
     name: "San Ramon",
     description:
@@ -814,7 +1011,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith reach San Ramon?",
         answer:
-          "Our trucks come straight down the 680 corridor from Walnut Creek — no bridges, no tunnels. Average ETA across the B&B Locksmith service area is under 30 minutes; call 415-423-0182 and dispatch will give you a real ETA for your San Ramon address, whether that's Bishop Ranch, Dougherty Valley, or anywhere between. We're open for same-day and emergency calls Monday–Saturday, 7am–6pm.",
+          "Our trucks come straight down the 680 corridor from Walnut Creek — no bridges, no tunnels. Call 415-423-0182 and dispatch will give you a real ETA for your San Ramon address, whether that's Bishop Ranch, Dougherty Valley, or anywhere between. We're open for same-day and emergency calls Monday–Saturday, 7am–6pm.",
       },
       {
         question: "Do you handle office and suite work in Bishop Ranch?",
@@ -839,7 +1036,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith get to Dublin?",
         answer:
-          "B&B Locksmith dispatches down the 680 corridor from Walnut Creek to Dublin, Monday–Saturday 7am–6pm. Our area-wide average ETA is under 30 minutes; call 415-423-0182 and dispatch will quote a real ETA for your Dublin address — east side, west side, or at a BART station parking lot. Bring photo ID; we verify before we open anything.",
+          "B&B Locksmith dispatches down the 680 corridor from Walnut Creek to Dublin, Monday–Saturday 7am–6pm. Call 415-423-0182 and dispatch will quote a real ETA for your Dublin address — east side, west side, or at a BART station parking lot. Bring photo ID; we verify before we open anything.",
       },
       {
         question: "I just bought new construction in Dublin — should I rekey?",
@@ -864,7 +1061,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith reach Pleasanton?",
         answer:
-          "B&B Locksmith runs Pleasanton calls down 680 from our Walnut Creek hub, Monday–Saturday 7am–6pm. Area-wide our average ETA is under 30 minutes; call 415-423-0182 and dispatch gives you a real ETA for your Pleasanton address before the truck rolls — downtown, Hacienda, or out by Ruby Hill.",
+          "B&B Locksmith runs Pleasanton calls down 680 from our Walnut Creek hub, Monday–Saturday 7am–6pm. Call 415-423-0182 and dispatch gives you a real ETA for your Pleasanton address before the truck rolls — downtown, Hacienda, or out by Ruby Hill.",
       },
       {
         question: "Do you service the storefronts on Main Street?",
@@ -889,7 +1086,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith reach Livermore?",
         answer:
-          "B&B Locksmith dispatches to Livermore down the 680/580 corridor from Walnut Creek, Monday–Saturday 7am–6pm. Livermore sits at the far edge of our area-wide under-30-minute average, so call 415-423-0182 and dispatch will give you an honest ETA for your address — downtown, Springtown, or out past the vineyards — before the truck rolls.",
+          "B&B Locksmith dispatches to Livermore down the 680/580 corridor from Walnut Creek, Monday–Saturday 7am–6pm. Livermore is at the far edge of our area, so call 415-423-0182 and dispatch will give you an honest ETA for your address — downtown, Springtown, or out past the vineyards — before the truck rolls.",
       },
       {
         question: "Do you service wineries and tasting rooms?",
@@ -914,7 +1111,7 @@ export const LOCATIONS = [
       {
         question: "How fast can a locksmith get to Richmond?",
         answer:
-          "B&B Locksmith dispatches to Richmond from Walnut Creek, Monday–Saturday 7am–6pm. Area-wide our average ETA is under 30 minutes; call 415-423-0182 and dispatch will quote a real ETA for your Richmond address — Point Richmond, the Annex, Hilltop, or the marina — before the truck rolls.",
+          "B&B Locksmith dispatches to Richmond from Walnut Creek, Monday–Saturday 7am–6pm. Call 415-423-0182 and dispatch will quote a real ETA for your Richmond address — Point Richmond, the Annex, Hilltop, or the marina — before the truck rolls.",
       },
       {
         question: "Do you secure warehouses and industrial properties in Richmond?",
@@ -1007,7 +1204,7 @@ export const LOCATIONS = [
 
 export const STATS = [
   { value: "15+", label: "Years Experience" },
-  { value: "1,000+", label: "5-Star Reviews" },
+  { value: "1,000+", label: "Yelp & Google Reviews" },
   { value: "5.0", label: "Star Rating" },
   { value: "C-28", label: "Licensed" },
 ] as const;

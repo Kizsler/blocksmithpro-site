@@ -6,7 +6,7 @@ import { STATS } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "About B&B Locksmith | Licensed Bay Area Locksmith Since 2011",
   description:
-    "A family-run, C-28-licensed Bay Area locksmith and security crew with over a thousand five-star reviews, securing homes and businesses since 2011.",
+    "A family-run, C-28-licensed Bay Area locksmith and security crew with over a thousand reviews on Yelp and Google, securing homes and businesses since 2011.",
   alternates: { canonical: "/about" },
 };
 
@@ -67,7 +67,7 @@ export default function AboutPage() {
             style={{ fontFamily: "var(--f-body)", color: "#F4F0E6CC" }}
           >
             A family-run locksmith and security crew. Licensed C-28. 1,000+
-            five-star reviews. We answer the phone, we show up, and
+            reviews on Yelp and Google. We answer the phone, we show up, and
             we leave the door closed behind us.
           </p>
         </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 like a neighbor.
               </p>
               <p>
-                With 1,000+ five-star reviews across Yelp and Google, our
+                With 1,000+ reviews across Yelp and Google, our
                 reputation speaks for itself. We offer master key systems,
                 access control, smart locks, commercial door hardware, intercom
                 and buzzer systems, safe installation, and emergency lockout —

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const FACTS = [
   { num: "Since 2011", sub: "15+ years in the Bay Area" },
   { num: "C-28", sub: "Licensed, bonded, and insured" },
-  { num: "5.0★", sub: "1,000+ five-star reviews" },
+  { num: "5.0★", sub: "1,000+ Yelp & Google reviews" },
   { num: "Walnut Creek", sub: "Home base for the whole Bay" },
 ] as const;
 

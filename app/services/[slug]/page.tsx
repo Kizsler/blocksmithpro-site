@@ -56,6 +56,7 @@ export default async function ServiceDetailPage({
   const related = VISIBLE_SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
   const faqs = "faq" in service ? service.faq : undefined;
   const gallery = "gallery" in service ? service.gallery : undefined;
+  const guides = "guides" in service ? service.guides : undefined;
   const isEmergency = "isEmergency" in service && service.isEmergency;
 
   return (
@@ -213,6 +214,36 @@ export default async function ServiceDetailPage({
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== GUIDES ===== */}
+      {guides && (
+        <section
+          className="relative border-b"
+          style={{ backgroundColor: "#F4F0E6", borderColor: "#1A1A1A1A" }}
+        >
+          <div className="mx-auto max-w-4xl px-6 pt-16 sm:px-10 lg:pt-24">
+            <h2
+              className="mb-8 uppercase leading-[0.88] tracking-[-0.01em] text-[clamp(2rem,4vw,3.25rem)]"
+              style={{ fontFamily: "var(--f-display)", color: "#1A1A1A" }}
+            >
+              Guides from our field notes
+            </h2>
+            <ul className="space-y-4">
+              {guides.map((g) => (
+                <li key={g.href}>
+                  <Link
+                    href={g.href}
+                    className="text-lg font-semibold underline decoration-[#E63946] underline-offset-4"
+                    style={{ fontFamily: "var(--f-body)", color: "#1A1A1A" }}
+                  >
+                    {g.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}

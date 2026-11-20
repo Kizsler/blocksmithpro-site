@@ -7,7 +7,7 @@ import { breadcrumbSchema, faqSchema, BUSINESS_ID, SITE_URL } from "@/lib/schema
 export const metadata: Metadata = {
   title: "Emergency & Same-Day Locksmith Bay Area | B&B Locksmith",
   description:
-    "Locked out? B&B Locksmith dispatches fast across the Bay Area with an under-30-minute average ETA. Home, business, and car lockouts, Mon–Sat 7am–6pm. Licensed C-28, bonded & insured. Call now.",
+    "Locked out? B&B Locksmith dispatches same-day from Walnut Creek and gives you a real ETA when you call. Home, business, and car lockouts, Mon–Sat 7am–6pm. Licensed C-28, bonded & insured. Call now.",
   alternates: { canonical: "/emergency-locksmith-bay-area" },
 };
 
@@ -45,7 +45,7 @@ const STEPS = [
   },
   {
     title: "We dispatch",
-    desc: "The nearest truck rolls from our Walnut Creek hub. Average ETA across our service area is under 30 minutes.",
+    desc: "The nearest truck rolls from our Walnut Creek hub. Dispatch gives you a real ETA for your address when you call.",
   },
   {
     title: "On-site work",
@@ -61,7 +61,7 @@ const FAQS = [
   {
     question: "How fast can an emergency locksmith reach me in the Bay Area?",
     answer:
-      "During business hours (Monday–Saturday, 7am–6pm), B&B Locksmith dispatches from Walnut Creek with an average ETA under 30 minutes across our Bay Area service area. We serve San Francisco, Oakland, San Jose, Fremont, Walnut Creek, Berkeley, Concord, San Ramon, Dublin, Pleasanton, Livermore, and Richmond. Exact timing depends on where you are and traffic, so call 415-423-0182 and dispatch will give you a real ETA for your location before the truck rolls.",
+      "During business hours (Monday–Saturday, 7am–6pm), B&B Locksmith dispatches from Walnut Creek across our Bay Area service area. We serve San Francisco, Oakland, San Jose, Fremont, Walnut Creek, Berkeley, Concord, San Ramon, Dublin, Pleasanton, Livermore, and Richmond. Exact timing depends on where you are and traffic, so call 415-423-0182 and dispatch will give you a real ETA for your location before the truck rolls.",
   },
   {
     question: "How much does an emergency locksmith cost?",
@@ -137,7 +137,7 @@ export default function EmergencyLocksmithPage() {
             className="text-[10px] uppercase tracking-[0.4em]"
             style={{ fontFamily: "var(--f-mono)", color: "#E63946" }}
           >
-            Same-day · Bay Area dispatch · &lt; 30 min average ETA
+            Same-day · Bay Area dispatch · Real ETA when you call
           </span>
           <h1
             className="mt-2 uppercase leading-[0.85] tracking-[-0.01em] text-[clamp(2.75rem,7vw,6rem)]"

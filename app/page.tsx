@@ -27,21 +27,20 @@ const YELP_URL = "https://www.yelp.com/biz/b-and-b-locksmith-and-security-daly-c
 
 const STATS_BAR = [
   { num: "15+", sub: "Years Experience", red: true, href: null },
-  { num: "1,000+", sub: "5-Star Reviews", red: false, href: YELP_URL },
+  { num: "1,000+", sub: "Yelp & Google reviews", red: false, href: YELP_URL },
   { num: "5.0★", sub: "Star Rating", red: false, href: null },
   { num: "C-28", sub: "Licensed", red: false, href: null },
 ] as const;
 
 const PROOF_STATS = [
   { num: "15+", label: "Years serving the Bay", sub: "Since 2011", red: true },
-  { num: "1,000+", label: "Five-star reviews", sub: "5.0 average", red: false },
+  { num: "1,000+", label: "Yelp & Google reviews", sub: "5.0 on Yelp", red: false },
   { num: "5.0★", label: "Average Yelp rating", sub: "Verified reviews", red: false },
-  { num: "< 30", label: "Min average ETA", sub: "Bay Area dispatch", red: true },
-  { num: "15", label: "Service disciplines", sub: "One team", red: false },
+  { num: "14", label: "Service disciplines", sub: "One team", red: false },
   { num: "Same-Day", label: "Emergency response", sub: "We pick up", red: false },
   { num: "C-28", label: "Licensed contractor", sub: "Bonded · Insured", red: true },
   { num: "50+", label: "Technology partners", sub: "50+ national brands", red: false },
-  { num: "15", label: "Cities served", sub: "Bay Area coverage", red: false },
+  { num: "21", label: "Cities served", sub: "Bay Area coverage", red: false },
   { num: "Master", label: "Level technicians", sub: "Licensed & certified", red: true },
 ] as const;
 
@@ -49,12 +48,12 @@ const HOME_FAQS = [
   {
     question: "How fast can B&B Locksmith get to me in the Bay Area?",
     answer:
-      "B&B Locksmith dispatches a mobile fleet from our Walnut Creek hub across the entire Bay Area, with an average ETA under 30 minutes inside our service area. Call 415-423-0182 and dispatch will quote a real ETA for your address before a truck rolls. We handle same-day and emergency calls Monday through Saturday, 7am to 6pm — home, business, and vehicle lockouts, broken key extraction, and urgent rekeying after a break-in or move-out.",
+      "B&B Locksmith dispatches a mobile fleet from our Walnut Creek hub across the Bay Area. Call 415-423-0182 and dispatch will quote a real ETA for your address before a truck rolls. We handle same-day and emergency calls Monday through Saturday, 7am to 6pm — home, business, and vehicle lockouts, broken key extraction, and urgent rekeying after a break-in or move-out.",
   },
   {
     question: "What cities does B&B Locksmith serve?",
     answer:
-      "We serve 15 Bay Area cities with dedicated coverage: San Francisco, San Jose, Fremont, Walnut Creek, Oakland, Berkeley, Concord, San Ramon, Dublin, Pleasanton, Livermore, Richmond, Vallejo, Morgan Hill, and Tiburon — plus the surrounding communities between them. Our trucks dispatch from Walnut Creek, so East Bay and central Contra Costa addresses typically see the fastest response times, with the rest of the Bay covered on the same dispatch line.",
+      "We serve 21 Bay Area cities with dedicated coverage, centered on Contra Costa County: Walnut Creek, Concord, Pleasant Hill, Lafayette, Martinez, Danville, Alamo, Orinda and San Ramon, plus San Francisco, Oakland, Berkeley, Richmond, Vallejo, Dublin, Pleasanton, Livermore, Fremont, San Jose, Morgan Hill and Tiburon. Our trucks dispatch from Walnut Creek, so East Bay and central Contra Costa addresses typically see the fastest response times, with the rest of the Bay covered on the same dispatch line.",
   },
   {
     question: "Is B&B Locksmith licensed and insured?",
@@ -210,7 +209,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="underline-offset-4 hover:underline"
                 >
-                  1,000+ five-star reviews
+                  1,000+ reviews on Yelp and Google
                 </a>
                 <span className="hidden opacity-30 sm:inline">·</span>
                 <span>Licensed C-28 contractor</span>
